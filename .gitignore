@@ -1,3 +1,6 @@
+# Work in progress — local only, not published
+_wip/
+
 # Claude Code — local only, not for public repo
 CLAUDE.md
 commit-and-push.sh
