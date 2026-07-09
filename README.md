@@ -19,6 +19,19 @@
 
 ---
 
+> ## ⚠️ Security Warning: Fake repositories and copies distributing malware
+> ISMS Builder has **no packaged "releases", installers, or downloadable ZIP files** — the only
+> legitimate source is this repository, cloned or downloaded directly from GitHub as plain
+> source code. We are aware of at least one **malicious repository impersonating this project**
+> (fake README, fake "Download" button linking to a ZIP disguised as a screenshot, containing a
+> Windows malware loader — `.cmd` → `.exe` → Lua-DLL payload chain). **Do not download or run any
+> "isms_builder" ZIP/installer/exe from anywhere other than this repository.**
+> If you find a suspicious repo or site impersonating this project, please open an
+> [issue](https://github.com/coolstartnow/isms-builder/issues) or a
+> [discussion](https://github.com/coolstartnow/isms-builder/discussions) so we can flag it.
+
+---
+
 > **Status: Active development — not yet a finished product.**
 > The core modules are functional and in use, but some features are incomplete
 > and the platform is still growing. Contributions, feedback and real-world
