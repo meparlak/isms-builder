@@ -138,12 +138,12 @@ npm start                     # http://localhost:3000
 
 Login with **`admin@example.com` / `adminpass`**. On first login you will be prompted to choose your **demo data language** (🇩🇪 DE / 🇬🇧 EN / 🇫🇷 FR / 🇳🇱 NL) or start with an empty system. Change the admin password immediately after.
 
-For production use with HTTPS and SQLite:
+For production use with HTTPS:
 
 ```bash
 # .env
 JWT_SECRET=your-very-long-random-secret
-STORAGE_BACKEND=sqlite
+STORAGE_BACKEND=json
 SSL_CERT_FILE=/etc/ssl/certs/your.crt
 SSL_KEY_FILE=/etc/ssl/private/your.key
 ```

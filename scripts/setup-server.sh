@@ -85,7 +85,7 @@ if [ ! -f "$APP_DIR/.env" ]; then
 PORT=$APP_PORT
 NODE_ENV=production
 JWT_SECRET=$JWT_SECRET
-STORAGE_BACKEND=sqlite
+STORAGE_BACKEND=json
 # Demo läuft mit englischen Seed-Daten
 EOF
   echo "   .env erstellt (JWT_SECRET generiert)."
