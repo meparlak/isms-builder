@@ -2252,11 +2252,9 @@ Nach dem Import wird `data/.demo_lang_set` geschrieben. Beim nächsten Demo-Rese
 
 ### Bundles regenerieren
 
-```bash
-node scripts/fix-demo-bundles.js
-```
-
-Das Script liest die bestehenden EN/DE/FR-Bundles, fixiert Inhalt und erzeugt `nl.json` neu. Alle 4 Bundles werden in `data/demo-bundles/` gespeichert.
+Die vier Demo-Bundles (`data/demo-bundles/{de,en,fr,nl}.json`) werden mit einem internen
+Maintainer-Tool gepflegt, das nicht Teil dieses Repositories ist. Für eigene Anpassungen genügt es,
+die JSON-Dateien direkt zu bearbeiten — Struktur siehe bestehende Bundles.
 
 ### UI (Login-Seite)
 
@@ -2270,7 +2268,6 @@ Das Sprach-Overlay (`#demoLangOverlay`) öffnet automatisch nach dem ersten Admi
 | `data/demo-bundles/en.json` | Englisches Demo-Bundle |
 | `data/demo-bundles/fr.json` | Französisches Demo-Bundle |
 | `data/demo-bundles/nl.json` | Niederländisches Demo-Bundle |
-| `scripts/fix-demo-bundles.js` | Bundle-Generator/Fixer |
 | `server/routes/admin.js` | `POST /admin/demo-load-bundle` |
 | `ui/login.html` | Sprach-Overlay HTML + JS |
 
