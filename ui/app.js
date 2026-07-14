@@ -3769,7 +3769,117 @@ async function renderProjectDetail(id) {
     <h3>${t('proj_checklistTitle')}</h3>
     <div id="projectChecklistBody">
       ${p.checklist.map(item => _projectChecklistRowHtml(p.id, item)).join('')}
+    </div>
+    <div class="kcard" style="padding:16px;margin-top:16px;cursor:default">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+        <h3 style="margin:0">${t('proj_stakeholdersTitle')}</h3>
+        <button class="btn btn-secondary btn-sm" onclick="openProjectStakeholderForm('${p.id}')">
+          <i class="ph ph-user-plus"></i> ${t('proj_stakeholder_add')}
+        </button>
+      </div>
+      <div id="projectStakeholderFormBody"></div>
+      <div id="projectStakeholdersBody">
+        ${p.stakeholders && p.stakeholders.length
+          ? p.stakeholders.map(sh => _projectStakeholderRowHtml(p.id, sh)).join('')
+          : `<p class="capa-empty">${t('proj_stakeholders_none')}</p>`}
+      </div>
     </div>`
+}
+
+const PROJECT_STAKEHOLDER_ROLE_LABEL_KEYS = {
+  sponsor: 'proj_stakeholder_role_sponsor',
+  responsible: 'proj_stakeholder_role_responsible',
+  customer: 'proj_stakeholder_role_customer',
+}
+
+function _projectStakeholderRowHtml(projectId, sh) {
+  const roleLabel = t(PROJECT_STAKEHOLDER_ROLE_LABEL_KEYS[sh.role] || sh.role)
+  const nameHtml = sh.type === 'registered'
+    ? `<i class="ph ph-user-circle"></i> ${escHtml(sh.userId || '')}`
+    : `<i class="ph ph-user"></i> ${t('proj_stakeholder_external_prefix')}${escHtml(sh.externalName || '')}`
+  return `
+    <div class="check-row" style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)">
+      <span>${nameHtml}</span>
+      <span style="display:flex;align-items:center;gap:8px">
+        <span class="badge role-badge-${sh.role}">${escHtml(roleLabel)}</span>
+        <button class="tmpl-delete-btn" title="${t('proj_stakeholder_remove')}" onclick="removeProjectStakeholder('${projectId}','${sh.id}')">
+          <i class="ph ph-x"></i>
+        </button>
+      </span>
+    </div>`
+}
+
+function openProjectStakeholderForm(projectId) {
+  const holder = document.getElementById('projectStakeholderFormBody')
+  if (!holder) return
+  holder.innerHTML = `
+    <div class="form-group" style="border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px;margin-bottom:12px;">
+      <div style="display:flex;gap:12px;margin-bottom:8px;">
+        <label style="display:flex;align-items:center;gap:4px;font-size:.85rem;">
+          <input type="radio" name="projStakeholderType" value="registered" checked onchange="_toggleProjectStakeholderTypeInputs()"> ${t('proj_stakeholder_type_registered')}
+        </label>
+        <label style="display:flex;align-items:center;gap:4px;font-size:.85rem;">
+          <input type="radio" name="projStakeholderType" value="external" onchange="_toggleProjectStakeholderTypeInputs()"> ${t('proj_stakeholder_type_external')}
+        </label>
+      </div>
+      <input id="projStakeholderUserId" class="form-input" placeholder="${t('proj_stakeholder_userIdPlaceholder')}" style="margin-bottom:8px;">
+      <input id="projStakeholderExternalName" class="form-input" placeholder="${t('proj_stakeholder_externalNamePlaceholder')}" style="margin-bottom:8px;display:none;">
+      <select id="projStakeholderRole" class="form-input" style="margin-bottom:8px;">
+        <option value="sponsor">${t('proj_stakeholder_role_sponsor')}</option>
+        <option value="responsible">${t('proj_stakeholder_role_responsible')}</option>
+        <option value="customer">${t('proj_stakeholder_role_customer')}</option>
+      </select>
+      <p class="capa-form-error" id="projectStakeholderFormError" style="display:none;color:var(--danger-text);font-size:.8rem"></p>
+      <div style="display:flex;gap:8px;">
+        <button class="btn btn-primary btn-sm" onclick="submitProjectStakeholder('${projectId}')">
+          <i class="ph ph-floppy-disk"></i> ${t('proj_stakeholder_save')}
+        </button>
+        <button class="btn btn-secondary btn-sm" onclick="document.getElementById('projectStakeholderFormBody').innerHTML=''">
+          ${t('proj_stakeholder_cancel')}
+        </button>
+      </div>
+    </div>`
+}
+
+function _toggleProjectStakeholderTypeInputs() {
+  const type = document.querySelector('input[name="projStakeholderType"]:checked')?.value
+  const userIdEl = document.getElementById('projStakeholderUserId')
+  const extNameEl = document.getElementById('projStakeholderExternalName')
+  if (userIdEl) userIdEl.style.display = type === 'registered' ? '' : 'none'
+  if (extNameEl) extNameEl.style.display = type === 'external' ? '' : 'none'
+}
+
+async function submitProjectStakeholder(projectId) {
+  const type = document.querySelector('input[name="projStakeholderType"]:checked')?.value || 'registered'
+  const role = document.getElementById('projStakeholderRole')?.value
+  const errEl = document.getElementById('projectStakeholderFormError')
+  const body = { type, role }
+  if (type === 'registered') {
+    const userId = document.getElementById('projStakeholderUserId')?.value.trim()
+    if (!userId) { if (errEl) { errEl.textContent = t('proj_stakeholder_userIdRequired'); errEl.style.display = 'block' } ; return }
+    body.userId = userId
+  } else {
+    const externalName = document.getElementById('projStakeholderExternalName')?.value.trim()
+    if (!externalName) { if (errEl) { errEl.textContent = t('proj_stakeholder_externalNameRequired'); errEl.style.display = 'block' } ; return }
+    body.externalName = externalName
+  }
+  const res = await fetch(`/projects/${projectId}/stakeholders`, { method: 'POST', headers: apiHeaders('editor'), body: JSON.stringify(body) })
+  if (!res.ok) {
+    const e = await res.json().catch(() => ({}))
+    if (errEl) { errEl.textContent = e.error || t('proj_saveError'); errEl.style.display = 'block' }
+    return
+  }
+  await renderProjectDetail(projectId)
+}
+
+async function removeProjectStakeholder(projectId, stakeholderId) {
+  const res = await fetch(`/projects/${projectId}/stakeholders/${stakeholderId}`, { method: 'DELETE', headers: apiHeaders('editor') })
+  if (!res.ok) {
+    const e = await res.json().catch(() => ({}))
+    alert(e.error || t('proj_saveError'))
+    return
+  }
+  await renderProjectDetail(projectId)
 }
 
 function _projectChecklistRowHtml(projectId, item) {

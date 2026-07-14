@@ -56,4 +56,36 @@ function completeChecklistItem(projectId, itemKey, { done, evidenceRef, waived, 
   return list[idx]
 }
 
-module.exports = { CHECKLIST_TEMPLATE, create, getAll, getById, completeChecklistItem }
+const STAKEHOLDER_ROLES = ['sponsor', 'responsible', 'customer']
+
+function addStakeholder(projectId, { type, userId, externalName, role }) {
+  if (!STAKEHOLDER_ROLES.includes(role)) {
+    throw Object.assign(new Error(`Geçersiz rol: ${role}`), { status: 422 })
+  }
+  if (type === 'registered' && !userId) {
+    throw Object.assign(new Error('userId zorunlu (kayıtlı kullanıcı)'), { status: 422 })
+  }
+  if (type === 'external' && !externalName) {
+    throw Object.assign(new Error('externalName zorunlu (dış kişi)'), { status: 422 })
+  }
+  const list = load()
+  const idx = list.findIndex(p => p.id === projectId)
+  if (idx === -1) return null
+  const stakeholder = { id: `sh_${require('crypto').randomBytes(4).toString('hex')}`, type, userId: userId || null, externalName: externalName || null, role }
+  list[idx].stakeholders.push(stakeholder)
+  list[idx].updatedAt = nowISO()
+  save(list)
+  return list[idx]
+}
+
+function removeStakeholder(projectId, stakeholderId) {
+  const list = load()
+  const idx = list.findIndex(p => p.id === projectId)
+  if (idx === -1) return null
+  list[idx].stakeholders = list[idx].stakeholders.filter(s => s.id !== stakeholderId)
+  list[idx].updatedAt = nowISO()
+  save(list)
+  return list[idx]
+}
+
+module.exports = { CHECKLIST_TEMPLATE, STAKEHOLDER_ROLES, create, getAll, getById, completeChecklistItem, addStakeholder, removeStakeholder }

@@ -1,6 +1,6 @@
 'use strict'
 const { createTestDataDir, removeTestDataDir } = require('./setup/testEnv')
-const { loginAs, authedPost, authedPut, authedGet } = require('./setup/authHelper')
+const { loginAs, authedPost, authedPut, authedGet, authedDelete } = require('./setup/authHelper')
 
 let dataDir, app, adminCookie
 let projectId
@@ -51,5 +51,46 @@ describe('Proje / SDLC modülü', () => {
   test('"Gerekmiyor" gerekçesiz reddedilir (422)', async () => {
     const res = await authedPut(app, adminCookie, `/projects/${projectId}/checklist/design_doc`, { waived: true })
     expect(res.status).toBe(422)
+  })
+})
+
+describe('Proje — Paydaş Yönetimi', () => {
+  test('kayıtlı kullanıcı paydaş olarak eklenebilir', async () => {
+    const res = await authedPost(app, adminCookie, `/projects/${projectId}/stakeholders`, {
+      type: 'registered', userId: 'admin', role: 'sponsor',
+    })
+    expect(res.status).toBe(201)
+    expect(res.body.stakeholders).toHaveLength(1)
+    expect(res.body.stakeholders[0]).toMatchObject({ type: 'registered', userId: 'admin', role: 'sponsor' })
+  })
+
+  test('dış kişi eklenirken ad zorunlu (422)', async () => {
+    const res = await authedPost(app, adminCookie, `/projects/${projectId}/stakeholders`, {
+      type: 'external', role: 'customer',
+    })
+    expect(res.status).toBe(422)
+  })
+
+  test('dış kişi adıyla eklenebilir', async () => {
+    const res = await authedPost(app, adminCookie, `/projects/${projectId}/stakeholders`, {
+      type: 'external', externalName: 'Kübra Er', role: 'customer',
+    })
+    expect(res.status).toBe(201)
+    expect(res.body.stakeholders).toHaveLength(2)
+  })
+
+  test('geçersiz rol reddedilir (422)', async () => {
+    const res = await authedPost(app, adminCookie, `/projects/${projectId}/stakeholders`, {
+      type: 'registered', userId: 'admin', role: 'not_a_real_role',
+    })
+    expect(res.status).toBe(422)
+  })
+
+  test('paydaş kaldırılabilir', async () => {
+    const list = await authedGet(app, adminCookie, `/projects/${projectId}`)
+    const stakeholderId = list.body.stakeholders[0].id
+    const res = await authedDelete(app, adminCookie, `/projects/${projectId}/stakeholders/${stakeholderId}`)
+    expect(res.status).toBe(200)
+    expect(res.body.stakeholders).toHaveLength(1)
   })
 })

@@ -37,4 +37,22 @@ router.put('/projects/:id/checklist/:itemKey', requireAuth, authorize('editor'),
   }
 })
 
+router.post('/projects/:id/stakeholders', requireAuth, authorize('editor'), async (req, res) => {
+  try {
+    const updated = await projectStore.addStakeholder(req.params.id, req.body)
+    if (!updated) return res.status(404).json({ error: 'Not found' })
+    await require('../db/auditStore').append({ user: req.user, action: 'update', resource: 'project', resourceId: updated.id, detail: 'stakeholder added' })
+    res.status(201).json(updated)
+  } catch (e) {
+    res.status(e.status || 500).json({ error: e.message })
+  }
+})
+
+router.delete('/projects/:id/stakeholders/:stakeholderId', requireAuth, authorize('editor'), async (req, res) => {
+  const updated = await projectStore.removeStakeholder(req.params.id, req.params.stakeholderId)
+  if (!updated) return res.status(404).json({ error: 'Not found' })
+  await require('../db/auditStore').append({ user: req.user, action: 'update', resource: 'project', resourceId: updated.id, detail: 'stakeholder removed' })
+  res.json(updated)
+})
+
 module.exports = router

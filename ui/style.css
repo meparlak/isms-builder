@@ -972,6 +972,12 @@ hr { border: none; border-top: 1px solid var(--border); margin: 0; }
 .role-badge-reader       { background: color-mix(in srgb,#8c9bab 15%,transparent); color:#8c9bab; }
 .role-badge-revision     { background: color-mix(in srgb,#e2b96f 15%,transparent); color:#e2b96f; }
 
+/* Stakeholder role badges (PRJ paydaş rolleri) */
+.role-badge-sponsor      { background: color-mix(in srgb,var(--accent,#4f8cff) 15%,transparent); color: var(--accent-text,#4f8cff); }
+.role-badge-responsible  { background: color-mix(in srgb,#2dd4bf 15%,transparent); color:#2dd4bf; }
+.role-badge-customer     { background: color-mix(in srgb,#8c9bab 15%,transparent); color:#8c9bab; }
+.badge { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .03em; }
+
 /* ════════════════════════════════════════════════════════════
    RISK & COMPLIANCE
    ════════════════════════════════════════════════════════════ */
