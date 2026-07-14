@@ -1049,1195 +1049,1195 @@
   },
   "admin_title": {
     "en": "Administration",
-    "missingTr": true
+    "tr": "Yönetim"
   },
   "admin_users": {
     "en": "Users",
-    "missingTr": true
+    "tr": "Kullanıcılar"
   },
   "admin_entities": {
     "en": "Entities",
-    "missingTr": true
+    "tr": "Birimler"
   },
   "admin_templates": {
     "en": "Existing Templates",
-    "missingTr": true
+    "tr": "Mevcut Şablonlar"
   },
   "admin_lists": {
     "en": "Lists",
-    "missingTr": true
+    "tr": "Listeler"
   },
   "admin_org": {
     "en": "Organization",
-    "missingTr": true
+    "tr": "Organizasyon"
   },
   "admin_auditLog": {
     "en": "Audit Log",
-    "missingTr": true
+    "tr": "Denetim İzi"
   },
   "admin_maintenance": {
     "en": "Maintenance",
-    "missingTr": true
+    "tr": "Bakım"
   },
   "admin_trash": {
     "en": "Trash",
-    "missingTr": true
+    "tr": "Çöp Kutusu"
   },
   "admin_sysConfig": {
     "en": "System Configuration",
-    "missingTr": true
+    "tr": "Sistem Yapılandırması"
   },
   "admin_newUser": {
     "en": "New User",
-    "missingTr": true
+    "tr": "Yeni Kullanıcı"
   },
   "admin_email": {
     "en": "Email",
-    "missingTr": true
+    "tr": "E-posta"
   },
   "admin_role": {
     "en": "Role",
-    "missingTr": true
+    "tr": "Rol"
   },
   "admin_actions": {
     "en": "Actions",
-    "missingTr": true
+    "tr": "İşlemler"
   },
   "admin_saveUser": {
     "en": "Save User",
-    "missingTr": true
+    "tr": "Kullanıcıyı Kaydet"
   },
   "admin_deleteUser": {
     "en": "Really delete user \"[NAME]\"?",
-    "missingTr": true
+    "tr": "\"[NAME]\" kullanıcısı gerçekten silinsin mi?"
   },
   "admin_noTemplates": {
     "en": "No templates found.",
-    "missingTr": true
+    "tr": "Şablon bulunamadı."
   },
   "admin_restoreDefaults": {
     "en": "Restore defaults",
-    "missingTr": true
+    "tr": "Varsayılanları geri yükle"
   },
   "admin_newEntry": {
     "en": "New entry…",
-    "missingTr": true
+    "tr": "Yeni girdi…"
   },
   "admin_labelPlaceholder": {
     "en": "Label…",
-    "missingTr": true
+    "tr": "Etiket…"
   },
   "admin_idLabelRequired": {
     "en": "ID and label are required.",
-    "missingTr": true
+    "tr": "ID ve etiket zorunludur."
   },
   "admin_resetListConfirm": {
     "en": "Reset list to default values?",
-    "missingTr": true
+    "tr": "Liste varsayılan değerlere sıfırlansın mı?"
   },
   "admin_resetError": {
     "en": "Error resetting.",
-    "missingTr": true
+    "tr": "Sıfırlama hatası."
   },
   "admin_userManagement": {
     "en": "User Management",
-    "missingTr": true
+    "tr": "Kullanıcı Yönetimi"
   },
   "admin_noUsers": {
     "en": "No users found",
-    "missingTr": true
+    "tr": "Kullanıcı bulunamadı"
   },
   "admin_functions": {
     "en": "Functions",
-    "missingTr": true
+    "tr": "Fonksiyonlar"
   },
   "admin_domain": {
     "en": "Domain",
-    "missingTr": true
+    "tr": "Alan Adı"
   },
   "admin_editUser": {
     "en": "Edit User",
-    "missingTr": true
+    "tr": "Kullanıcıyı Düzenle"
   },
   "admin_username": {
     "en": "Username",
-    "missingTr": true
+    "tr": "Kullanıcı Adı"
   },
   "admin_orgFunctions": {
     "en": "Organisational Functions",
-    "missingTr": true
+    "tr": "Organizasyonel Fonksiyonlar"
   },
   "admin_functionsHint": {
     "en": "Multiple functions possible — independent of RBAC rank",
-    "missingTr": true
+    "tr": "Birden fazla fonksiyon mümkündür — RBAC rütbesinden bağımsızdır"
   },
   "admin_confirmPassword": {
     "en": "Confirm Password",
-    "missingTr": true
+    "tr": "Şifreyi Onayla"
   },
   "admin_userRequired": {
     "en": "Username, e-mail and role are required.",
-    "missingTr": true
+    "tr": "Kullanıcı adı, e-posta ve rol zorunludur."
   },
   "admin_passwordMismatch": {
     "en": "Passwords do not match.",
-    "missingTr": true
+    "tr": "Şifreler eşleşmiyor."
   },
   "admin_passwordMin": {
     "en": "Password must be at least 6 characters.",
-    "missingTr": true
+    "tr": "Şifre en az 6 karakter olmalıdır."
   },
   "admin_corporateEntities": {
     "en": "Corporate Structure – Entities",
-    "missingTr": true
+    "tr": "Kurumsal Yapı – Birimler"
   },
   "admin_newEntity": {
     "en": "New Entity",
-    "missingTr": true
+    "tr": "Yeni Birim"
   },
   "admin_editEntity": {
     "en": "Edit Entity",
-    "missingTr": true
+    "tr": "Birimi Düzenle"
   },
   "admin_entitySubsidiary": {
     "en": "Subsidiary",
-    "missingTr": true
+    "tr": "Bağlı Kuruluş"
   },
   "admin_entityHolding": {
     "en": "Holding",
-    "missingTr": true
+    "tr": "Holding"
   },
   "admin_deleteEntityConfirm": {
     "en": "Delete entity \"{name}\"?",
-    "missingTr": true
+    "tr": "\"{name}\" birimi silinsin mi?"
   },
   "auditLog_clear": {
     "en": "Clear Log",
-    "missingTr": true
+    "tr": "Günlüğü Temizle"
   },
   "auditLog_allActions": {
     "en": "All Actions",
-    "missingTr": true
+    "tr": "Tüm İşlemler"
   },
   "auditLog_allRes": {
     "en": "All Resources",
-    "missingTr": true
+    "tr": "Tüm Kaynaklar"
   },
   "auditLog_time": {
     "en": "Timestamp",
-    "missingTr": true
+    "tr": "Zaman Damgası"
   },
   "auditLog_action": {
     "en": "Action",
-    "missingTr": true
+    "tr": "İşlem"
   },
   "auditLog_resource": {
     "en": "Resource",
-    "missingTr": true
+    "tr": "Kaynak"
   },
   "auditLog_detail": {
     "en": "Detail",
-    "missingTr": true
+    "tr": "Detay"
   },
   "auditLog_noEntries": {
     "en": "No entries.",
-    "missingTr": true
+    "tr": "Kayıt yok."
   },
   "auditLog_total": {
     "en": "Total entries",
-    "missingTr": true
+    "tr": "Toplam kayıt"
   },
   "auditLog_confirm": {
     "en": "Really clear the audit log? This action cannot be undone.",
-    "missingTr": true
+    "tr": "Denetim izi gerçekten temizlensin mi? Bu işlem geri alınamaz."
   },
   "auditLog_clearError": {
     "en": "Error clearing the log.",
-    "missingTr": true
+    "tr": "Günlük temizlenirken hata oluştu."
   },
   "audit_userPlaceholder": {
     "en": "User…",
-    "missingTr": true
+    "tr": "Kullanıcı…"
   },
   "audit_actionCreated": {
     "en": "Created",
-    "missingTr": true
+    "tr": "Oluşturuldu"
   },
   "audit_actionUpdated": {
     "en": "Updated",
-    "missingTr": true
+    "tr": "Güncellendi"
   },
   "audit_actionDeleted": {
     "en": "Deleted",
-    "missingTr": true
+    "tr": "Silindi"
   },
   "audit_actionLogin": {
     "en": "Login",
-    "missingTr": true
+    "tr": "Giriş"
   },
   "audit_actionLogout": {
     "en": "Logout",
-    "missingTr": true
+    "tr": "Çıkış"
   },
   "audit_actionExport": {
     "en": "Export",
-    "missingTr": true
+    "tr": "Dışa Aktarma"
   },
   "audit_actionSettings": {
     "en": "Settings",
-    "missingTr": true
+    "tr": "Ayarlar"
   },
   "audit_resourceUser": {
     "en": "User",
-    "missingTr": true
+    "tr": "Kullanıcı"
   },
   "org_general": {
     "en": "General Information",
-    "missingTr": true
+    "tr": "Genel Bilgiler"
   },
   "org_name": {
     "en": "Organization Name",
-    "missingTr": true
+    "tr": "Organizasyon Adı"
   },
   "org_short": {
     "en": "Short Code",
-    "missingTr": true
+    "tr": "Kısa Kod"
   },
   "org_scope": {
     "en": "ISMS Scope",
-    "missingTr": true
+    "tr": "ISMS Kapsamı"
   },
   "org_responsibilities": {
     "en": "Responsibilities",
-    "missingTr": true
+    "tr": "Sorumluluklar"
   },
   "org_ciso": {
     "en": "CISO / ISM Name",
-    "missingTr": true
+    "tr": "CISO / BGY Sorumlusu Adı"
   },
   "org_cisoEmail": {
     "en": "CISO / ISM Email",
-    "missingTr": true
+    "tr": "CISO / BGY Sorumlusu E-postası"
   },
   "org_dso": {
     "en": "DPO / Privacy Officer Name",
-    "missingTr": true
+    "tr": "VKS / Gizlilik Sorumlusu Adı"
   },
   "org_dsoEmail": {
     "en": "DPO / Privacy Officer Email",
-    "missingTr": true
+    "tr": "VKS / Gizlilik Sorumlusu E-postası"
   },
   "org_2fa": {
     "en": "Enforce Two-Factor Authentication (2FA) system-wide",
-    "missingTr": true
+    "tr": "İki Faktörlü Kimlik Doğrulamayı (2FA) sistem genelinde zorunlu kıl"
   },
   "org_save": {
     "en": "Save",
-    "missingTr": true
+    "tr": "Kaydet"
   },
   "org_dataConfiguration": {
     "en": "Organisation Data & Configuration",
-    "missingTr": true
+    "tr": "Organizasyon Verisi ve Yapılandırması"
   },
   "org_logoText": {
     "en": "Logo Text / Abbreviation",
-    "missingTr": true
+    "tr": "Logo Metni / Kısaltma"
   },
   "org_icsContact": {
     "en": "ICS Contact",
-    "missingTr": true
+    "tr": "ICS İrtibat Kişisi"
   },
   "org_securityPolicies": {
     "en": "Security Policies",
-    "missingTr": true
+    "tr": "Güvenlik Politikaları"
   },
   "org_2faDesc": {
     "en": "When enabled, users <strong>cannot log in without 2FA configured</strong>. Login will be rejected with an explanatory message.",
-    "missingTr": true
+    "tr": "Etkinleştirildiğinde, kullanıcılar <strong>2FA yapılandırılmadan oturum açamaz</strong>. Giriş açıklayıcı bir mesajla reddedilir."
   },
   "org_2faWarning": {
     "en": "Only enable if <em>all</em> user accounts already have 2FA set up. Otherwise affected accounts will be locked out immediately.",
-    "missingTr": true
+    "tr": "Yalnızca <em>tüm</em> kullanıcı hesaplarında 2FA zaten kuruluysa etkinleştirin. Aksi halde etkilenen hesaplar anında kilitlenir."
   },
   "org_saveSecurity": {
     "en": "Save security settings",
-    "missingTr": true
+    "tr": "Güvenlik ayarlarını kaydet"
   },
   "org_emailNotifications": {
     "en": "E-Mail Notifications",
-    "missingTr": true
+    "tr": "E-posta Bildirimleri"
   },
   "org_smtpEnvNotice": {
     "en": "SMTP credentials are configured in the <code>.env</code> file (<code>SMTP_HOST</code>, <code>SMTP_USER</code> etc.). Only notification types are controlled here.",
-    "missingTr": true
+    "tr": "SMTP kimlik bilgileri <code>.env</code> dosyasında yapılandırılır (<code>SMTP_HOST</code>, <code>SMTP_USER</code> vb.). Burada yalnızca bildirim türleri kontrol edilir."
   },
   "org_enableDigest": {
     "en": "Enable daily digest e-mails",
-    "missingTr": true
+    "tr": "Günlük özet e-postalarını etkinleştir"
   },
   "org_digestDesc": {
     "en": "Sends a daily summary to CISO, GDPO and admin e-mail once per day.",
-    "missingTr": true
+    "tr": "CISO, GDPO ve yönetici e-postasına günde bir kez günlük özet gönderir."
   },
   "org_adminEmail": {
     "en": "Admin E-Mail",
-    "missingTr": true
+    "tr": "Yönetici E-postası"
   },
   "org_emailHighRisks": {
     "en": "High/critical risks",
-    "missingTr": true
+    "tr": "Yüksek/kritik riskler"
   },
   "org_emailBcmDue": {
     "en": "BCM tests due (≤ 14 days)",
-    "missingTr": true
+    "tr": "Süresi gelen BCM testleri (≤ 14 gün)"
   },
   "org_emailSupplierAudits": {
     "en": "Supplier audits due (≤ 14 days)",
-    "missingTr": true
+    "tr": "Süresi gelen tedarikçi denetimleri (≤ 14 gün)"
   },
   "org_emailDsar": {
     "en": "DSAR deadlines (≤ 3 days)",
-    "missingTr": true
+    "tr": "DSAR son tarihleri (≤ 3 gün)"
   },
   "org_emailGdprIncidents": {
     "en": "GDPR incidents > 48h open",
-    "missingTr": true
+    "tr": "48 saatten fazla açık GDPR olayları"
   },
   "org_emailDeletionLog": {
     "en": "Deletion log Art. 17 GDPR",
-    "missingTr": true
+    "tr": "Silme günlüğü Md. 17 GDPR"
   },
   "org_emailContracts": {
     "en": "Expiring contracts (≤ 30 days)",
-    "missingTr": true
+    "tr": "Süresi dolan sözleşmeler (≤ 30 gün)"
   },
   "org_emailTemplateReview": {
     "en": "Template review due (≤ 14 days)",
-    "missingTr": true
+    "tr": "Süresi gelen şablon gözden geçirmesi (≤ 14 gün)"
   },
   "org_toCiso": {
     "en": "→ CISO e-mail",
-    "missingTr": true
+    "tr": "→ CISO e-postası"
   },
   "org_toGdpo": {
     "en": "→ GDPO e-mail",
-    "missingTr": true
+    "tr": "→ GDPO e-postası"
   },
   "org_toAdmin": {
     "en": "→ Admin e-mail",
-    "missingTr": true
+    "tr": "→ Yönetici e-postası"
   },
   "org_saveEmail": {
     "en": "Save e-mail settings",
-    "missingTr": true
+    "tr": "E-posta ayarlarını kaydet"
   },
   "org_smtpConfig": {
     "en": "SMTP Configuration",
-    "missingTr": true
+    "tr": "SMTP Yapılandırması"
   },
   "org_securityNotice": {
     "en": "Security notice",
-    "missingTr": true
+    "tr": "Güvenlik uyarısı"
   },
   "org_smtpSecurityNotice": {
     "en": "The SMTP password is stored in <code>org-settings.json</code> (plaintext). For higher security, use environment variables (<code>SMTP_HOST</code> etc.) in <code>.env</code> — these always take precedence.",
-    "missingTr": true
+    "tr": "SMTP şifresi <code>org-settings.json</code> dosyasında (düz metin) saklanır. Daha yüksek güvenlik için <code>.env</code> içinde ortam değişkenlerini (<code>SMTP_HOST</code> vb.) kullanın — bunlar her zaman önceliklidir."
   },
   "org_smtpEnvOverride": {
     "en": "SMTP is configured via <code>.env</code> variables — UI settings are ignored.",
-    "missingTr": true
+    "tr": "SMTP, <code>.env</code> değişkenleri üzerinden yapılandırılmış — arayüz ayarları dikkate alınmıyor."
   },
   "org_smtpHost": {
     "en": "SMTP Host",
-    "missingTr": true
+    "tr": "SMTP Sunucusu"
   },
   "org_smtpPort": {
     "en": "Port",
-    "missingTr": true
+    "tr": "Port"
   },
   "org_smtpEncryption": {
     "en": "TLS / Encryption",
-    "missingTr": true
+    "tr": "TLS / Şifreleme"
   },
   "org_smtpUsername": {
     "en": "Username",
-    "missingTr": true
+    "tr": "Kullanıcı Adı"
   },
   "org_smtpPassword": {
     "en": "Password",
-    "missingTr": true
+    "tr": "Şifre"
   },
   "org_smtpSender": {
     "en": "Sender (From)",
-    "missingTr": true
+    "tr": "Gönderen (Kimden)"
   },
   "org_saveSmtp": {
     "en": "Save SMTP",
-    "missingTr": true
+    "tr": "SMTP'yi Kaydet"
   },
   "org_sendTestMail": {
     "en": "Send test mail",
-    "missingTr": true
+    "tr": "Test e-postası gönder"
   },
   "org_testMailDesc": {
     "en": "Test mail will be sent to the CISO e-mail ({email}). Please enter a CISO e-mail under Responsibilities first.",
-    "missingTr": true
+    "tr": "Test e-postası CISO e-posta adresine ({email}) gönderilecektir. Lütfen önce Sorumluluklar bölümünde bir CISO e-postası girin."
   },
   "org_menuOrder": {
     "en": "Menu Order",
-    "missingTr": true
+    "tr": "Menü Sırası"
   },
   "org_menuOrderDesc": {
     "en": "Drag entries with <i class=\"ph ph-dots-six-vertical\"></i> or use ↑/↓ to adjust the sidebar order. Dashboard, Admin and Settings are always shown.",
-    "missingTr": true
+    "tr": "Kenar çubuğu sırasını ayarlamak için girdileri <i class=\"ph ph-dots-six-vertical\"></i> ile sürükleyin veya ↑/↓ kullanın. Panel, Yönetim ve Ayarlar her zaman gösterilir."
   },
   "org_saveOrder": {
     "en": "Save order",
-    "missingTr": true
+    "tr": "Sırayı kaydet"
   },
   "org_units": {
     "en": "Organisational Units",
-    "missingTr": true
+    "tr": "Organizasyonel Birimler"
   },
   "org_newUnit": {
     "en": "New Unit",
-    "missingTr": true
+    "tr": "Yeni Birim"
   },
   "org_unitsDesc": {
     "en": "Defines the IT org structure (CIO → GroupIT / GroupApp → Local IT). Used for ownership assignment across all modules (Risks, Assets, Suppliers, BCM, Goals, Findings).",
-    "missingTr": true
+    "tr": "BT organizasyon yapısını tanımlar (CIO → GroupIT / GroupApp → Yerel BT). Tüm modüllerde (Riskler, Varlıklar, Tedarikçiler, İş Sürekliliği, Hedefler, Bulgular) sahiplik ataması için kullanılır."
   },
   "org_parent": {
     "en": "Parent",
-    "missingTr": true
+    "tr": "Üst Birim"
   },
   "org_head": {
     "en": "Head",
-    "missingTr": true
+    "tr": "Yönetici"
   },
   "org_noUnits": {
     "en": "No units defined.",
-    "missingTr": true
+    "tr": "Tanımlanmış birim yok."
   },
   "org_itUnit": {
     "en": "IT Organisational Unit",
-    "missingTr": true
+    "tr": "BT Organizasyonel Birimi"
   },
   "org_parentUnit": {
     "en": "Parent Unit",
-    "missingTr": true
+    "tr": "Üst Birim"
   },
   "org_noParentTop": {
     "en": "none (top level)",
-    "missingTr": true
+    "tr": "yok (en üst seviye)"
   },
   "org_headPerson": {
     "en": "Head (Person)",
-    "missingTr": true
+    "tr": "Yönetici (Kişi)"
   },
   "org_deleteUnitConfirm": {
     "en": "Delete unit \"{name}\"?",
-    "missingTr": true
+    "tr": "\"{name}\" birimi silinsin mi?"
   },
   "org_noUnitAssigned": {
     "en": "no unit assigned",
-    "missingTr": true
+    "tr": "atanmış birim yok"
   },
   "org_2faEnabled": {
     "en": "2FA enforcement enabled.",
-    "missingTr": true
+    "tr": "2FA zorunluluğu etkinleştirildi."
   },
   "org_2faDisabled": {
     "en": "2FA enforcement disabled.",
-    "missingTr": true
+    "tr": "2FA zorunluluğu devre dışı bırakıldı."
   },
   "org_splashSaved": {
     "en": "Splash screen settings saved.",
-    "missingTr": true
+    "tr": "Açılış ekranı ayarları kaydedildi."
   },
   "org_orderSaved": {
     "en": "Order saved. Reload the page for the change to take effect.",
-    "missingTr": true
+    "tr": "Sıra kaydedildi. Değişikliğin etkili olması için sayfayı yeniden yükleyin."
   },
   "org_smtpSaved": {
     "en": "SMTP saved.",
-    "missingTr": true
+    "tr": "SMTP kaydedildi."
   },
   "org_sendingTestMail": {
     "en": "Sending test mail…",
-    "missingTr": true
+    "tr": "Test e-postası gönderiliyor…"
   },
   "org_cisoEmailMissing": {
     "en": "CISO email missing — please enter it first and save org settings.",
-    "missingTr": true
+    "tr": "CISO e-postası eksik — lütfen önce girip organizasyon ayarlarını kaydedin."
   },
   "org_testMailSent": {
     "en": "Test mail sent to {email}.",
-    "missingTr": true
+    "tr": "Test e-postası {email} adresine gönderildi."
   },
   "org_smtpConnectionFailed": {
     "en": "SMTP connection failed",
-    "missingTr": true
+    "tr": "SMTP bağlantısı başarısız oldu"
   },
   "org_emailSaved": {
     "en": "E-mail settings saved.",
-    "missingTr": true
+    "tr": "E-posta ayarları kaydedildi."
   },
   "maint_backend": {
     "en": "Storage Backend",
-    "missingTr": true
+    "tr": "Depolama Altyapısı"
   },
   "maint_backup": {
     "en": "Data Backup & Export",
-    "missingTr": true
+    "tr": "Veri Yedekleme ve Dışa Aktarma"
   },
   "maint_download": {
     "en": "Download Full Export",
-    "missingTr": true
+    "tr": "Tam Dışa Aktarmayı İndir"
   },
   "maint_cleanup": {
     "en": "Start Cleanup",
-    "missingTr": true
+    "tr": "Temizliği Başlat"
   },
   "maint_demoReset": {
     "en": "Perform Demo Reset",
-    "missingTr": true
+    "tr": "Demo Sıfırlama Uygula"
   },
   "maint_demoImport": {
     "en": "Import Demo Data",
-    "missingTr": true
+    "tr": "Demo Verisi İçe Aktar"
   },
   "maint_dataMaintenance": {
     "en": "Data & Maintenance",
-    "missingTr": true
+    "tr": "Veri ve Bakım"
   },
   "maint_productionRestartTitle": {
     "en": "Transition to production — server restart required",
-    "missingTr": true
+    "tr": "Üretime geçiş — sunucu yeniden başlatma gerekli"
   },
   "maint_productionRestartDesc": {
     "en": "The demo reset has set <code>STORAGE_BACKEND=sqlite</code> in <code>.env</code>. The change will take effect after a server restart. Until then the server is still running with the old backend.",
-    "missingTr": true
+    "tr": "Demo sıfırlama, <code>.env</code> dosyasında <code>STORAGE_BACKEND=sqlite</code> ayarını yaptı. Değişiklik, sunucu yeniden başlatıldıktan sonra etkili olacaktır. O zamana kadar sunucu eski altyapıyla çalışmaya devam ediyor."
   },
   "maint_productionRestartAfter": {
     "en": "After restart, the system stores all data in <code>data/isms.db</code> (SQLite, WAL mode). JSON files are retained as a fallback backup.",
-    "missingTr": true
+    "tr": "Yeniden başlatmadan sonra sistem tüm verileri <code>data/isms.db</code> içinde saklar (SQLite, WAL modu). JSON dosyaları yedek olarak korunur."
   },
   "maint_backendDesc": {
     "en": "<strong>JSON</strong> — for demo and development only. <strong>SQLite</strong> — required for production (ACID-compliant, WAL mode, no data loss on crash). The demo reset automatically sets <code>STORAGE_BACKEND=sqlite</code> in <code>.env</code> and requires a server restart afterwards.",
-    "missingTr": true
+    "tr": "<strong>JSON</strong> — yalnızca demo ve geliştirme içindir. <strong>SQLite</strong> — üretim için gereklidir (ACID uyumlu, WAL modu, çökmede veri kaybı yok). Demo sıfırlama, <code>.env</code> içinde otomatik olarak <code>STORAGE_BACKEND=sqlite</code> ayarlar ve ardından sunucu yeniden başlatmayı gerektirir."
   },
   "maint_backupDesc": {
     "en": "Exports all data (templates, SoA, risks, GDPR, users, settings) as a single JSON file. Attachments (PDF/DOCX) are not included.",
-    "missingTr": true
+    "tr": "Tüm verileri (şablonlar, SOA, riskler, GDPR, kullanıcılar, ayarlar) tek bir JSON dosyası olarak dışa aktarır. Ekler (PDF/DOCX) dahil değildir."
   },
   "maint_cleanupOrphans": {
     "en": "Clean up orphaned attachments",
-    "missingTr": true
+    "tr": "Sahipsiz ekleri temizle"
   },
   "maint_cleanupOrphansDesc": {
     "en": "Removes files from the upload directory that are no longer associated with any template.",
-    "missingTr": true
+    "tr": "Artık hiçbir şablonla ilişkili olmayan dosyaları yükleme dizininden kaldırır."
   },
   "maint_aiIntegration": {
     "en": "AI Integration (Ollama)",
-    "missingTr": true
+    "tr": "AI Entegrasyonu (Ollama)"
   },
   "maint_aiDesc": {
     "en": "Controls semantic search and future AI features. Ollama must be installed and running locally. If Ollama is unavailable, features can be disabled here — the topbar search will then fall back to \"unavailable\".",
-    "missingTr": true
+    "tr": "Anlamsal aramayı ve gelecekteki AI özelliklerini kontrol eder. Ollama'nın yerel olarak kurulu ve çalışıyor olması gerekir. Ollama kullanılamıyorsa özellikler buradan devre dışı bırakılabilir — üst çubuk araması bu durumda \"kullanılamıyor\" durumuna düşer."
   },
   "maint_enableAiSearch": {
     "en": "Enable AI search",
-    "missingTr": true
+    "tr": "AI aramayı etkinleştir"
   },
   "maint_aiGlobalSwitch": {
     "en": "Global switch — disables all AI features system-wide.",
-    "missingTr": true
+    "tr": "Genel anahtar — tüm AI özelliklerini sistem genelinde devre dışı bırakır."
   },
   "maint_ollamaUrl": {
     "en": "Ollama URL",
-    "missingTr": true
+    "tr": "Ollama URL"
   },
   "maint_embeddingModel": {
     "en": "Embedding model",
-    "missingTr": true
+    "tr": "Gömme (embedding) modeli"
   },
   "maint_rebuildIndex": {
     "en": "Rebuild index",
-    "missingTr": true
+    "tr": "İndeksi yeniden oluştur"
   },
   "maint_checkStatus": {
     "en": "Check status",
-    "missingTr": true
+    "tr": "Durumu kontrol et"
   },
   "maint_demoResetTitle": {
     "en": "Demo Reset",
-    "missingTr": true
+    "tr": "Demo Sıfırlama"
   },
   "maint_demoResetDesc": {
     "en": "Exports all current demo data, then deletes all module data and users (except admin) and resets the admin account to <code>adminpass</code> without 2FA. The exported JSON file is automatically downloaded. After the reset, a notice for the administrator will appear on the login page.",
-    "missingTr": true
+    "tr": "Mevcut tüm demo verilerini dışa aktarır, ardından tüm modül verilerini ve kullanıcıları (yönetici hariç) siler ve yönetici hesabını 2FA olmadan <code>adminpass</code> şifresine sıfırlar. Dışa aktarılan JSON dosyası otomatik olarak indirilir. Sıfırlamadan sonra giriş sayfasında yönetici için bir uyarı görünür."
   },
   "maint_demoImportDesc": {
     "en": "Restores a previously exported demo dataset. All module data will be overwritten. Users alice and bob will be restored with original passwords and without 2FA. The admin account remains unchanged.",
-    "missingTr": true
+    "tr": "Daha önce dışa aktarılmış bir demo veri kümesini geri yükler. Tüm modül verilerinin üzerine yazılır. alice ve bob kullanıcıları orijinal şifreleriyle ve 2FA olmadan geri yüklenir. Yönetici hesabı değişmeden kalır."
   },
   "maint_selectJsonImport": {
     "en": "Select JSON file & import",
-    "missingTr": true
+    "tr": "JSON dosyası seç ve içe aktar"
   },
   "maint_splashScreen": {
     "en": "Login Splash Screen",
-    "missingTr": true
+    "tr": "Giriş Açılış Ekranı"
   },
   "maint_splashDesc": {
     "en": "After login, show the ISMS Builder banner image for a few seconds before the dashboard opens.",
-    "missingTr": true
+    "tr": "Girişten sonra, panel açılmadan önce birkaç saniye ISMS Builder banner görselini göster."
   },
   "maint_enableSplash": {
     "en": "Enable splash screen",
-    "missingTr": true
+    "tr": "Açılış ekranını etkinleştir"
   },
   "maint_showSplash": {
     "en": "Show banner image after successful login",
-    "missingTr": true
+    "tr": "Başarılı girişten sonra banner görselini göster"
   },
   "maint_durationSeconds": {
     "en": "Duration (seconds)",
-    "missingTr": true
+    "tr": "Süre (saniye)"
   },
   "modules_title": {
     "en": "System Configuration – Module Management",
-    "missingTr": true
+    "tr": "Sistem Yapılandırması – Modül Yönetimi"
   },
   "modules_desc": {
     "en": "Enable or disable modules according to your organisation structure and applicable standards. Disabled modules are hidden system-wide — for all users. <strong>Dashboard, Admin and Settings</strong> are always active.",
-    "missingTr": true
+    "tr": "Organizasyon yapınıza ve geçerli standartlara göre modülleri etkinleştirin veya devre dışı bırakın. Devre dışı bırakılan modüller tüm sistemde — tüm kullanıcılar için — gizlenir. <strong>Panel, Yönetim ve Ayarlar</strong> her zaman aktiftir."
   },
   "modules_active": {
     "en": "Active",
-    "missingTr": true
+    "tr": "Aktif"
   },
   "modules_disabled": {
     "en": "Disabled",
-    "missingTr": true
+    "tr": "Devre Dışı"
   },
   "modules_soaFrameworks": {
     "en": "SoA – Active Compliance Frameworks",
-    "missingTr": true
+    "tr": "SOA – Aktif Uyumluluk Çerçeveleri"
   },
   "modules_soaFrameworksDesc": {
     "en": "Select the frameworks relevant to your organisation. Disabled frameworks are hidden in SoA, Dashboard and Reports.",
-    "missingTr": true
+    "tr": "Organizasyonunuzla ilgili çerçeveleri seçin. Devre dışı bırakılan çerçeveler SOA, Panel ve Raporlarda gizlenir."
   },
   "modules_soaFrameworksNote": {
     "en": "At least one framework must remain active — an ISMS without a compliance framework would not make sense. The system prevents disabling the last active framework.",
-    "missingTr": true
+    "tr": "En az bir çerçeve aktif kalmalıdır — uyumluluk çerçevesi olmayan bir ISMS anlamlı olmaz. Sistem, son aktif çerçevenin devre dışı bırakılmasını engeller."
   },
   "modules_saveApply": {
     "en": "Save & apply configuration",
-    "missingTr": true
+    "tr": "Yapılandırmayı kaydet ve uygula"
   },
   "modules_lastFrameworkWarning": {
     "en": "At least one framework must remain active — the last active framework cannot be disabled.",
-    "missingTr": true
+    "tr": "En az bir çerçeve aktif kalmalıdır — son aktif çerçeve devre dışı bırakılamaz."
   },
   "modules_savedUpdating": {
     "en": "Saved. Sidebar and SoA are being updated…",
-    "missingTr": true
+    "tr": "Kaydedildi. Kenar çubuğu ve SOA güncelleniyor…"
   },
   "inc_title": {
     "en": "Incident Inbox – CISO Processing",
-    "missingTr": true
+    "tr": "Olay Kutusu – CISO İşlemleri"
   },
   "inc_allStatus": {
     "en": "All Status",
-    "missingTr": true
+    "tr": "Tüm Durumlar"
   },
   "inc_new": {
     "en": "New",
-    "missingTr": true
+    "tr": "Yeni"
   },
   "inc_inReview": {
     "en": "In Review",
-    "missingTr": true
+    "tr": "Gözden Geçirmede"
   },
   "inc_assigned": {
     "en": "Assigned",
-    "missingTr": true
+    "tr": "Atandı"
   },
   "inc_closed": {
     "en": "Closed",
-    "missingTr": true
+    "tr": "Kapatıldı"
   },
   "inc_none": {
     "en": "No incidents present.",
-    "missingTr": true
+    "tr": "Kayıtlı olay yok."
   },
   "inc_select": {
     "en": "Select incident from list",
-    "missingTr": true
+    "tr": "Listeden bir olay seçin"
   },
   "inc_inboxTitle": {
     "en": "Incident Inbox – CISO Processing",
-    "missingTr": true
+    "tr": "Olay Kutusu – CISO İşlemleri"
   },
   "inc_statusNew": {
     "en": "New",
-    "missingTr": true
+    "tr": "Yeni"
   },
   "inc_statusReview": {
     "en": "Under Review",
-    "missingTr": true
+    "tr": "İncelemede"
   },
   "inc_statusAssigned": {
     "en": "Assigned",
-    "missingTr": true
+    "tr": "Atandı"
   },
   "inc_statusClosed": {
     "en": "Closed",
-    "missingTr": true
+    "tr": "Kapatıldı"
   },
   "inc_reference": {
     "en": "Reference",
-    "missingTr": true
+    "tr": "Referans"
   },
   "inc_company": {
     "en": "Company",
-    "missingTr": true
+    "tr": "Şirket"
   },
   "inc_typeLabel": {
     "en": "Incident Type",
-    "missingTr": true
+    "tr": "Olay Türü"
   },
   "inc_reporterEmail": {
     "en": "Reporter Email",
-    "missingTr": true
+    "tr": "Bildiren E-postası"
   },
   "inc_resolved": {
     "en": "Resolved?",
-    "missingTr": true
+    "tr": "Çözüldü mü?"
   },
   "inc_description": {
     "en": "Description",
-    "missingTr": true
+    "tr": "Açıklama"
   },
   "inc_measuresTaken": {
     "en": "Measures Already Taken",
-    "missingTr": true
+    "tr": "Alınan Önlemler"
   },
   "inc_localContact": {
     "en": "Local Contact",
-    "missingTr": true
+    "tr": "Yerel İrtibat Kişisi"
   },
   "inc_cisoDecision": {
     "en": "CISO Decision",
-    "missingTr": true
+    "tr": "CISO Kararı"
   },
   "inc_setStatus": {
     "en": "Set Status",
-    "missingTr": true
+    "tr": "Durumu Ayarla"
   },
   "inc_assignTo": {
     "en": "Assign to",
-    "missingTr": true
+    "tr": "Ata"
   },
   "inc_notAssigned": {
     "en": "not yet assigned",
-    "missingTr": true
+    "tr": "henüz atanmadı"
   },
   "inc_itDepartment": {
     "en": "IT Department",
-    "missingTr": true
+    "tr": "BT Departmanı"
   },
   "inc_dataProtection": {
     "en": "Data Protection / DPO",
-    "missingTr": true
+    "tr": "Veri Koruma / VKS"
   },
   "inc_reportable": {
     "en": "Reportable (GDPR)",
-    "missingTr": true
+    "tr": "Bildirim Gerektiriyor (GDPR)"
   },
   "inc_stillOpen": {
     "en": "still open",
-    "missingTr": true
+    "tr": "hâlâ açık"
   },
   "inc_reportableTbd": {
     "en": "Unclear – under review",
-    "missingTr": true
+    "tr": "Belirsiz – incelemede"
   },
   "inc_reportableYes": {
     "en": "Yes – reportable",
-    "missingTr": true
+    "tr": "Evet – bildirim gerekiyor"
   },
   "inc_reportableNo": {
     "en": "No – not reportable",
-    "missingTr": true
+    "tr": "Hayır – bildirim gerekmiyor"
   },
   "inc_cisoNotes": {
     "en": "CISO Notes",
-    "missingTr": true
+    "tr": "CISO Notları"
   },
   "inc_lastUpdated": {
     "en": "Last updated",
-    "missingTr": true
+    "tr": "Son güncelleme"
   },
   "inc_saveDecision": {
     "en": "Save Decision",
-    "missingTr": true
+    "tr": "Kararı Kaydet"
   },
   "inc_ref": {
     "en": "Reference Number",
-    "missingTr": true
+    "tr": "Referans Numarası"
   },
   "inc_type": {
     "en": "Type of Incident",
-    "missingTr": true
+    "tr": "Olay Türü"
   },
   "inc_updated": {
     "en": "Last updated:",
-    "missingTr": true
+    "tr": "Son güncelleme:"
   },
   "inc_deleteConfirm": {
     "en": "Really delete this incident?\nThis action cannot be undone.",
-    "missingTr": true
+    "tr": "Bu olay gerçekten silinsin mi?\nBu işlem geri alınamaz."
   },
   "uc_title": {
     "en": "Under Construction",
-    "missingTr": true
+    "tr": "Yapım Aşamasında"
   },
   "uc_text": {
     "en": "This module will be available in a future release.",
-    "missingTr": true
+    "tr": "Bu modül gelecekteki bir sürümde kullanılabilir olacak."
   },
   "col_date": {
     "en": "Date",
-    "missingTr": true
+    "tr": "Tarih"
   },
   "col_title": {
     "en": "Title",
-    "missingTr": true
+    "tr": "Başlık"
   },
   "col_status": {
     "en": "Status",
-    "missingTr": true
+    "tr": "Durum"
   },
   "col_owner": {
     "en": "Owner",
-    "missingTr": true
+    "tr": "Sahip"
   },
   "col_type": {
     "en": "Type",
-    "missingTr": true
+    "tr": "Tür"
   },
   "col_version": {
     "en": "Version",
-    "missingTr": true
+    "tr": "Sürüm"
   },
   "col_name": {
     "en": "Name",
-    "missingTr": true
+    "tr": "Ad"
   },
   "col_actions": {
     "en": "Actions",
-    "missingTr": true
+    "tr": "İşlemler"
   },
   "col_modified": {
     "en": "Modified",
-    "missingTr": true
+    "tr": "Değiştirildi"
   },
   "col_label": {
     "en": "Label",
-    "missingTr": true
+    "tr": "Etiket"
   },
   "sidebar_create": {
     "en": "Create",
-    "missingTr": true
+    "tr": "Oluştur"
   },
   "sidebar_nav": {
     "en": "Navigation",
-    "missingTr": true
+    "tr": "Gezinme"
   },
   "sidebar_types": {
     "en": "Template Types",
-    "missingTr": true
+    "tr": "Şablon Türleri"
   },
   "sidebar_admin": {
     "en": "Administration",
-    "missingTr": true
+    "tr": "Yönetim"
   },
   "tmpl_childPage": {
     "en": "Child Page",
-    "missingTr": true
+    "tr": "Alt Sayfa"
   },
   "tmpl_move": {
     "en": "Move",
-    "missingTr": true
+    "tr": "Taşı"
   },
   "tmpl_history": {
     "en": "History",
-    "missingTr": true
+    "tr": "Geçmiş"
   },
   "tmpl_soaControls": {
     "en": "SoA Controls",
-    "missingTr": true
+    "tr": "SOA Kontrolleri"
   },
   "tmpl_appliesTo": {
     "en": "Applies to",
-    "missingTr": true
+    "tr": "Uygulandığı"
   },
   "tmpl_nextReview": {
     "en": "Next Review:",
-    "missingTr": true
+    "tr": "Sonraki Gözden Geçirme:"
   },
   "tmpl_titlePlaceholder": {
     "en": "Template title",
-    "missingTr": true
+    "tr": "Şablon başlığı"
   },
   "tmpl_contentPlaceholder": {
     "en": "Template content…",
-    "missingTr": true
+    "tr": "Şablon içeriği…"
   },
   "tmpl_linkSoaControls": {
     "en": "Link SoA Controls",
-    "missingTr": true
+    "tr": "SOA Kontrollerini Bağla"
   },
   "tmpl_controlSearchPlaceholder": {
     "en": "Search controls…",
-    "missingTr": true
+    "tr": "Kontrol ara…"
   },
   "tmpl_createNew": {
     "en": "Create New Template",
-    "missingTr": true
+    "tr": "Yeni Şablon Oluştur"
   },
   "tmpl_newTitlePlaceholder": {
     "en": "Enter title…",
-    "missingTr": true
+    "tr": "Başlık girin…"
   },
   "tmpl_trashConfirm": {
     "en": "Move template \"{title}\" to trash?",
-    "missingTr": true
+    "tr": "\"{title}\" şablonu çöp kutusuna taşınsın mı?"
   },
   "tmpl_permanentDeleteConfirm": {
     "en": "Permanently delete template \"{title}\"? This cannot be undone.",
-    "missingTr": true
+    "tr": "\"{title}\" şablonu kalıcı olarak silinsin mi? Bu işlem geri alınamaz."
   },
   "tmpl_restoreConfirm": {
     "en": "Restore template \"{title}\"?",
-    "missingTr": true
+    "tr": "\"{title}\" şablonu geri yüklensin mi?"
   },
   "tfa_hint": {
     "en": "2FA not active",
-    "missingTr": true
+    "tr": "2FA aktif değil"
   },
   "tfa_title": {
     "en": "2FA not set up – enable now",
-    "missingTr": true
+    "tr": "2FA kurulu değil – şimdi etkinleştirin"
   },
   "tfa_banner": {
     "en": "You have not enabled 2FA yet. We recommend setting up 2FA for better security.",
-    "missingTr": true
+    "tr": "Henüz 2FA'yı etkinleştirmediniz. Daha iyi güvenlik için 2FA kurmanızı öneririz."
   },
   "tfa_setup": {
     "en": "Setup now",
-    "missingTr": true
+    "tr": "Şimdi kur"
   },
   "err_saveFailed": {
     "en": "Error saving",
-    "missingTr": true
+    "tr": "Kaydetme hatası"
   },
   "err_network": {
     "en": "Network Error",
-    "missingTr": true
+    "tr": "Ağ Hatası"
   },
   "err_load": {
     "en": "Load failed",
-    "missingTr": true
+    "tr": "Yükleme başarısız"
   },
   "err_delete": {
     "en": "Deletion failed.",
-    "missingTr": true
+    "tr": "Silme başarısız."
   },
   "err_popupBlocked": {
     "en": "Pop-up blocked. Please allow pop-ups for this site.",
-    "missingTr": true
+    "tr": "Pop-up engellendi. Lütfen bu site için pop-up izni verin."
   },
   "err_invalidJson": {
     "en": "Invalid JSON file.",
-    "missingTr": true
+    "tr": "Geçersiz JSON dosyası."
   },
   "err_restartServer": {
     "en": "Please restart the server.",
-    "missingTr": true
+    "tr": "Lütfen sunucuyu yeniden başlatın."
   },
   "msg_saved": {
     "en": "Saved.",
-    "missingTr": true
+    "tr": "Kaydedildi."
   },
   "msg_deleted": {
     "en": "Deleted.",
-    "missingTr": true
+    "tr": "Silindi."
   },
   "msg_restored": {
     "en": "Restored.",
-    "missingTr": true
+    "tr": "Geri yüklendi."
   },
   "topbar_settings": {
     "en": "Settings",
-    "missingTr": true
+    "tr": "Ayarlar"
   },
   "topbar_logout": {
     "en": "Sign out",
-    "missingTr": true
+    "tr": "Çıkış Yap"
   },
   "topbar_search": {
     "en": "Search…",
-    "missingTr": true
+    "tr": "Ara…"
   },
   "topbar_toggleSidebar": {
     "en": "Show/hide sidebar",
-    "missingTr": true
+    "tr": "Kenar çubuğunu göster/gizle"
   },
   "guidance_noPrintableDocs": {
     "en": "No printable documents in this category.",
-    "missingTr": true
+    "tr": "Bu kategoride yazdırılabilir belge yok."
   },
   "guidance_printCategoryTitle": {
     "en": "Print all documents in this category as PDF",
-    "missingTr": true
+    "tr": "Bu kategorideki tüm belgeleri PDF olarak yazdır"
   },
   "guidance_printAll": {
     "en": "Print all",
-    "missingTr": true
+    "tr": "Tümünü yazdır"
   },
   "filter_allStatuses": {
     "en": "All Statuses",
-    "missingTr": true
+    "tr": "Tüm Durumlar"
   },
   "filter_allCats": {
     "en": "All Categories",
-    "missingTr": true
+    "tr": "Tüm Kategoriler"
   },
   "filter_allEntities": {
     "en": "All Entities",
-    "missingTr": true
+    "tr": "Tüm Birimler"
   },
   "col_responsible": {
     "en": "Responsible",
-    "missingTr": true
+    "tr": "Sorumlu"
   },
   "col_dueDate": {
     "en": "Due Date",
-    "missingTr": true
+    "tr": "Son Tarih"
   },
   "col_category": {
     "en": "Category",
-    "missingTr": true
+    "tr": "Kategori"
   },
   "col_counterparty": {
     "en": "Counterparty",
-    "missingTr": true
+    "tr": "Karşı Taraf"
   },
   "col_endDate": {
     "en": "End Date",
-    "missingTr": true
+    "tr": "Bitiş Tarihi"
   },
   "col_signed": {
     "en": "Signed",
-    "missingTr": true
+    "tr": "İmzalandı"
   },
   "col_expires": {
     "en": "Expires",
-    "missingTr": true
+    "tr": "Süresi Doluyor"
   },
   "col_published": {
     "en": "Published",
-    "missingTr": true
+    "tr": "Yayımlandı"
   },
   "col_validUntil": {
     "en": "Valid Until",
-    "missingTr": true
+    "tr": "Geçerlilik Sonu"
   },
   "col_country": {
     "en": "Country",
-    "missingTr": true
+    "tr": "Ülke"
   },
   "col_nextAudit": {
     "en": "Next Audit",
-    "missingTr": true
+    "tr": "Sonraki Denetim"
   },
   "col_auditResult": {
     "en": "Audit Result",
-    "missingTr": true
+    "tr": "Denetim Sonucu"
   },
   "col_dataAccess": {
     "en": "Data Access",
-    "missingTr": true
+    "tr": "Veri Erişimi"
   },
   "col_criticality": {
     "en": "Criticality",
-    "missingTr": true
+    "tr": "Kritiklik"
   },
   "col_process": {
     "en": "Process",
-    "missingTr": true
+    "tr": "Süreç"
   },
   "col_department": {
     "en": "Department",
-    "missingTr": true
+    "tr": "Departman"
   },
   "col_due": {
     "en": "Due:",
-    "missingTr": true
+    "tr": "Son Tarih:"
   },
   "col_deletedBy": {
     "en": "Deleted By",
-    "missingTr": true
+    "tr": "Silen"
   },
   "col_deletedAt": {
     "en": "Deleted At",
-    "missingTr": true
+    "tr": "Silinme Tarihi"
   },
   "kpi_total": {
     "en": "Total",
-    "missingTr": true
+    "tr": "Toplam"
   },
   "kpi_active": {
     "en": "Active",
-    "missingTr": true
+    "tr": "Aktif"
   },
   "kpi_overdue": {
     "en": "Overdue",
-    "missingTr": true
+    "tr": "Süresi Geçti"
   },
   "kpi_planned": {
     "en": "Planned",
-    "missingTr": true
+    "tr": "Planlandı"
   },
   "kpi_inProgress": {
     "en": "In Progress",
-    "missingTr": true
+    "tr": "Devam Ediyor"
   },
   "kpi_completed": {
     "en": "Completed",
-    "missingTr": true
+    "tr": "Tamamlandı"
   },
   "common_close": {
     "en": "Close",
-    "missingTr": true
+    "tr": "Kapat"
   },
   "common_edit": {
     "en": "Edit",
-    "missingTr": true
+    "tr": "Düzenle"
   },
   "common_applicableEntities": {
     "en": "Applicable to Entities",
-    "missingTr": true
+    "tr": "Uygulandığı Birimler"
   },
   "common_policiesPicker": {
     "en": "Policies / Templates",
-    "missingTr": true
+    "tr": "Politikalar / Şablonlar"
   },
   "risk_new": {
     "en": "New Risk",
