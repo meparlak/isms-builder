@@ -146,6 +146,7 @@
     settings_langEn:     { de: 'English',                   en: 'English',                    fr: 'English (Anglais)',          nl: 'English (Engels)' , tr: 'English (İngilizce)' },
     settings_langFr:     { de: 'Français',                  en: 'Français (French)',          fr: 'Français',                  nl: 'Français (Frans)' , tr: 'Français (Fransızca)' },
     settings_langNl:     { de: 'Nederlands',                en: 'Nederlands (Dutch)',         fr: 'Nederlands (Néerlandais)',   nl: 'Nederlands' , tr: 'Nederlands (Hollandaca)' },
+    settings_langTr:     { de: 'Türkisch',                  en: 'Turkish',                    fr: 'Turc',                       nl: 'Turks' , tr: 'Türkçe' },
     settings_langSaved:  { de: 'Sprache gespeichert. Seite wird neu geladen…', en: 'Language saved. Reloading page…', fr: 'Langue enregistrée. Rechargement de la page…', nl: 'Taal opgeslagen. Pagina wordt herladen…' , tr: 'Dil kaydedildi. Sayfa yeniden yükleniyor…' },
 
     settings_password:   { de: 'Passwort ändern',           en: 'Change Password',            fr: 'Modifier le mot de passe',  nl: 'Wachtwoord wijzigen' , tr: 'Şifre Değiştir' },
