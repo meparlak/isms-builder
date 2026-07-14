@@ -1,6 +1,6 @@
 'use strict'
 const { createTestDataDir, removeTestDataDir } = require('./setup/testEnv')
-const { loginAs, authedGet, authedPost } = require('./setup/authHelper')
+const { loginAs, authedGet, authedPost, authedPut } = require('./setup/authHelper')
 
 let dataDir, app, adminCookie, contentownerCookie
 
@@ -62,6 +62,44 @@ describe('Kanıt Havuzu — agregasyon (/evidence)', () => {
     // Alakasız sourceType filtresi bu kaydı döndürmemeli
     const filtered = await authedGet(app, adminCookie, '/evidence?sourceType=bcm_bia')
     expect(filtered.body.some(e => e.sourceId === contractId)).toBe(false)
+  })
+
+  test('bir proje checklist öğesi evidenceRef ile tamamlanınca /evidence içinde görünür', async () => {
+    // Proje oluştur
+    const projRes = await authedPost(app, contentownerCookie, '/projects', {
+      code: 'SDLC-2024-TEST',
+      name: 'Test SDLC Projesi',
+      requestingUnit: 'IT Department',
+      targetDate: '2024-12-31',
+    })
+    expect(projRes.status).toBe(201)
+    const projectId = projRes.body.id
+
+    // Checklist öğesini evidenceRef ile tamamla
+    const completeRes = await authedPut(app, contentownerCookie, `/projects/${projectId}/checklist/request_form`, {
+      done: true,
+      evidenceRef: 'form-20240101-abcdef.pdf',
+    })
+    expect(completeRes.status).toBe(200)
+
+    // /evidence ile sourceType=project filtresi uygulanarak sorgula
+    const res = await authedGet(app, adminCookie, '/evidence?sourceType=project')
+    expect(res.status).toBe(200)
+    expect(Array.isArray(res.body)).toBe(true)
+    expect(res.body.length).toBeGreaterThan(0)
+    expect(res.body.some(e => e.sourceId === projectId)).toBe(true)
+
+    const projectEvidence = res.body.find(e => e.sourceId === projectId)
+    expect(projectEvidence).toMatchObject({
+      sourceType: 'project',
+      sourceId: projectId,
+      sourceTitle: 'Test SDLC Projesi',
+      filename: 'form-20240101-abcdef.pdf',
+    })
+
+    // Alakasız sourceType filtresi bu kaydı döndürmemeli
+    const filtered = await authedGet(app, adminCookie, '/evidence?sourceType=legal_contract')
+    expect(filtered.body.some(e => e.sourceId === projectId)).toBe(false)
   })
 
   test('/evidence auth olmadan 401', async () => {

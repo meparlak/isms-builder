@@ -42,7 +42,21 @@ const SOURCES = [
   { type: 'legal_privacy_policy', fetch: async () => (await require('./legalStore').privacyPolicies.getAll()) || [] },
 
   { type: 'template', fetch: async () => (await require('../storage').getTemplates({})) || [] },
-  // Yeni modül eklendikçe (PRJ — Faz 3) buraya bir satır eklenir.
+
+  { type: 'project', fetch: async () => {
+    const projectStore = require('./projectStore')
+    const projects = (await projectStore.getAll()) || []
+    // Proje checklist'indeki her evidenceRef'i bir ek gibi dönüştür
+    return projects.map(proj => ({
+      ...proj,
+      attachments: (proj.checklist || [])
+        .filter(item => item.evidenceRef)
+        .map(item => ({
+          id: item.key,
+          filename: item.evidenceRef,
+        }))
+    }))
+  }},
 ]
 
 async function listAll({ sourceType } = {}) {
