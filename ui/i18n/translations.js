@@ -74,6 +74,7 @@
     nav_legal:       { de: 'Legal & Privacy',     en: 'Legal & Privacy',   fr: 'Juridique & Confidentialité', nl: 'Juridisch & Privacy' , tr: 'Hukuk ve Gizlilik' },
     nav_incident:    { de: 'Incident Inbox',      en: 'Incident Inbox',    fr: 'Boîte incidents',       nl: 'Incidentenpostbus' , tr: 'Olay Kutusu' },
     nav_capa:        { de: 'CAPA / Maßnahmen',    en: 'CAPA / Actions',    fr: 'CAPA / Actions',        nl: 'CAPA / Acties' , tr: 'DÖF / Aksiyonlar' },
+    nav_evidence:    { de: 'Nachweis-Pool',       en: 'Evidence Pool',     fr: 'Pool de preuves',       nl: 'Bewijspool' , tr: 'Kanıt Havuzu' },
     nav_suppliers:   { de: 'Lieferkette',         en: 'Supply Chain',      fr: 'Chaîne d\'approvisionnement', nl: 'Leveranciersketen' , tr: 'Tedarik Zinciri' },
     nav_bcm:         { de: 'Business Continuity', en: 'Business Continuity', fr: 'Continuité d\'activité', nl: 'Bedrijfscontinuïteit' , tr: 'İş Sürekliliği' },
     nav_governance:  { de: 'Governance',          en: 'Governance',        fr: 'Gouvernance',           nl: 'Bestuur' , tr: 'Yönetişim' },
@@ -1040,6 +1041,26 @@
     capa_closeWarning:       { de: 'Das Schließen kann nicht rückgängig gemacht werden.', en: 'Closing cannot be undone.', fr: 'La clôture ne peut pas être annulée.', nl: 'Sluiten kan niet ongedaan worden gemaakt.' , tr: 'Kapatma işlemi geri alınamaz.' },
     capa_verificationNote:   { de: 'Verifizierungsnotiz',          en: 'Verification note',           fr: 'Note de vérification',            nl: 'Verificatienotitie' , tr: 'Doğrulama notu' },
     capa_verificationRequired: { de: 'Eine Verifizierungsnotiz ist erforderlich.', en: 'A verification note is required.', fr: 'Une note de vérification est requise.', nl: 'Een verificatienotitie is verplicht.' , tr: 'Doğrulama notu zorunludur.' },
+
+    // ── Evidence Pool (Kanıt Havuzu) — agregasyon görünümü ─────────────────
+    evidence_title:            { de: 'Nachweis-Pool',                en: 'Evidence Pool',               fr: 'Pool de preuves',                 nl: 'Bewijspool' , tr: 'Kanıt Havuzu' },
+    evidence_none:             { de: 'Keine Nachweise vorhanden.',   en: 'No evidence found.',          fr: 'Aucune preuve trouvée.',          nl: 'Geen bewijs gevonden.' , tr: 'Kanıt bulunamadı.' },
+    evidence_col_file:         { de: 'Datei',                        en: 'File',                        fr: 'Fichier',                         nl: 'Bestand' , tr: 'Dosya' },
+    evidence_col_linkedRecord: { de: 'Verknüpfter Datensatz',        en: 'Linked Record',               fr: 'Enregistrement lié',              nl: 'Gekoppeld record' , tr: 'Bağlı Kayıt' },
+    evidence_col_size:         { de: 'Größe',                        en: 'Size',                        fr: 'Taille',                          nl: 'Grootte' , tr: 'Boyut' },
+    evidence_col_scan:         { de: 'Scan',                         en: 'Scan',                        fr: 'Analyse',                         nl: 'Scan' , tr: 'Tarama' },
+    evidence_col_uploadedBy:   { de: 'Hochgeladen von',              en: 'Uploaded By',                 fr: 'Téléchargé par',                  nl: 'Geüpload door' , tr: 'Yükleyen' },
+    evidence_scanNotAvailable: { de: 'Nicht verfügbar',              en: 'Not available',               fr: 'Non disponible',                  nl: 'Niet beschikbaar' , tr: 'Mevcut değil' },
+    evidence_source_bcm_bia:               { de: 'BCM – BIA',                    en: 'BCM – BIA',                    fr: 'PCA – BIA',                       nl: 'BCM – BIA' , tr: 'İSY – BIA' },
+    evidence_source_bcm_plan:              { de: 'BCM – Plan',                   en: 'BCM – Plan',                   fr: 'PCA – Plan',                      nl: 'BCM – Plan' , tr: 'İSY – Plan' },
+    evidence_source_bcm_exercise:          { de: 'BCM – Übung',                  en: 'BCM – Exercise',               fr: 'PCA – Exercice',                  nl: 'BCM – Oefening' , tr: 'İSY – Tatbikat' },
+    evidence_source_governance_review:     { de: 'Governance – Bewertung',       en: 'Governance – Review',          fr: 'Gouvernance – Revue',              nl: 'Governance – Beoordeling' , tr: 'Yönetişim – Gözden Geçirme' },
+    evidence_source_governance_action:     { de: 'Governance – Maßnahme',        en: 'Governance – Action',          fr: 'Gouvernance – Action',            nl: 'Governance – Actie' , tr: 'Yönetişim – Aksiyon' },
+    evidence_source_governance_meeting:    { de: 'Governance – Sitzung',         en: 'Governance – Meeting',         fr: 'Gouvernance – Réunion',           nl: 'Governance – Vergadering' , tr: 'Yönetişim – Toplantı' },
+    evidence_source_legal_contract:        { de: 'Recht – Vertrag',              en: 'Legal – Contract',             fr: 'Juridique – Contrat',             nl: 'Juridisch – Contract' , tr: 'Hukuk – Sözleşme' },
+    evidence_source_legal_nda:             { de: 'Recht – NDA',                  en: 'Legal – NDA',                  fr: 'Juridique – NDA',                 nl: 'Juridisch – NDA' , tr: 'Hukuk – Gizlilik Sözleşmesi' },
+    evidence_source_legal_privacy_policy:  { de: 'Recht – Datenschutzrichtlinie', en: 'Legal – Privacy Policy',      fr: 'Juridique – Politique de confidentialité', nl: 'Juridisch – Privacybeleid' , tr: 'Hukuk – Gizlilik Politikası' },
+    evidence_source_template:              { de: 'Vorlage',                      en: 'Template',                     fr: 'Modèle',                          nl: 'Sjabloon' , tr: 'Şablon' },
 
   };
 })();

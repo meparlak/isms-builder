@@ -41,6 +41,7 @@ const SECTION_META = [
   { id:'legal',      labelKey:'nav_legal',      label:'Legal & Privacy',    icon:'ph-scales',              minRole:'contentowner', functions:['ciso','dso'] },
   { id:'incident',   labelKey:'nav_incident',   label:'Incident Inbox',     icon:'ph-siren',               minRole:'contentowner', functions:['ciso'] },
   { id:'capa',       labelKey:'nav_capa',       label:'CAPA / Actions',     icon:'ph-check-square',        minRole:'reader',       functions:['ciso','contentowner'] },
+  { id:'evidence',   labelKey:'nav_evidence',   label:'Evidence Pool',     icon:'ph-archive-tray',        minRole:'reader' },
   { id:'suppliers',  labelKey:'nav_suppliers',  label:'Supply Chain',       icon:'ph-truck',               minRole:'contentowner', functions:['ciso','revision'] },
   { id:'bcm',        labelKey:'nav_bcm',        label:'Business Continuity',icon:'ph-heartbeat',           minRole:'contentowner', functions:['ciso','revision'] },
   { id:'governance', labelKey:'nav_governance', label:'Governance',         icon:'ph-chalkboard-teacher',  minRole:'contentowner', functions:['ciso','dso','revision','qmb'] },
@@ -932,7 +933,7 @@ function loadSection(sectionId){
 }
 
 function removeAllDynamicPanels() {
-  ['dashboardContainer','soaContainer','guidanceContainer','riskContainer','calendarContainer','adminPanelContainer','settingsPanelContainer','reportsContainer','gdprContainer','trainingContainer','incidentContainer','legalContainer','goalsContainer','assetsContainer','governanceContainer','bcmContainer','suppliersContainer','policyAcksContainer','capaBoardContainer'].forEach(id => {
+  ['dashboardContainer','soaContainer','guidanceContainer','riskContainer','calendarContainer','adminPanelContainer','settingsPanelContainer','reportsContainer','gdprContainer','trainingContainer','incidentContainer','legalContainer','goalsContainer','assetsContainer','governanceContainer','bcmContainer','suppliersContainer','policyAcksContainer','capaBoardContainer','evidencePoolContainer'].forEach(id => {
     dom(id)?.remove()
   })
 }
@@ -2078,6 +2079,11 @@ function renderSectionContent(sectionId){
     editorCard.style.display = 'none'
     listPanel.style.display = 'none'
     renderCapaBoard()
+    return
+  } else if (sectionId === 'evidence') {
+    editorCard.style.display = 'none'
+    listPanel.style.display = 'none'
+    renderEvidencePool()
     return
   } else if (sectionId === 'legal') {
     editorCard.style.display = 'none'
@@ -3471,6 +3477,98 @@ async function _capaKriCounts() {
   } catch {
     return { openCapa: null, overdue: null }
   }
+}
+
+// ── Kanıt Havuzu (Evidence Pool) — bcm/governance/legal/şablon eklerinin
+// salt-okunur, tek listede toplandığı görünüm. Bkz. server/db/evidenceIndex.js.
+const EVIDENCE_SOURCE_LABEL_KEYS = {
+  bcm_bia:               'evidence_source_bcm_bia',
+  bcm_plan:               'evidence_source_bcm_plan',
+  bcm_exercise:            'evidence_source_bcm_exercise',
+  governance_review:      'evidence_source_governance_review',
+  governance_action:      'evidence_source_governance_action',
+  governance_meeting:     'evidence_source_governance_meeting',
+  legal_contract:          'evidence_source_legal_contract',
+  legal_nda:               'evidence_source_legal_nda',
+  legal_privacy_policy:    'evidence_source_legal_privacy_policy',
+  template:                'evidence_source_template',
+}
+
+function _evidenceFmtSize(b) {
+  b = b || 0
+  return b > 1048576 ? (b / 1048576).toFixed(1) + ' MB' : (b / 1024).toFixed(0) + ' KB'
+}
+
+async function _fetchEvidenceList() {
+  const res = await fetch('/evidence', { headers: apiHeaders('reader') })
+  return res.ok ? await res.json() : []
+}
+
+async function renderEvidencePool() {
+  dom('evidencePoolContainer')?.remove()
+  const container = document.createElement('div')
+  container.id = 'evidencePoolContainer'
+  container.className = 'evidence-pool-container'
+  dom('editor').appendChild(container)
+
+  container.innerHTML = `
+    <div class="capa-board-header">
+      <h2><i class="ph ph-archive-tray"></i> ${t('evidence_title')}</h2>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <button class="btn btn-secondary btn-sm" onclick="renderEvidencePool()">
+          <i class="ph ph-arrow-clockwise"></i> ${t('refresh')}
+        </button>
+      </div>
+    </div>
+    <div id="evidencePoolBody"><p class="report-loading">${t('loading')}</p></div>`
+
+  if (!container.isConnected) return
+  await loadEvidencePool()
+}
+
+async function loadEvidencePool() {
+  const body = document.getElementById('evidencePoolBody')
+  if (!body) return
+  const items = await _fetchEvidenceList()
+
+  if (!items.length) {
+    body.innerHTML = `<p class="capa-empty">${t('evidence_none')}</p>`
+    return
+  }
+
+  body.innerHTML = `
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>${t('evidence_col_file')}</th>
+          <th>${t('evidence_col_linkedRecord')}</th>
+          <th>${t('evidence_col_size')}</th>
+          <th>${t('evidence_col_scan')}</th>
+          <th>${t('evidence_col_uploadedBy')}</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${items.map(_evidenceRowHtml).join('')}
+      </tbody>
+    </table>`
+}
+
+function _evidenceRowHtml(e) {
+  const fileName = e.originalName || e.filename || ''
+  const sourceLabelKey = EVIDENCE_SOURCE_LABEL_KEYS[e.sourceType]
+  const sourceLabel = sourceLabelKey ? t(sourceLabelKey) : e.sourceType
+  const uploadedAt = e.uploadedAt ? new Date(e.uploadedAt).toLocaleDateString('en-GB') : ''
+  return `
+    <tr>
+      <td><i class="ph ph-file"></i> ${escHtml(fileName)}</td>
+      <td>
+        <span class="capa-source-badge">${escHtml(sourceLabel)}</span>
+        ${e.sourceTitle ? `<div class="evidence-source-title">${escHtml(e.sourceTitle)}</div>` : ''}
+      </td>
+      <td>${_evidenceFmtSize(e.size)}</td>
+      <td><span class="evidence-scan-badge">${t('evidence_scanNotAvailable')}</span></td>
+      <td>${e.uploadedBy ? escHtml(e.uploadedBy) : ''}${uploadedAt ? ` · ${uploadedAt}` : ''}</td>
+    </tr>`
 }
 
 async function renderDashboard() {
