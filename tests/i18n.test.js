@@ -13,3 +13,14 @@ describe('i18n — Turkish locale desteği', () => {
     expect(tSrc).toMatch(/nav\.startsWith\('tr'\)/)
   })
 })
+
+describe('i18n — tr çeviri kapsamı', () => {
+  test('TRANSLATIONS içindeki her anahtarda tr alanı var', () => {
+    global.window = {}
+    delete require.cache[require.resolve('../ui/i18n/translations.js')]
+    require('../ui/i18n/translations.js')
+    const dict = global.window.TRANSLATIONS
+    const missing = Object.keys(dict).filter(k => !dict[k].tr)
+    expect(missing).toEqual([])
+  })
+})
