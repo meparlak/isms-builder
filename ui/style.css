@@ -409,6 +409,28 @@ hr { border: none; border-top: 1px solid var(--border); margin: 0; }
 @media (max-width: 1100px) { .dashboard-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 700px) { .dashboard-grid { grid-template-columns: 1fr; } .dash-card.wide { grid-column: span 1; } }
 
+/* ── KRI stat cards (Key Risk Indicator) ── */
+.kri-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.kri {
+  position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  padding: 16px 18px 16px 22px; box-shadow: var(--shadow-sm); overflow: hidden;
+}
+.kri .stripe { position: absolute; top: 0; left: 0; bottom: 0; width: 4px; background: var(--accent); }
+.kri.ok   .stripe { background: var(--success); }
+.kri.warn .stripe { background: var(--warning); }
+.kri.crit .stripe { background: var(--danger); }
+.kri .label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--text-subtle); margin-bottom: 8px; }
+.kri .n { font-size: 32px; font-weight: 800; line-height: 1; color: var(--text-inverse); }
+.kri.ok   .n { color: var(--success-text); }
+.kri.warn .n { color: var(--warning-text); }
+.kri.crit .n { color: var(--danger-text); }
+.trend { display: inline-flex; align-items: center; gap: 3px; font-size: 11px; font-weight: 600; color: var(--text-subtle); }
+.trend.up   { color: var(--danger-text); }
+.trend.down { color: var(--success-text); }
+.trend.flat { color: var(--text-subtle); }
+@media (max-width: 1200px) { .kri-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 700px)  { .kri-grid { grid-template-columns: 1fr; } }
+
 /* ═══════════════════════════════════════════════════════════
    SOA – STATEMENT OF APPLICABILITY
    ═══════════════════════════════════════════════════════════ */
