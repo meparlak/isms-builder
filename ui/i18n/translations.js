@@ -211,6 +211,11 @@
     dash_fwCompliance:   { de: 'Framework-Compliance',      en: 'Framework Compliance',       fr: 'Conformité framework',      nl: 'Framework-naleving' , tr: 'Çerçeve Uyumluluğu' },
     dash_criticalHigh:   { de: 'Kritisch/Hoch',             en: 'Critical/High',              fr: 'Critique/Élevé',            nl: 'Kritiek/Hoog' , tr: 'Kritik/Yüksek' },
     dash_scanRisksPending:{ de: '{count} Scan-Risiko(en) warten auf Freigabe', en: '{count} scan risk(s) awaiting approval', fr: '{count} risque(s) de scan en attente d’approbation', nl: '{count} scanrisico(’s) wachten op goedkeuring' , tr: '{count} tarama riski onay bekliyor' },
+    dash_kriTitle:       { de: 'Schlüssel-Risikoindikatoren (KRI)', en: 'Key Risk Indicators (KRI)', fr: 'Indicateurs clés de risque (KRI)', nl: 'Sleutelrisico-indicatoren (KRI)' , tr: 'Kilit Risk Göstergeleri (KRI)' },
+    dash_kriOpenCapa:    { de: 'Offene Abweichungen', en: 'Open CAPA', fr: 'CAPA ouvert', nl: 'Open CAPA' , tr: 'Açık DÖF' },
+    dash_kriOverdueAction: { de: 'Überfällige Maßnahmen', en: 'Overdue Action', fr: 'Actions en retard', nl: 'Achterstallige acties' , tr: 'Gecikmiş Aksiyon' },
+    dash_kriAvgClosureTime: { de: 'Ø Schließungszeit', en: 'Avg. Closure Time', fr: 'Durée moyenne de fermeture', nl: 'Gem. Sluitingstijd' , tr: 'Ort. Kapama Süresi' },
+    dash_kriDays:        { de: 'Tage', en: 'days', fr: 'jours', nl: 'dagen' , tr: 'gün' },
 
     // ── SoA ─────────────────────────────────────────────────────────────────
     soa_title:           { de: 'Statement of Applicability', en: 'Statement of Applicability', fr: 'Déclaration d\'applicabilité', nl: 'Verklaring van toepasselijkheid' , tr: 'Uygulanabilirlik Bildirgesi' },

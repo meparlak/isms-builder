@@ -3003,21 +3003,21 @@ async function renderDashboard() {
     </div>
 
     <!-- KRI Cards: Kilit Risk Göstergeleri (CAPA verisi Alt-Faz 2.2'de bağlanacak; şimdilik placeholder) -->
-    <div class="dash-section-title" style="margin:16px 0 8px"><i class="ph ph-gauge"></i> Kilit Risk Göstergeleri (KRI)</div>
+    <div class="dash-section-title" style="margin:16px 0 8px"><i class="ph ph-gauge"></i> ${t('dash_kriTitle')}</div>
     <div class="kri-grid" style="margin-bottom:0">
       <div class="kri warn">
         <div class="stripe"></div>
-        <div class="label">Açık DÖF</div>
+        <div class="label">${t('dash_kriOpenCapa')}</div>
         <div class="n">—</div>
       </div>
       <div class="kri crit">
         <div class="stripe"></div>
-        <div class="label">Gecikmiş Aksiyon</div>
+        <div class="label">${t('dash_kriOverdueAction')}</div>
         <div class="n">—</div>
       </div>
       <div class="kri ok">
         <div class="stripe"></div>
-        <div class="label">Ort. Kapama Süresi <span class="trend flat">(gün)</span></div>
+        <div class="label">${t('dash_kriAvgClosureTime')} <span class="trend flat">(${t('dash_kriDays')})</span></div>
         <div class="n">—</div>
       </div>
     </div>
