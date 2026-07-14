@@ -1,1051 +1,1051 @@
 {
   "loginTitle": {
     "en": "ISMS Builder – Sign in",
-    "missingTr": true
+    "tr": "ISMS Builder – Oturum Aç"
   },
   "loginWelcome": {
     "en": "Welcome back",
-    "missingTr": true
+    "tr": "Tekrar hoş geldiniz"
   },
   "loginSubtitle": {
     "en": "Sign in with your ISMS credentials.",
-    "missingTr": true
+    "tr": "ISMS kimlik bilgilerinizle oturum açın."
   },
   "loginEmail": {
     "en": "Email address",
-    "missingTr": true
+    "tr": "E-posta adresi"
   },
   "loginEmailPh": {
     "en": "name@example.com",
-    "missingTr": true
+    "tr": "ad@ornek.com"
   },
   "loginPassword": {
     "en": "Password",
-    "missingTr": true
+    "tr": "Şifre"
   },
   "loginPasswordPh": {
     "en": "Password",
-    "missingTr": true
+    "tr": "Şifre"
   },
   "loginTotpHint": {
     "en": "Enter the 6-digit code from your authenticator app.",
-    "missingTr": true
+    "tr": "Kimlik doğrulama uygulamanızdaki 6 haneli kodu girin."
   },
   "loginTotp": {
     "en": "Sign in with 2FA",
-    "missingTr": true
+    "tr": "2FA ile oturum aç"
   },
   "loginBtn": {
     "en": "Sign in",
-    "missingTr": true
+    "tr": "Oturum Aç"
   },
   "loginReportIncident": {
     "en": "Report a Security Incident",
-    "missingTr": true
+    "tr": "Güvenlik Olayı Bildir"
   },
   "loginFooter": {
     "en": "ISMS Builder · ISO 27001 · BSI · NIS2 · EUCS · EU AI Act",
-    "missingTr": true
+    "tr": "ISMS Builder · ISO 27001 · BSI · NIS2 · EUCS · EU AI Act"
   },
   "licenseNotice": {
     "en": "© Claude Hecker · Open source (AGPL-3.0)",
-    "missingTr": true
+    "tr": "© Claude Hecker · Açık kaynak (AGPL-3.0)"
   },
   "licenseSourceLink": {
     "en": "Source code on GitHub",
-    "missingTr": true
+    "tr": "GitHub'da kaynak kod"
   },
   "loginLang": {
     "en": "Language",
-    "missingTr": true
+    "tr": "Dil"
   },
   "demoResetTitle": {
     "en": "Demo mode ended",
-    "missingTr": true
+    "tr": "Demo modu sona erdi"
   },
   "demoResetText": {
     "en": "The system has been reset for production use. Please sign in with admin@example.com / password adminpass and change the password immediately after first login.",
-    "missingTr": true
+    "tr": "Sistem üretim kullanımı için sıfırlandı. Lütfen admin@example.com / adminpass şifresiyle oturum açın ve ilk girişten hemen sonra şifrenizi değiştirin."
   },
   "incModalTitle": {
     "en": "Report a Security Incident",
-    "missingTr": true
+    "tr": "Güvenlik Olayı Bildir"
   },
   "incEmailLabel": {
     "en": "Your Email",
-    "missingTr": true
+    "tr": "E-posta Adresiniz"
   },
   "incEntityLabel": {
     "en": "Entity / Location",
-    "missingTr": true
+    "tr": "Birim / Konum"
   },
   "incEntityPh": {
     "en": "– please select –",
-    "missingTr": true
+    "tr": "– lütfen seçin –"
   },
   "incTypeLabel": {
     "en": "Incident Type",
-    "missingTr": true
+    "tr": "Olay Türü"
   },
   "incTypePh": {
     "en": "– please select –",
-    "missingTr": true
+    "tr": "– lütfen seçin –"
   },
   "incTypeMalware": {
     "en": "Malware / Malicious Software",
-    "missingTr": true
+    "tr": "Zararlı Yazılım / Kötü Amaçlı Yazılım"
   },
   "incTypePhishing": {
     "en": "Phishing / Scam / Social Engineering",
-    "missingTr": true
+    "tr": "Kimlik Avı / Dolandırıcılık / Sosyal Mühendislik"
   },
   "incTypeDataTheft": {
     "en": "Data Theft / Data Loss",
-    "missingTr": true
+    "tr": "Veri Hırsızlığı / Veri Kaybı"
   },
   "incTypeRansomware": {
     "en": "Ransomware / Extortion",
-    "missingTr": true
+    "tr": "Fidye Yazılımı / Şantaj"
   },
   "incTypeUnauth": {
     "en": "Unauthorized System Access",
-    "missingTr": true
+    "tr": "Yetkisiz Sistem Erişimi"
   },
   "incTypeSocial": {
     "en": "CEO Fraud / Identity Abuse",
-    "missingTr": true
+    "tr": "CEO Dolandırıcılığı / Kimlik Suistimali"
   },
   "incTypeOther": {
     "en": "Other",
-    "missingTr": true
+    "tr": "Diğer"
   },
   "incDescLabel": {
     "en": "What happened?",
-    "missingTr": true
+    "tr": "Ne oldu?"
   },
   "incDescPh": {
     "en": "Please describe the incident as precisely as possible: When, where, how was it detected?",
-    "missingTr": true
+    "tr": "Olayı mümkün olduğunca kesin şekilde açıklayın: Ne zaman, nerede, nasıl tespit edildi?"
   },
   "incMeasuresLabel": {
     "en": "What measures have already been taken?",
-    "missingTr": true
+    "tr": "Şu ana kadar hangi önlemler alındı?"
   },
   "incMeasuresPh": {
     "en": "e.g. system disconnected, passwords changed, IT notified…",
-    "missingTr": true
+    "tr": "örn. sistem bağlantısı kesildi, şifreler değiştirildi, BT bilgilendirildi…"
   },
   "incContactLabel": {
     "en": "Local Contact",
-    "missingTr": true
+    "tr": "Yerel İrtibat Kişisi"
   },
   "incContactPh": {
     "en": "Name and phone / email",
-    "missingTr": true
+    "tr": "Ad soyad ve telefon / e-posta"
   },
   "incCleanedLabel": {
     "en": "Has everything been cleaned up?",
-    "missingTr": true
+    "tr": "Her şey temizlendi mi?"
   },
   "incCleanedNo": {
     "en": "No – follow-up required",
-    "missingTr": true
+    "tr": "Hayır – takip gerekiyor"
   },
   "incCleanedPartial": {
     "en": "Partial – further measures planned",
-    "missingTr": true
+    "tr": "Kısmen – ek önlemler planlanıyor"
   },
   "incCleanedYes": {
     "en": "Yes – fully cleaned up",
-    "missingTr": true
+    "tr": "Evet – tamamen temizlendi"
   },
   "incHint": {
     "en": "This report goes directly to the CISO team. Fields marked * are required. Assignment to IT or data protection and reporting obligation assessment is done by the CISO.",
-    "missingTr": true
+    "tr": "Bu bildirim doğrudan CISO ekibine gider. * ile işaretli alanlar zorunludur. BT veya veri koruma birimine atama ve bildirim yükümlülüğü değerlendirmesi CISO tarafından yapılır."
   },
   "incCancelBtn": {
     "en": "Cancel",
-    "missingTr": true
+    "tr": "İptal"
   },
   "incSubmitBtn": {
     "en": "Report Incident",
-    "missingTr": true
+    "tr": "Olayı Bildir"
   },
   "incConfirmTitle": {
     "en": "Incident Reported",
-    "missingTr": true
+    "tr": "Olay Bildirildi"
   },
   "incConfirmText": {
     "en": "Your incident has been successfully submitted. The CISO team will handle further processing.",
-    "missingTr": true
+    "tr": "Olayınız başarıyla gönderildi. Sonraki işlemleri CISO ekibi yürütecektir."
   },
   "incConfirmRef": {
     "en": "Your reference number:",
-    "missingTr": true
+    "tr": "Referans numaranız:"
   },
   "incConfirmNote": {
     "en": "Please note this reference number for follow-up queries.",
-    "missingTr": true
+    "tr": "Takip sorularınız için lütfen bu referans numarasını not edin."
   },
   "incConfirmClose": {
     "en": "Close",
-    "missingTr": true
+    "tr": "Kapat"
   },
   "nav_dashboard": {
     "en": "Dashboard",
-    "missingTr": true
+    "tr": "Panel"
   },
   "nav_soa": {
     "en": "SoA – Controls",
-    "missingTr": true
+    "tr": "SOA – Kontroller"
   },
   "nav_guidance": {
     "en": "Guidance",
-    "missingTr": true
+    "tr": "Rehberlik"
   },
   "nav_training": {
     "en": "Training",
-    "missingTr": true
+    "tr": "Eğitim"
   },
   "nav_calendar": {
     "en": "Calendar",
-    "missingTr": true
+    "tr": "Takvim"
   },
   "nav_risk": {
     "en": "Risk & Compliance",
-    "missingTr": true
+    "tr": "Risk ve Uyumluluk"
   },
   "nav_assets": {
     "en": "Asset Management",
-    "missingTr": true
+    "tr": "Varlık Yönetimi"
   },
   "nav_goals": {
     "en": "Security Goals",
-    "missingTr": true
+    "tr": "Güvenlik Hedefleri"
   },
   "nav_gdpr": {
     "en": "GDPR & Data Protection",
-    "missingTr": true
+    "tr": "GDPR ve Veri Koruma"
   },
   "nav_legal": {
     "en": "Legal & Privacy",
-    "missingTr": true
+    "tr": "Hukuk ve Gizlilik"
   },
   "nav_incident": {
     "en": "Incident Inbox",
-    "missingTr": true
+    "tr": "Olay Kutusu"
   },
   "nav_suppliers": {
     "en": "Supply Chain",
-    "missingTr": true
+    "tr": "Tedarik Zinciri"
   },
   "nav_bcm": {
     "en": "Business Continuity",
-    "missingTr": true
+    "tr": "İş Sürekliliği"
   },
   "nav_governance": {
     "en": "Governance",
-    "missingTr": true
+    "tr": "Yönetişim"
   },
   "nav_policyAcks": {
     "en": "Policy Acknowledgements",
-    "missingTr": true
+    "tr": "Politika Onayları"
   },
   "nav_reports": {
     "en": "Reports",
-    "missingTr": true
+    "tr": "Raporlar"
   },
   "nav_settings": {
     "en": "Settings",
-    "missingTr": true
+    "tr": "Ayarlar"
   },
   "nav_admin": {
     "en": "Admin",
-    "missingTr": true
+    "tr": "Yönetim"
   },
   "template": {
     "en": "Template",
-    "missingTr": true
+    "tr": "Şablon"
   },
   "risk_title": {
     "en": "Risk",
-    "missingTr": true
+    "tr": "Risk"
   },
   "incident_title": {
     "en": "Incident",
-    "missingTr": true
+    "tr": "Olay"
   },
   "lc_toDraft": {
     "en": "← Reactivate",
-    "missingTr": true
+    "tr": "← Yeniden Etkinleştir"
   },
   "lc_toReview": {
     "en": "→ For Review",
-    "missingTr": true
+    "tr": "→ Gözden Geçirmeye Gönder"
   },
   "lc_toApproved": {
     "en": "→ Approve",
-    "missingTr": true
+    "tr": "→ Onayla"
   },
   "lc_backToDraft": {
     "en": "← Back to Draft",
-    "missingTr": true
+    "tr": "← Taslağa Geri Dön"
   },
   "lc_backToReview": {
     "en": "← Back to Review",
-    "missingTr": true
+    "tr": "← Gözden Geçirmeye Geri Dön"
   },
   "lc_archive": {
     "en": "→ Archive",
-    "missingTr": true
+    "tr": "→ Arşivle"
   },
   "status_draft": {
     "en": "Draft",
-    "missingTr": true
+    "tr": "Taslak"
   },
   "status_review": {
     "en": "Review",
-    "missingTr": true
+    "tr": "Gözden Geçirme"
   },
   "status_approved": {
     "en": "Approved",
-    "missingTr": true
+    "tr": "Onaylandı"
   },
   "status_archived": {
     "en": "Archived",
-    "missingTr": true
+    "tr": "Arşivlendi"
   },
   "save": {
     "en": "Save",
-    "missingTr": true
+    "tr": "Kaydet"
   },
   "saved": {
     "en": "✓ Saved",
-    "missingTr": true
+    "tr": "✓ Kaydedildi"
   },
   "cancel": {
     "en": "Cancel",
-    "missingTr": true
+    "tr": "İptal"
   },
   "close": {
     "en": "Close",
-    "missingTr": true
+    "tr": "Kapat"
   },
   "edit": {
     "en": "Edit",
-    "missingTr": true
+    "tr": "Düzenle"
   },
   "delete": {
     "en": "Delete",
-    "missingTr": true
+    "tr": "Sil"
   },
   "restore": {
     "en": "Restore",
-    "missingTr": true
+    "tr": "Geri Yükle"
   },
   "add": {
     "en": "Add",
-    "missingTr": true
+    "tr": "Ekle"
   },
   "remove": {
     "en": "Remove",
-    "missingTr": true
+    "tr": "Kaldır"
   },
   "reset": {
     "en": "Reset",
-    "missingTr": true
+    "tr": "Sıfırla"
   },
   "default": {
     "en": "Default",
-    "missingTr": true
+    "tr": "Varsayılan"
   },
   "confirm": {
     "en": "Confirm",
-    "missingTr": true
+    "tr": "Onayla"
   },
   "loading": {
     "en": "Loading…",
-    "missingTr": true
+    "tr": "Yükleniyor…"
   },
   "error": {
     "en": "Error",
-    "missingTr": true
+    "tr": "Hata"
   },
   "warning": {
     "en": "Warning",
-    "missingTr": true
+    "tr": "Uyarı"
   },
   "note": {
     "en": "Note",
-    "missingTr": true
+    "tr": "Not"
   },
   "yes": {
     "en": "Yes",
-    "missingTr": true
+    "tr": "Evet"
   },
   "no": {
     "en": "No",
-    "missingTr": true
+    "tr": "Hayır"
   },
   "refresh": {
     "en": "Refresh",
-    "missingTr": true
+    "tr": "Yenile"
   },
   "search": {
     "en": "Search…",
-    "missingTr": true
+    "tr": "Ara…"
   },
   "search_noResultsFor": {
     "en": "No results for \"{query}\"",
-    "missingTr": true
+    "tr": "\"{query}\" için sonuç bulunamadı"
   },
   "search_ai": {
     "en": "AI",
-    "missingTr": true
+    "tr": "AI"
   },
   "search_keyword": {
     "en": "Keyword",
-    "missingTr": true
+    "tr": "Anahtar Kelime"
   },
   "search_results": {
     "en": "Search results",
-    "missingTr": true
+    "tr": "Arama sonuçları"
   },
   "search_aiUnavailable": {
     "en": "AI search unavailable",
-    "missingTr": true
+    "tr": "AI arama kullanılamıyor"
   },
   "underConstruction": {
     "en": "Under Construction",
-    "missingTr": true
+    "tr": "Yapım Aşamasında"
   },
   "underConstructionHint": {
     "en": "This module will be available in one of the next releases.",
-    "missingTr": true
+    "tr": "Bu modül önümüzdeki sürümlerden birinde kullanılabilir olacak."
   },
   "create": {
     "en": "Create",
-    "missingTr": true
+    "tr": "Oluştur"
   },
   "export": {
     "en": "Export",
-    "missingTr": true
+    "tr": "Dışa Aktar"
   },
   "common_action": {
     "en": "Action",
-    "missingTr": true
+    "tr": "İşlem"
   },
   "common_back": {
     "en": "Back",
-    "missingTr": true
+    "tr": "Geri"
   },
   "common_print": {
     "en": "Print",
-    "missingTr": true
+    "tr": "Yazdır"
   },
   "common_total": {
     "en": "Total",
-    "missingTr": true
+    "tr": "Toplam"
   },
   "moveUp": {
     "en": "Move up",
-    "missingTr": true
+    "tr": "Yukarı taşı"
   },
   "moveDown": {
     "en": "Move down",
-    "missingTr": true
+    "tr": "Aşağı taşı"
   },
   "err_nameRequired": {
     "en": "Name is required.",
-    "missingTr": true
+    "tr": "Ad alanı zorunludur."
   },
   "settings_lang": {
     "en": "Language / Sprache",
-    "missingTr": true
+    "tr": "Dil / Language"
   },
   "settings_langDesc": {
     "en": "Choose the interface language. The setting is saved in your browser.",
-    "missingTr": true
+    "tr": "Arayüz dilini seçin. Bu ayar tarayıcınızda saklanır."
   },
   "settings_langDe": {
     "en": "Deutsch (German)",
-    "missingTr": true
+    "tr": "Deutsch (Almanca)"
   },
   "settings_langEn": {
     "en": "English",
-    "missingTr": true
+    "tr": "English (İngilizce)"
   },
   "settings_langFr": {
     "en": "Français (French)",
-    "missingTr": true
+    "tr": "Français (Fransızca)"
   },
   "settings_langNl": {
     "en": "Nederlands (Dutch)",
-    "missingTr": true
+    "tr": "Nederlands (Hollandaca)"
   },
   "settings_langSaved": {
     "en": "Language saved. Reloading page…",
-    "missingTr": true
+    "tr": "Dil kaydedildi. Sayfa yeniden yükleniyor…"
   },
   "settings_password": {
     "en": "Change Password",
-    "missingTr": true
+    "tr": "Şifre Değiştir"
   },
   "settings_pwOld": {
     "en": "Old Password",
-    "missingTr": true
+    "tr": "Eski Şifre"
   },
   "settings_pwNew": {
     "en": "New Password",
-    "missingTr": true
+    "tr": "Yeni Şifre"
   },
   "settings_pwRepeat": {
     "en": "Repeat",
-    "missingTr": true
+    "tr": "Tekrar"
   },
   "settings_pwSave": {
     "en": "Change Password",
-    "missingTr": true
+    "tr": "Şifreyi Değiştir"
   },
   "settings_pwChanged": {
     "en": "Password changed.",
-    "missingTr": true
+    "tr": "Şifre değiştirildi."
   },
   "settings_pwWrong": {
     "en": "Incorrect old password.",
-    "missingTr": true
+    "tr": "Eski şifre yanlış."
   },
   "settings_2fa": {
     "en": "Setup 2FA",
-    "missingTr": true
+    "tr": "2FA Kurulumu"
   },
   "settings_2faScan": {
     "en": "Scan this QR code with an authenticator app (Google Authenticator, Authy, Microsoft Authenticator, etc.)",
-    "missingTr": true
+    "tr": "Bu QR kodunu bir kimlik doğrulama uygulamasıyla tarayın (Google Authenticator, Authy, Microsoft Authenticator vb.)"
   },
   "settings_2faCode": {
     "en": "Verification Code",
-    "missingTr": true
+    "tr": "Doğrulama Kodu"
   },
   "settings_2faVerify": {
     "en": "Verify & enable 2FA",
-    "missingTr": true
+    "tr": "Doğrula ve 2FA'yı etkinleştir"
   },
   "settings_2faDisable": {
     "en": "Disable 2FA",
-    "missingTr": true
+    "tr": "2FA'yı Devre Dışı Bırak"
   },
   "settings_2faKey": {
     "en": "Secret Key:",
-    "missingTr": true
+    "tr": "Gizli Anahtar:"
   },
   "settings_2faKeyNote": {
     "en": "Save this secret key in a secure location.",
-    "missingTr": true
+    "tr": "Bu gizli anahtarı güvenli bir yerde saklayın."
   },
   "dash_title": {
     "en": "ISMS Dashboard",
-    "missingTr": true
+    "tr": "ISMS Paneli"
   },
   "dash_status": {
     "en": "As of:",
-    "missingTr": true
+    "tr": "Güncel:"
   },
   "dash_actionRequired": {
     "en": "Action Required",
-    "missingTr": true
+    "tr": "Eylem Gerekli"
   },
   "dash_noIssues": {
     "en": "No critical issues",
-    "missingTr": true
+    "tr": "Kritik sorun yok"
   },
   "dash_policies": {
     "en": "Policies & Compliance",
-    "missingTr": true
+    "tr": "Politikalar ve Uyumluluk"
   },
   "dash_templates": {
     "en": "Templates",
-    "missingTr": true
+    "tr": "Şablonlar"
   },
   "dash_approved": {
     "en": "Approved",
-    "missingTr": true
+    "tr": "Onaylandı"
   },
   "dash_inReview": {
     "en": "In Review",
-    "missingTr": true
+    "tr": "Gözden Geçirmede"
   },
   "dash_fwRate": {
     "en": "Ø Framework Rate",
-    "missingTr": true
+    "tr": "Ø Çerçeve Oranı"
   },
   "dash_risks": {
     "en": "Risk Management",
-    "missingTr": true
+    "tr": "Risk Yönetimi"
   },
   "dash_totalRisks": {
     "en": "Total Risks",
-    "missingTr": true
+    "tr": "Toplam Risk"
   },
   "dash_critical": {
     "en": "Critical",
-    "missingTr": true
+    "tr": "Kritik"
   },
   "dash_high": {
     "en": "High",
-    "missingTr": true
+    "tr": "Yüksek"
   },
   "dash_openActions": {
     "en": "Open Actions",
-    "missingTr": true
+    "tr": "Açık Eylemler"
   },
   "dash_gdpr": {
     "en": "Data Protection (GDPR)",
-    "missingTr": true
+    "tr": "Veri Koruma (GDPR)"
   },
   "dash_vvt": {
     "en": "Record Entries",
-    "missingTr": true
+    "tr": "Kayıt Girdileri"
   },
   "dash_breaches": {
     "en": "Open Data Breaches",
-    "missingTr": true
+    "tr": "Açık Veri İhlalleri"
   },
   "dash_dsars": {
     "en": "Open DSARs",
-    "missingTr": true
+    "tr": "Açık DSAR Talepleri"
   },
   "dash_toms": {
     "en": "TOMs Implemented",
-    "missingTr": true
+    "tr": "Uygulanan TOM'lar"
   },
   "dash_goals": {
     "en": "ISO 27001 Ch. 6.2",
-    "missingTr": true
+    "tr": "ISO 27001 Md. 6.2"
   },
   "dash_activeGoals": {
     "en": "Active Goals",
-    "missingTr": true
+    "tr": "Aktif Hedefler"
   },
   "dash_achieved": {
     "en": "Achieved",
-    "missingTr": true
+    "tr": "Ulaşıldı"
   },
   "dash_overdue": {
     "en": "Overdue",
-    "missingTr": true
+    "tr": "Süresi Geçti"
   },
   "dash_progress": {
     "en": "Ø Progress",
-    "missingTr": true
+    "tr": "Ø İlerleme"
   },
   "dash_assets": {
     "en": "Total Assets",
-    "missingTr": true
+    "tr": "Toplam Varlık"
   },
   "dash_eol": {
     "en": "EoL in 90 Days",
-    "missingTr": true
+    "tr": "90 Gün İçinde Kullanım Ömrü Sonu"
   },
   "dash_unclassifiedCritical": {
     "en": "Unclassified crit.",
-    "missingTr": true
+    "tr": "Sınıflandırılmamış krit."
   },
   "dash_top5": {
     "en": "Top 5 Risks",
-    "missingTr": true
+    "tr": "İlk 5 Risk"
   },
   "dash_next14": {
     "en": "Next 14 Days",
-    "missingTr": true
+    "tr": "Sonraki 14 Gün"
   },
   "dash_activity": {
     "en": "Recent Activity",
-    "missingTr": true
+    "tr": "Son Etkinlik"
   },
   "dash_noActivity": {
     "en": "No activity yet.",
-    "missingTr": true
+    "tr": "Henüz etkinlik yok."
   },
   "dash_by": {
     "en": "by",
-    "missingTr": true
+    "tr": "yapan:"
   },
   "dash_suppliers": {
     "en": "Total Suppliers",
-    "missingTr": true
+    "tr": "Toplam Tedarikçi"
   },
   "dash_critSuppliers": {
     "en": "Critical Suppliers",
-    "missingTr": true
+    "tr": "Kritik Tedarikçiler"
   },
   "dash_auditsOverdue": {
     "en": "Audits Overdue",
-    "missingTr": true
+    "tr": "Süresi Geçen Denetimler"
   },
   "dash_withDataAccess": {
     "en": "With Data Access",
-    "missingTr": true
+    "tr": "Veri Erişimi Olan"
   },
   "dash_bcm": {
     "en": "Continuity Plans",
-    "missingTr": true
+    "tr": "Süreklilik Planları"
   },
   "dash_testedPlans": {
     "en": "Tested Plans",
-    "missingTr": true
+    "tr": "Test Edilmiş Planlar"
   },
   "dash_criticalProcesses": {
     "en": "Critical Processes",
-    "missingTr": true
+    "tr": "Kritik Süreçler"
   },
   "dash_testsOverdue": {
     "en": "Tests Overdue",
-    "missingTr": true
+    "tr": "Süresi Geçen Testler"
   },
   "dash_governance": {
     "en": "Management Reviews",
-    "missingTr": true
+    "tr": "Yönetim Gözden Geçirmeleri"
   },
   "dash_legal": {
     "en": "Legal & Training",
-    "missingTr": true
+    "tr": "Hukuk ve Eğitim"
   },
   "dash_contracts": {
     "en": "Active Contracts",
-    "missingTr": true
+    "tr": "Aktif Sözleşmeler"
   },
   "dash_expiring": {
     "en": "Contracts Expiring",
-    "missingTr": true
+    "tr": "Süresi Dolan Sözleşmeler"
   },
   "dash_training": {
     "en": "Training Rate",
-    "missingTr": true
+    "tr": "Eğitim Oranı"
   },
   "dash_overdueTraining": {
     "en": "Overdue Training",
-    "missingTr": true
+    "tr": "Süresi Geçen Eğitim"
   },
   "dash_fwCompliance": {
     "en": "Framework Compliance",
-    "missingTr": true
+    "tr": "Çerçeve Uyumluluğu"
   },
   "dash_criticalHigh": {
     "en": "Critical/High",
-    "missingTr": true
+    "tr": "Kritik/Yüksek"
   },
   "dash_scanRisksPending": {
     "en": "{count} scan risk(s) awaiting approval",
-    "missingTr": true
+    "tr": "{count} tarama riski onay bekliyor"
   },
   "soa_title": {
     "en": "Statement of Applicability",
-    "missingTr": true
+    "tr": "Uygulanabilirlik Bildirgesi"
   },
   "soa_allThemes": {
     "en": "All Themes",
-    "missingTr": true
+    "tr": "Tüm Temalar"
   },
   "soa_allStatus": {
     "en": "All Status",
-    "missingTr": true
+    "tr": "Tüm Durumlar"
   },
   "soa_applicable": {
     "en": "Applicable",
-    "missingTr": true
+    "tr": "Uygulanabilir"
   },
   "soa_notApplicable": {
     "en": "Not Applicable",
-    "missingTr": true
+    "tr": "Uygulanamaz"
   },
   "soa_notStarted": {
     "en": "Not started",
-    "missingTr": true
+    "tr": "Başlanmadı"
   },
   "soa_partial": {
     "en": "Partial",
-    "missingTr": true
+    "tr": "Kısmi"
   },
   "soa_implemented": {
     "en": "Implemented",
-    "missingTr": true
+    "tr": "Uygulandı"
   },
   "soa_optimized": {
     "en": "Optimized",
-    "missingTr": true
+    "tr": "Optimize Edildi"
   },
   "soa_theme": {
     "en": "Theme",
-    "missingTr": true
+    "tr": "Tema"
   },
   "soa_control": {
     "en": "Control",
-    "missingTr": true
+    "tr": "Kontrol"
   },
   "soa_owner": {
     "en": "Owner",
-    "missingTr": true
+    "tr": "Sahip"
   },
   "soa_justification": {
     "en": "Justification",
-    "missingTr": true
+    "tr": "Gerekçe"
   },
   "soa_noControls": {
     "en": "No controls found.",
-    "missingTr": true
+    "tr": "Kontrol bulunamadı."
   },
   "soa_loading": {
     "en": "Loading details…",
-    "missingTr": true
+    "tr": "Detaylar yükleniyor…"
   },
   "soa_showDetails": {
     "en": "Show details",
-    "missingTr": true
+    "tr": "Detayları göster"
   },
   "soa_linkedTemplates": {
     "en": "Linked Templates / Policies",
-    "missingTr": true
+    "tr": "Bağlı Şablonlar / Politikalar"
   },
   "soa_appliesTo": {
     "en": "Applies to (Entities)",
-    "missingTr": true
+    "tr": "Uygulandığı Birimler"
   },
   "soa_allEntities": {
     "en": "All Entities",
-    "missingTr": true
+    "tr": "Tüm Birimler"
   },
   "soa_noCrossMapping": {
     "en": "No cross-mapping for this control.",
-    "missingTr": true
+    "tr": "Bu kontrol için çapraz eşleme yok."
   },
   "soa_crossMapping": {
     "en": "Cross-Mapping (related controls)",
-    "missingTr": true
+    "tr": "Çapraz Eşleme (ilgili kontroller)"
   },
   "soa_importIsoControls": {
     "en": "Import ISO Controls",
-    "missingTr": true
+    "tr": "ISO Kontrollerini İçe Aktar"
   },
   "soa_newControl": {
     "en": "New Control",
-    "missingTr": true
+    "tr": "Yeni Kontrol"
   },
   "soa_noTemplatesLinked": {
     "en": "No templates linked.",
-    "missingTr": true
+    "tr": "Bağlı şablon yok."
   },
   "soa_linkTemplate": {
     "en": "Link template…",
-    "missingTr": true
+    "tr": "Şablon bağla…"
   },
   "soa_link": {
     "en": "Link",
-    "missingTr": true
+    "tr": "Bağla"
   },
   "soa_editApplicability": {
     "en": "Edit applicability",
-    "missingTr": true
+    "tr": "Uygulanabilirliği düzenle"
   },
   "soa_editControl": {
     "en": "Edit control",
-    "missingTr": true
+    "tr": "Kontrolü düzenle"
   },
   "soa_deleteControlTitle": {
     "en": "Delete (only if no templates linked)",
-    "missingTr": true
+    "tr": "Sil (yalnızca bağlı şablon yoksa)"
   },
   "soa_customControl": {
     "en": "Custom Control",
-    "missingTr": true
+    "tr": "Özel Kontrol"
   },
   "soa_controlTitlePlaceholder": {
     "en": "Control title…",
-    "missingTr": true
+    "tr": "Kontrol başlığı…"
   },
   "soa_themeCategory": {
     "en": "Theme / Category",
-    "missingTr": true
+    "tr": "Tema / Kategori"
   },
   "soa_themePlaceholder": {
     "en": "e.g. Access Control",
-    "missingTr": true
+    "tr": "örn. Erişim Kontrolü"
   },
   "soa_justificationPlaceholder": {
     "en": "Why is this control needed?",
-    "missingTr": true
+    "tr": "Bu kontrol neden gerekli?"
   },
   "soa_importArrayRequired": {
     "en": "JSON must contain an array of controls.",
-    "missingTr": true
+    "tr": "JSON, bir kontrol dizisi içermelidir."
   },
   "soa_importSuccess": {
     "en": "✓ {count} ISO controls imported. Page is reloading…",
-    "missingTr": true
+    "tr": "✓ {count} ISO kontrolü içe aktarıldı. Sayfa yeniden yükleniyor…"
   },
   "reports_title": {
     "en": "Reports & Compliance",
-    "missingTr": true
+    "tr": "Raporlar ve Uyumluluk"
   },
   "reports_compliance": {
     "en": "Compliance",
-    "missingTr": true
+    "tr": "Uyumluluk"
   },
   "reports_fw": {
     "en": "Framework Coverage",
-    "missingTr": true
+    "tr": "Çerçeve Kapsamı"
   },
   "reports_gap": {
     "en": "Gap Analysis",
-    "missingTr": true
+    "tr": "Boşluk Analizi"
   },
   "reports_templates": {
     "en": "Template Overview",
-    "missingTr": true
+    "tr": "Şablon Genel Görünümü"
   },
   "reports_reviews": {
     "en": "Due Reviews",
-    "missingTr": true
+    "tr": "Süresi Gelen Gözden Geçirmeler"
   },
   "reports_matrix": {
     "en": "Compliance Matrix",
-    "missingTr": true
+    "tr": "Uyumluluk Matrisi"
   },
   "reports_audit": {
     "en": "Audit Trail",
-    "missingTr": true
+    "tr": "Denetim İzi"
   },
   "reports_entity": {
     "en": "Entity",
-    "missingTr": true
+    "tr": "Birim"
   },
   "reports_allEntities": {
     "en": "All Entities",
-    "missingTr": true
+    "tr": "Tüm Birimler"
   },
   "reports_framework": {
     "en": "Framework",
-    "missingTr": true
+    "tr": "Çerçeve"
   },
   "reports_allFw": {
     "en": "All Frameworks",
-    "missingTr": true
+    "tr": "Tüm Çerçeveler"
   },
   "reports_from": {
     "en": "From",
-    "missingTr": true
+    "tr": "Başlangıç"
   },
   "reports_to": {
     "en": "To",
-    "missingTr": true
+    "tr": "Bitiş"
   },
   "reports_generate": {
     "en": "Generate Report",
-    "missingTr": true
+    "tr": "Rapor Oluştur"
   },
   "reports_run": {
     "en": "Run",
-    "missingTr": true
+    "tr": "Çalıştır"
   },
   "reports_calculating": {
     "en": "Calculating…",
-    "missingTr": true
+    "tr": "Hesaplanıyor…"
   },
   "reports_rate": {
     "en": "Rate",
-    "missingTr": true
+    "tr": "Oran"
   },
   "reports_controlsWithoutPolicy": {
     "en": "Controls without policy",
-    "missingTr": true
+    "tr": "Politikası olmayan kontroller"
   },
   "reports_inDays": {
     "en": "In {days} days",
-    "missingTr": true
+    "tr": "{days} gün içinde"
   },
   "reports_daysCount": {
     "en": "{days} days",
-    "missingTr": true
+    "tr": "{days} gün"
   },
   "reports_reviewDate": {
     "en": "Review Date",
-    "missingTr": true
+    "tr": "Gözden Geçirme Tarihi"
   },
   "reports_changedBy": {
     "en": "Changed by",
-    "missingTr": true
+    "tr": "Değiştiren"
   },
   "reports_fromScan": {
     "en": "from scan",
-    "missingTr": true
+    "tr": "taramadan"
   },
   "reports_manual": {
     "en": "Manual",
-    "missingTr": true
+    "tr": "Manuel"
   },
   "reports_source": {
     "en": "Source",
-    "missingTr": true
+    "tr": "Kaynak"
   },
   "reports_descCompliance": {
     "en": "Implementation rate per entity and framework",
-    "missingTr": true
+    "tr": "Birim ve çerçeve bazında uygulama oranı"
   },
   "reports_descFramework": {
     "en": "Controls per framework: applicable / implemented / gap",
-    "missingTr": true
+    "tr": "Çerçeve başına kontroller: uygulanabilir / uygulandı / boşluk"
   },
   "reports_descGap": {
     "en": "Controls without linked policy templates",
-    "missingTr": true
+    "tr": "Bağlı politika şablonu olmayan kontroller"
   },
   "reports_descTemplates": {
     "en": "All templates of an entity by status",
-    "missingTr": true
+    "tr": "Bir birimin durumuna göre tüm şablonları"
   },
   "reports_descReviews": {
     "en": "Templates with overdue or upcoming review date",
-    "missingTr": true
+    "tr": "Süresi geçmiş veya yaklaşan gözden geçirme tarihi olan şablonlar"
   },
   "reports_descMatrix": {
     "en": "Control × Entity traffic light overview",
-    "missingTr": true
+    "tr": "Kontrol × Birim trafik ışığı görünümü"
   },
   "reports_descAudit": {
     "en": "Status changes on templates in a given period",
-    "missingTr": true
+    "tr": "Belirli bir dönemde şablonlardaki durum değişiklikleri"
   },
   "reports_descFindings": {
     "en": "Audit findings with action plans (IS→SHALL→Risk→Recommendation)",
-    "missingTr": true
+    "tr": "Eylem planlı denetim bulguları (MEVCUT DURUM→GEREKLİLİK→Risk→Öneri)"
   },
   "reports_descRisks": {
     "en": "All approved risks incl. CVSS scores from scan imports",
-    "missingTr": true
+    "tr": "Tarama içe aktarımlarından gelen CVSS puanları dahil onaylı tüm riskler"
   },
   "reports_overdue": {
     "en": "Overdue",
-    "missingTr": true
+    "tr": "Süresi Geçti"
   },
   "reports_dueSoon": {
     "en": "Due Soon",
-    "missingTr": true
+    "tr": "Yakında Süresi Doluyor"
   },
   "reports_noDate": {
     "en": "No Review Date",
-    "missingTr": true
+    "tr": "Gözden Geçirme Tarihi Yok"
   },
   "reports_days": {
     "en": "Days",
-    "missingTr": true
+    "tr": "Gün"
   },
   "reports_jsonExport": {
     "en": "JSON",
-    "missingTr": true
+    "tr": "JSON"
   },
   "reports_csvExport": {
     "en": "CSV",
-    "missingTr": true
+    "tr": "CSV"
   },
   "admin_title": {
     "en": "Administration",
