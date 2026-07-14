@@ -2241,735 +2241,735 @@
   },
   "risk_new": {
     "en": "New Risk",
-    "missingTr": true
+    "tr": "Yeni Risk"
   },
   "risk_register": {
     "en": "Risk Register",
-    "missingTr": true
+    "tr": "Risk Kaydı"
   },
   "risk_treatmentsTab": {
     "en": "Treatment Plans",
-    "missingTr": true
+    "tr": "İşleme Planları"
   },
   "risk_reportsTab": {
     "en": "Reports",
-    "missingTr": true
+    "tr": "Raporlar"
   },
   "risk_probability": {
     "en": "Probability",
-    "missingTr": true
+    "tr": "Olasılık"
   },
   "risk_impact": {
     "en": "Impact",
-    "missingTr": true
+    "tr": "Etki"
   },
   "risk_heatmapHint": {
     "en": "Click a point to open risk details.",
-    "missingTr": true
+    "tr": "Risk detaylarını açmak için bir noktaya tıklayın."
   },
   "risk_levelLow": {
     "en": "Low (1–4)",
-    "missingTr": true
+    "tr": "Düşük (1–4)"
   },
   "risk_levelMed": {
     "en": "Medium (5–9)",
-    "missingTr": true
+    "tr": "Orta (5–9)"
   },
   "risk_levelHigh": {
     "en": "High (10–14)",
-    "missingTr": true
+    "tr": "Yüksek (10–14)"
   },
   "risk_levelCrit": {
     "en": "Critical (15–25)",
-    "missingTr": true
+    "tr": "Kritik (15–25)"
   },
   "risk_measure": {
     "en": "Measure",
-    "missingTr": true
+    "tr": "Önlem"
   },
   "risk_riskCol": {
     "en": "Risk",
-    "missingTr": true
+    "tr": "Risk"
   },
   "risk_all": {
     "en": "All Risks",
-    "missingTr": true
+    "tr": "Tüm Riskler"
   },
   "risk_total": {
     "en": "Total Risks",
-    "missingTr": true
+    "tr": "Toplam Risk"
   },
   "risk_noRisks": {
     "en": "No risks found.",
-    "missingTr": true
+    "tr": "Risk bulunamadı."
   },
   "risk_openTreatments": {
     "en": "Open Treatments",
-    "missingTr": true
+    "tr": "Açık İşlemeler"
   },
   "risk_catTechnical": {
     "en": "Technical",
-    "missingTr": true
+    "tr": "Teknik"
   },
   "risk_catOrganizational": {
     "en": "Organizational",
-    "missingTr": true
+    "tr": "Organizasyonel"
   },
   "risk_catPhysical": {
     "en": "Physical",
-    "missingTr": true
+    "tr": "Fiziksel"
   },
   "risk_catLegal": {
     "en": "Legal",
-    "missingTr": true
+    "tr": "Hukuki"
   },
   "risk_treatmentReduce": {
     "en": "Reduce",
-    "missingTr": true
+    "tr": "Azalt"
   },
   "risk_treatmentAccept": {
     "en": "Accept",
-    "missingTr": true
+    "tr": "Kabul Et"
   },
   "risk_treatmentAvoid": {
     "en": "Avoid",
-    "missingTr": true
+    "tr": "Kaçın"
   },
   "risk_treatmentTransfer": {
     "en": "Transfer",
-    "missingTr": true
+    "tr": "Devret"
   },
   "risk_statusCompleted": {
     "en": "Completed",
-    "missingTr": true
+    "tr": "Tamamlandı"
   },
   "risk_allTreatments": {
     "en": "All Treatment Measures",
-    "missingTr": true
+    "tr": "Tüm İşleme Önlemleri"
   },
   "risk_select": {
     "en": "Select risk",
-    "missingTr": true
+    "tr": "Risk seç"
   },
   "risk_newMeasure": {
     "en": "New Measure",
-    "missingTr": true
+    "tr": "Yeni Önlem"
   },
   "risk_orgUnit": {
     "en": "Unit (OU)",
-    "missingTr": true
+    "tr": "Birim (OU)"
   },
   "risk_approvalPending": {
     "en": "Approval Pending",
-    "missingTr": true
+    "tr": "Onay Bekliyor"
   },
   "risk_approvalRequired": {
     "en": "Approval required",
-    "missingTr": true
+    "tr": "Onay gerekli"
   },
   "risk_approve": {
     "en": "Approve",
-    "missingTr": true
+    "tr": "Onayla"
   },
   "risk_approved": {
     "en": "Approved",
-    "missingTr": true
+    "tr": "Onaylandı"
   },
   "risk_approvedBy": {
     "en": "Approved By",
-    "missingTr": true
+    "tr": "Onaylayan"
   },
   "risk_scanImports": {
     "en": "Scan Imports",
-    "missingTr": true
+    "tr": "Tarama İçe Aktarımları"
   },
   "risk_scanReviewText": {
     "en": "This risk was automatically created by a scan import and must be reviewed and approved.",
-    "missingTr": true
+    "tr": "Bu risk otomatik olarak bir tarama içe aktarımı tarafından oluşturuldu ve bir denetçi veya CISO tarafından gözden geçirilip onaylanmalıdır."
   },
   "risk_approvalFailed": {
     "en": "Approval failed",
-    "missingTr": true
+    "tr": "Onaylama başarısız"
   },
   "risk_byLevel": {
     "en": "By Risk Level",
-    "missingTr": true
+    "tr": "Risk Seviyesine Göre"
   },
   "risk_byCategory": {
     "en": "By Category",
-    "missingTr": true
+    "tr": "Kategoriye Göre"
   },
   "risk_byStatus": {
     "en": "By Status",
-    "missingTr": true
+    "tr": "Duruma Göre"
   },
   "risk_recorded": {
     "en": "Risks recorded",
-    "missingTr": true
+    "tr": "Kayıtlı riskler"
   },
   "risk_treatmentsOpen": {
     "en": "Treatment plans open",
-    "missingTr": true
+    "tr": "Açık işleme planları"
   },
   "risk_descHeading": {
     "en": "Risk Description",
-    "missingTr": true
+    "tr": "Risk Açıklaması"
   },
   "risk_threat": {
     "en": "Threat",
-    "missingTr": true
+    "tr": "Tehdit"
   },
   "risk_vulnerability": {
     "en": "Vulnerability",
-    "missingTr": true
+    "tr": "Zafiyet"
   },
   "risk_mitigation": {
     "en": "Mitigation Measures",
-    "missingTr": true
+    "tr": "Azaltıcı Önlemler"
   },
   "risk_assessment": {
     "en": "Assessment",
-    "missingTr": true
+    "tr": "Değerlendirme"
   },
   "risk_treatmentOpt": {
     "en": "Treatment Option",
-    "missingTr": true
+    "tr": "İşleme Seçeneği"
   },
   "risk_noMeasures": {
     "en": "No measures recorded.",
-    "missingTr": true
+    "tr": "Kayıtlı önlem yok."
   },
   "risk_linkedControls": {
     "en": "Linked SoA Controls",
-    "missingTr": true
+    "tr": "Bağlı SOA Kontrolleri"
   },
   "risk_openBtn": {
     "en": "Open Risk",
-    "missingTr": true
+    "tr": "Riski Aç"
   },
   "risk_selectFirst": {
     "en": "Please select a risk first.",
-    "missingTr": true
+    "tr": "Lütfen önce bir risk seçin."
   },
   "risk_openMeasures": {
     "en": "Open Measures",
-    "missingTr": true
+    "tr": "Açık Önlemler"
   },
   "cvss_descCritical": {
     "en": "Critical: vulnerability can allow full system compromise, often without authentication or user interaction (for example remote code execution).",
-    "missingTr": true
+    "tr": "Kritik: zafiyet, çoğunlukla kimlik doğrulama veya kullanıcı etkileşimi olmadan tam sistem ele geçirilmesine izin verebilir (örneğin uzaktan kod çalıştırma)."
   },
   "cvss_descHigh": {
     "en": "High: significant damage is possible. Attackers may control important resources or read confidential data.",
-    "missingTr": true
+    "tr": "Yüksek: önemli hasar mümkündür. Saldırganlar önemli kaynakları kontrol edebilir veya gizli verileri okuyabilir."
   },
   "cvss_descMedium": {
     "en": "Medium: limited damage, or exploitation requires specific preconditions such as network access or user interaction.",
-    "missingTr": true
+    "tr": "Orta: sınırlı hasar veya istismar için ağ erişimi ya da kullanıcı etkileşimi gibi belirli ön koşullar gerekir."
   },
   "cvss_descLow": {
     "en": "Low: minimal damage, difficult exploitation, or strong limiting factors.",
-    "missingTr": true
+    "tr": "Düşük: minimal hasar, zor istismar veya güçlü sınırlayıcı faktörler."
   },
   "cvss_descNone": {
     "en": "No risk: no impact on confidentiality, integrity, or availability.",
-    "missingTr": true
+    "tr": "Risk yok: gizlilik, bütünlük veya erişilebilirlik üzerinde etkisi yok."
   },
   "cvss_sourceNote": {
     "en": "Classification according to CVSS v3.1",
-    "missingTr": true
+    "tr": "CVSS v3.1'e göre sınıflandırma"
   },
   "goals_title": {
     "en": "Security Goals",
-    "missingTr": true
+    "tr": "Güvenlik Hedefleri"
   },
   "goals_new": {
     "en": "New Goal",
-    "missingTr": true
+    "tr": "Yeni Hedef"
   },
   "goals_loading": {
     "en": "Loading Security Goals…",
-    "missingTr": true
+    "tr": "Güvenlik Hedefleri yükleniyor…"
   },
   "goals_achieved": {
     "en": "Achieved",
-    "missingTr": true
+    "tr": "Ulaşıldı"
   },
   "goals_avgProgress": {
     "en": "Avg. Progress",
-    "missingTr": true
+    "tr": "Ort. İlerleme"
   },
   "goals_count": {
     "en": "Goal(s)",
-    "missingTr": true
+    "tr": "Hedef"
   },
   "goals_empty": {
     "en": "No security goals found.",
-    "missingTr": true
+    "tr": "Güvenlik hedefi bulunamadı."
   },
   "goals_catConfidentiality": {
     "en": "Confidentiality",
-    "missingTr": true
+    "tr": "Gizlilik"
   },
   "goals_catIntegrity": {
     "en": "Integrity",
-    "missingTr": true
+    "tr": "Bütünlük"
   },
   "goals_catAvailability": {
     "en": "Availability",
-    "missingTr": true
+    "tr": "Erişilebilirlik"
   },
   "goals_catCompliance": {
     "en": "Compliance",
-    "missingTr": true
+    "tr": "Uyumluluk"
   },
   "goals_catOperational": {
     "en": "Operational",
-    "missingTr": true
+    "tr": "Operasyonel"
   },
   "goals_catTechnical": {
     "en": "Technical",
-    "missingTr": true
+    "tr": "Teknik"
   },
   "goals_catOrganizational": {
     "en": "Organizational",
-    "missingTr": true
+    "tr": "Organizasyonel"
   },
   "goals_statusPlanned": {
     "en": "Planned",
-    "missingTr": true
+    "tr": "Planlandı"
   },
   "goals_statusActive": {
     "en": "Active",
-    "missingTr": true
+    "tr": "Aktif"
   },
   "goals_statusAchieved": {
     "en": "Achieved",
-    "missingTr": true
+    "tr": "Ulaşıldı"
   },
   "goals_statusMissed": {
     "en": "Missed",
-    "missingTr": true
+    "tr": "Kaçırıldı"
   },
   "goals_statusCancelled": {
     "en": "Cancelled",
-    "missingTr": true
+    "tr": "İptal Edildi"
   },
   "goals_priorityLow": {
     "en": "Low",
-    "missingTr": true
+    "tr": "Düşük"
   },
   "goals_priorityMedium": {
     "en": "Medium",
-    "missingTr": true
+    "tr": "Orta"
   },
   "goals_priorityHigh": {
     "en": "High",
-    "missingTr": true
+    "tr": "Yüksek"
   },
   "goals_priorityCritical": {
     "en": "Critical",
-    "missingTr": true
+    "tr": "Kritik"
   },
   "goals_isoClause": {
     "en": "ISO 27001 Cl. 6.2",
-    "missingTr": true
+    "tr": "ISO 27001 Md. 6.2"
   },
   "goals_countLabel": {
     "en": "Goal(s)",
-    "missingTr": true
+    "tr": "Hedef"
   },
   "goals_metricKpi": {
     "en": "Metric / KPI",
-    "missingTr": true
+    "tr": "Metrik / KPI"
   },
   "goals_target": {
     "en": "Target",
-    "missingTr": true
+    "tr": "Hedef Değer"
   },
   "goals_current": {
     "en": "Current",
-    "missingTr": true
+    "tr": "Mevcut Değer"
   },
   "goals_unit": {
     "en": "Unit",
-    "missingTr": true
+    "tr": "Birim"
   },
   "goals_unitHint": {
     "en": "e.g. %, days, items",
-    "missingTr": true
+    "tr": "örn. %, gün, adet"
   },
   "goals_edit": {
     "en": "Edit Security Goal",
-    "missingTr": true
+    "tr": "Güvenlik Hedefini Düzenle"
   },
   "goals_titlePlaceholder": {
     "en": "e.g. Reduce critical vulnerabilities by 80%",
-    "missingTr": true
+    "tr": "örn. Kritik zafiyetleri %80 azalt"
   },
   "goals_priority": {
     "en": "Priority",
-    "missingTr": true
+    "tr": "Öncelik"
   },
   "goals_descriptionContext": {
     "en": "Description / Context",
-    "missingTr": true
+    "tr": "Açıklama / Bağlam"
   },
   "goals_descPlaceholder": {
     "en": "What should be achieved and why?",
-    "missingTr": true
+    "tr": "Ne başarılmalı ve neden?"
   },
   "goals_ownerResponsible": {
     "en": "Owner / Responsible",
-    "missingTr": true
+    "tr": "Sahip / Sorumlu"
   },
   "goals_targetDate": {
     "en": "Target Date",
-    "missingTr": true
+    "tr": "Hedef Tarih"
   },
   "goals_reviewDate": {
     "en": "Review Date",
-    "missingTr": true
+    "tr": "Gözden Geçirme Tarihi"
   },
   "goals_manualProgress": {
     "en": "Manual Progress (%)",
-    "missingTr": true
+    "tr": "Manuel İlerleme (%)"
   },
   "goals_progressHint": {
     "en": "Calculated from KPIs if available",
-    "missingTr": true
+    "tr": "Mevcutsa KPI'lardan otomatik hesaplanır"
   },
   "goals_kpisMetrics": {
     "en": "KPIs (Metrics)",
-    "missingTr": true
+    "tr": "KPI'lar (Metrikler)"
   },
   "goals_kpisDesc": {
     "en": "Define measurable metrics — progress is automatically calculated from the KPIs.",
-    "missingTr": true
+    "tr": "Ölçülebilir metrikler tanımlayın — ilerleme KPI'lardan otomatik olarak hesaplanır."
   },
   "goals_addKpi": {
     "en": "Add KPI",
-    "missingTr": true
+    "tr": "KPI Ekle"
   },
   "goals_notes": {
     "en": "Notes",
-    "missingTr": true
+    "tr": "Notlar"
   },
   "goals_deleteConfirm": {
     "en": "Delete security goal?",
-    "missingTr": true
+    "tr": "Güvenlik hedefi silinsin mi?"
   },
   "legal_activeContracts": {
     "en": "Active Contracts",
-    "missingTr": true
+    "tr": "Aktif Sözleşmeler"
   },
   "legal_expiring": {
     "en": "Expiring",
-    "missingTr": true
+    "tr": "Süresi Doluyor"
   },
   "legal_activeNdas": {
     "en": "Active NDAs",
-    "missingTr": true
+    "tr": "Aktif Gizlilik Sözleşmeleri"
   },
   "legal_livePolicies": {
     "en": "Live Policies",
-    "missingTr": true
+    "tr": "Yürürlükteki Politikalar"
   },
   "legal_contractsTab": {
     "en": "Contracts",
-    "missingTr": true
+    "tr": "Sözleşmeler"
   },
   "legal_newContract": {
     "en": "New Contract",
-    "missingTr": true
+    "tr": "Yeni Sözleşme"
   },
   "legal_noContracts": {
     "en": "No contracts found.",
-    "missingTr": true
+    "tr": "Sözleşme bulunamadı."
   },
   "legal_newNda": {
     "en": "New NDA",
-    "missingTr": true
+    "tr": "Yeni Gizlilik Sözleşmesi"
   },
   "legal_noNdas": {
     "en": "No NDAs found.",
-    "missingTr": true
+    "tr": "Gizlilik sözleşmesi bulunamadı."
   },
   "legal_newPolicy": {
     "en": "New Policy",
-    "missingTr": true
+    "tr": "Yeni Politika"
   },
   "legal_noPolicies": {
     "en": "No privacy policies found.",
-    "missingTr": true
+    "tr": "Gizlilik politikası bulunamadı."
   },
   "training_tabOverview": {
     "en": "Overview",
-    "missingTr": true
+    "tr": "Genel Bakış"
   },
   "training_tabPlan": {
     "en": "Training Plan",
-    "missingTr": true
+    "tr": "Eğitim Planı"
   },
   "training_tabEvidence": {
     "en": "Evidence",
-    "missingTr": true
+    "tr": "Kanıt"
   },
   "training_completionRate": {
     "en": "Completion Rate",
-    "missingTr": true
+    "tr": "Tamamlanma Oranı"
   },
   "training_overdueUpcoming": {
     "en": "Overdue & Upcoming Trainings",
-    "missingTr": true
+    "tr": "Süresi Geçen ve Yaklaşan Eğitimler"
   },
   "training_overdueSince": {
     "en": "Overdue since",
-    "missingTr": true
+    "tr": "Şu tarihten beri süresi geçti"
   },
   "training_noUrgent": {
     "en": "No urgent trainings.",
-    "missingTr": true
+    "tr": "Acil eğitim yok."
   },
   "training_evidenceHeading": {
     "en": "Completed Training with Evidence",
-    "missingTr": true
+    "tr": "Kanıtlı Tamamlanmış Eğitim"
   },
   "training_noEvidence": {
     "en": "No completed training yet.",
-    "missingTr": true
+    "tr": "Henüz tamamlanmış eğitim yok."
   },
   "bcm_tabBia": {
     "en": "BIA Register",
-    "missingTr": true
+    "tr": "İş Etki Analizi (BIA) Kaydı"
   },
   "bcm_tabPlans": {
     "en": "Continuity Plans",
-    "missingTr": true
+    "tr": "Süreklilik Planları"
   },
   "bcm_tabExercises": {
     "en": "Exercises & Tests",
-    "missingTr": true
+    "tr": "Tatbikatlar ve Testler"
   },
   "bcm_subtitle": {
     "en": "BIA Register · Continuity Plans (BCP/DRP/ITP) · Exercises & Tests | ISO 22301",
-    "missingTr": true
+    "tr": "İş Etki Analizi Kaydı · Süreklilik Planları (BCP/DRP/ITP) · Tatbikatlar ve Testler | ISO 22301"
   },
   "bcm_rto": {
     "en": "RTO (h)",
-    "missingTr": true
+    "tr": "RTO (sa)"
   },
   "bcm_rpo": {
     "en": "RPO (h)",
-    "missingTr": true
+    "tr": "RPO (sa)"
   },
   "bcm_noBia": {
     "en": "No BIA entries found",
-    "missingTr": true
+    "tr": "İş Etki Analizi kaydı bulunamadı"
   },
   "assets_new": {
     "en": "New Asset",
-    "missingTr": true
+    "tr": "Yeni Varlık"
   },
   "assets_tabAll": {
     "en": "All Assets",
-    "missingTr": true
+    "tr": "Tüm Varlıklar"
   },
   "assets_tabByCat": {
     "en": "By Category",
-    "missingTr": true
+    "tr": "Kategoriye Göre"
   },
   "assets_tabByClass": {
     "en": "By Classification",
-    "missingTr": true
+    "tr": "Sınıflandırmaya Göre"
   },
   "assets_allClass": {
     "en": "All Classifications",
-    "missingTr": true
+    "tr": "Tüm Sınıflandırmalar"
   },
   "assets_allCrit": {
     "en": "All Criticalities",
-    "missingTr": true
+    "tr": "Tüm Kritiklik Düzeyleri"
   },
   "suppliers_tabList": {
     "en": "List",
-    "missingTr": true
+    "tr": "Liste"
   },
   "suppliers_tabData": {
     "en": "Data Processing",
-    "missingTr": true
+    "tr": "Veri İşleme"
   },
   "suppliers_title": {
     "en": "Supply Chain Management",
-    "missingTr": true
+    "tr": "Tedarik Zinciri Yönetimi"
   },
   "suppliers_total": {
     "en": "Total Suppliers",
-    "missingTr": true
+    "tr": "Toplam Tedarikçi"
   },
   "gdpr_title": {
     "en": "GDPR & Privacy",
-    "missingTr": true
+    "tr": "GDPR ve Gizlilik"
   },
   "cal_riskDue": {
     "en": "Risk Due",
-    "missingTr": true
+    "tr": "Riskin Son Tarihi"
   },
   "cal_riskReview": {
     "en": "Risk Review",
-    "missingTr": true
+    "tr": "Risk Gözden Geçirmesi"
   },
   "cal_measureDue": {
     "en": "Measure Due",
-    "missingTr": true
+    "tr": "Önlemin Son Tarihi"
   },
   "cal_templateReview": {
     "en": "Template Review",
-    "missingTr": true
+    "tr": "Şablon Gözden Geçirmesi"
   },
   "cal_templateDue": {
     "en": "Template Due",
-    "missingTr": true
+    "tr": "Şablonun Son Tarihi"
   },
   "cal_overdue": {
     "en": "Overdue",
-    "missingTr": true
+    "tr": "Süresi Geçti"
   },
   "cal_dueSoon": {
     "en": "Due Soon",
-    "missingTr": true
+    "tr": "Yakında Süresi Doluyor"
   },
   "cal_noUpcoming": {
     "en": "No upcoming events.",
-    "missingTr": true
+    "tr": "Yaklaşan etkinlik yok."
   },
   "cal_openRisk": {
     "en": "Open Risk",
-    "missingTr": true
+    "tr": "Riski Aç"
   },
   "cal_upcoming": {
     "en": "Upcoming Events",
-    "missingTr": true
+    "tr": "Yaklaşan Etkinlikler"
   },
   "gov_tabReviews": {
     "en": "Management Reviews",
-    "missingTr": true
+    "tr": "Yönetim Gözden Geçirmeleri"
   },
   "gov_tabActions": {
     "en": "Actions",
-    "missingTr": true
+    "tr": "Eylemler"
   },
   "gov_tabMeetings": {
     "en": "Meeting Minutes",
-    "missingTr": true
+    "tr": "Toplantı Tutanakları"
   },
   "gov_newReview": {
     "en": "New Review",
-    "missingTr": true
+    "tr": "Yeni Gözden Geçirme"
   },
   "gov_newAction": {
     "en": "New Action",
-    "missingTr": true
+    "tr": "Yeni Eylem"
   },
   "gov_meetings": {
     "en": "Meetings",
-    "missingTr": true
+    "tr": "Toplantılar"
   },
   "gov_newMeeting": {
     "en": "New Meeting",
-    "missingTr": true
+    "tr": "Yeni Toplantı"
   },
   "list_templateTypes": {
     "en": "Template Types",
-    "missingTr": true
+    "tr": "Şablon Türleri"
   },
   "list_riskCats": {
     "en": "Risk Categories",
-    "missingTr": true
+    "tr": "Risk Kategorileri"
   },
   "list_riskTreatments": {
     "en": "Risk Treatments",
-    "missingTr": true
+    "tr": "Risk İşlemeleri"
   },
   "list_gdprDataCats": {
     "en": "GDPR Data Categories",
-    "missingTr": true
+    "tr": "GDPR Veri Kategorileri"
   },
   "list_gdprSubjects": {
     "en": "GDPR Subject Groups",
-    "missingTr": true
+    "tr": "GDPR Veri Sahibi Grupları"
   },
   "list_incidentTypes": {
     "en": "Incident Types",
-    "missingTr": true
+    "tr": "Olay Türleri"
   },
   "reports_createBtn": {
     "en": "Create Report",
-    "missingTr": true
+    "tr": "Rapor Oluştur"
   },
   "reports_fromLabel": {
     "en": "From",
-    "missingTr": true
+    "tr": "Başlangıç"
   },
   "reports_toLabel": {
     "en": "To",
-    "missingTr": true
+    "tr": "Bitiş"
   },
   "trash_deletedBy": {
     "en": "Deleted By",
-    "missingTr": true
+    "tr": "Silen"
   },
   "trash_deletedAt": {
     "en": "Deleted At",
-    "missingTr": true
+    "tr": "Silinme Tarihi"
   },
   "trash_expires": {
     "en": "Expires",
-    "missingTr": true
+    "tr": "Süresi Doluyor"
   },
   "trash_loadError": {
     "en": "Error loading trash.",
-    "missingTr": true
+    "tr": "Çöp kutusu yüklenirken hata oluştu."
   },
   "trash_empty": {
     "en": "The trash is empty.",
-    "missingTr": true
+    "tr": "Çöp kutusu boş."
   },
   "trash_autoDelete": {
     "en": "Entries are automatically permanently deleted after 30 days.",
-    "missingTr": true
+    "tr": "Kayıtlar 30 gün sonra otomatik olarak kalıcı şekilde silinir."
   },
   "trash_entries": {
     "en": "entries",
-    "missingTr": true
+    "tr": "kayıt"
   },
   "trash_inTrash": {
     "en": "in trash",
-    "missingTr": true
+    "tr": "çöp kutusunda"
   },
   "trash_deletePermanent": {
     "en": "Delete permanently",
-    "missingTr": true
+    "tr": "Kalıcı olarak sil"
   },
   "trash_restoreItemConfirm": {
     "en": "Restore item?",
-    "missingTr": true
+    "tr": "Öğe geri yüklensin mi?"
   },
   "trash_unknownModule": {
     "en": "Unknown module",
-    "missingTr": true
+    "tr": "Bilinmeyen modül"
   },
   "trash_restoreFailed": {
     "en": "Restore failed",
-    "missingTr": true
+    "tr": "Geri yükleme başarısız"
   },
   "trash_permanentDeleteConfirm": {
     "en": "Permanently delete? This action CANNOT be undone!",
-    "missingTr": true
+    "tr": "Kalıcı olarak silinsin mi? Bu işlem GERİ ALINAMAZ!"
   },
   "trash_deleteFailed": {
     "en": "Delete failed",
-    "missingTr": true
+    "tr": "Silme başarısız"
   },
   "findings_title": {
     "en": "Audit Findings",
