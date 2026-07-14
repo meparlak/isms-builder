@@ -2973,562 +2973,562 @@
   },
   "findings_title": {
     "en": "Audit Findings",
-    "missingTr": true
+    "tr": "Denetim Bulguları"
   },
   "findings_tabList": {
     "en": "All",
-    "missingTr": true
+    "tr": "Tümü"
   },
   "findings_tabOpen": {
     "en": "Open",
-    "missingTr": true
+    "tr": "Açık"
   },
   "findings_tabResolved": {
     "en": "Resolved",
-    "missingTr": true
+    "tr": "Çözüldü"
   },
   "findings_new": {
     "en": "New Finding",
-    "missingTr": true
+    "tr": "Yeni Bulgu"
   },
   "findings_total": {
     "en": "Total Findings",
-    "missingTr": true
+    "tr": "Toplam Bulgu"
   },
   "findings_open": {
     "en": "Open",
-    "missingTr": true
+    "tr": "Açık"
   },
   "findings_critical": {
     "en": "Critical",
-    "missingTr": true
+    "tr": "Kritik"
   },
   "findings_high": {
     "en": "High",
-    "missingTr": true
+    "tr": "Yüksek"
   },
   "findings_medium": {
     "en": "Medium",
-    "missingTr": true
+    "tr": "Orta"
   },
   "findings_low": {
     "en": "Low",
-    "missingTr": true
+    "tr": "Düşük"
   },
   "findings_observation": {
     "en": "Observation",
-    "missingTr": true
+    "tr": "Gözlem"
   },
   "findings_openActions": {
     "en": "Open Actions",
-    "missingTr": true
+    "tr": "Açık Eylemler"
   },
   "findings_overdue": {
     "en": "Overdue Actions",
-    "missingTr": true
+    "tr": "Süresi Geçen Eylemler"
   },
   "findings_observation_field": {
     "en": "Observation (IS)",
-    "missingTr": true
+    "tr": "Mevcut Durum (IS)"
   },
   "findings_requirement": {
     "en": "Requirement (SHALL)",
-    "missingTr": true
+    "tr": "Gereklilik (SHALL)"
   },
   "findings_impact": {
     "en": "Risk / Impact",
-    "missingTr": true
+    "tr": "Risk / Etki"
   },
   "findings_recommendation": {
     "en": "Recommendation",
-    "missingTr": true
+    "tr": "Öneri"
   },
   "findings_actions": {
     "en": "Action Plan",
-    "missingTr": true
+    "tr": "Eylem Planı"
   },
   "findings_singular": {
     "en": "Finding",
-    "missingTr": true
+    "tr": "Bulgu"
   },
   "findings_none": {
     "en": "No findings",
-    "missingTr": true
+    "tr": "Bulgu yok"
   },
   "findings_edit": {
     "en": "Edit Finding",
-    "missingTr": true
+    "tr": "Bulguyu Düzenle"
   },
   "findings_create": {
     "en": "Create Finding",
-    "missingTr": true
+    "tr": "Bulgu Oluştur"
   },
   "findings_deleted": {
     "en": "Finding deleted",
-    "missingTr": true
+    "tr": "Bulgu silindi"
   },
   "findings_severity": {
     "en": "Severity",
-    "missingTr": true
+    "tr": "Önem Derecesi"
   },
   "findings_statusOpen": {
     "en": "Open",
-    "missingTr": true
+    "tr": "Açık"
   },
   "findings_statusInProgress": {
     "en": "In Progress",
-    "missingTr": true
+    "tr": "Devam Ediyor"
   },
   "findings_statusResolved": {
     "en": "Resolved",
-    "missingTr": true
+    "tr": "Çözüldü"
   },
   "findings_statusAccepted": {
     "en": "Accepted",
-    "missingTr": true
+    "tr": "Kabul Edildi"
   },
   "findings_statusDone": {
     "en": "Done",
-    "missingTr": true
+    "tr": "Tamamlandı"
   },
   "findings_actionsOpenShort": {
     "en": "Actions open",
-    "missingTr": true
+    "tr": "Açık eylem"
   },
   "findings_actionsOverdueShort": {
     "en": "Actions overdue",
-    "missingTr": true
+    "tr": "Süresi geçen eylem"
   },
   "findings_auditedArea": {
     "en": "Audited Area",
-    "missingTr": true
+    "tr": "Denetlenen Alan"
   },
   "findings_auditor": {
     "en": "Auditor",
-    "missingTr": true
+    "tr": "Denetçi"
   },
   "findings_period": {
     "en": "Period",
-    "missingTr": true
+    "tr": "Dönem"
   },
   "findings_created": {
     "en": "Created",
-    "missingTr": true
+    "tr": "Oluşturuldu"
   },
   "findings_basicData": {
     "en": "Basic Data",
-    "missingTr": true
+    "tr": "Temel Bilgiler"
   },
   "findings_details": {
     "en": "Finding Details",
-    "missingTr": true
+    "tr": "Bulgu Detayları"
   },
   "findings_observationFull": {
     "en": "Observation (Current State)",
-    "missingTr": true
+    "tr": "Gözlem (Mevcut Durum)"
   },
   "findings_requirementFull": {
     "en": "Requirement (Target State)",
-    "missingTr": true
+    "tr": "Gereklilik (Hedef Durum)"
   },
   "findings_linkedControls": {
     "en": "Linked Controls",
-    "missingTr": true
+    "tr": "Bağlı Kontroller"
   },
   "findings_noActions": {
     "en": "No actions recorded.",
-    "missingTr": true
+    "tr": "Kayıtlı eylem yok."
   },
   "findings_actionDescPlaceholder": {
     "en": "What exactly will be done?",
-    "missingTr": true
+    "tr": "Tam olarak ne yapılacak?"
   },
   "findings_responsiblePlaceholder": {
     "en": "Name / role",
-    "missingTr": true
+    "tr": "Ad / rol"
   },
   "findings_targetDate": {
     "en": "Target Date",
-    "missingTr": true
+    "tr": "Hedef Tarih"
   },
   "findings_deleteActionConfirm": {
     "en": "Delete action?",
-    "missingTr": true
+    "tr": "Eylem silinsin mi?"
   },
   "findings_titlePlaceholder": {
     "en": "Short clear finding name",
-    "missingTr": true
+    "tr": "Kısa, açık bulgu adı"
   },
   "findings_auditorPlaceholder": {
     "en": "Name or initials",
-    "missingTr": true
+    "tr": "Ad veya kısaltma"
   },
   "findings_periodFrom": {
     "en": "Audit Period From",
-    "missingTr": true
+    "tr": "Denetim Dönemi Başlangıcı"
   },
   "findings_observationPlaceholder": {
     "en": "What was found? Sample size, specific figures…",
-    "missingTr": true
+    "tr": "Ne bulundu? Örneklem büyüklüğü, belirli rakamlar…"
   },
   "findings_requirementPlaceholder": {
     "en": "What does the standard or internal policy require?",
-    "missingTr": true
+    "tr": "Standart veya iç politika ne gerektiriyor?"
   },
   "findings_impactPlaceholder": {
     "en": "What can happen if this is not fixed?",
-    "missingTr": true
+    "tr": "Bu düzeltilmezse ne olabilir?"
   },
   "findings_recommendationPlaceholder": {
     "en": "What should be done specifically?",
-    "missingTr": true
+    "tr": "Özellikle ne yapılmalı?"
   },
   "findings_detailView": {
     "en": "Detail View",
-    "missingTr": true
+    "tr": "Detay Görünümü"
   },
   "findings_titleRequired": {
     "en": "Title is required",
-    "missingTr": true
+    "tr": "Başlık zorunludur"
   },
   "findings_createdMessage": {
     "en": "Finding {ref} created.",
-    "missingTr": true
+    "tr": "{ref} bulgusu oluşturuldu."
   },
   "findings_trashConfirm": {
     "en": "Move finding to trash?",
-    "missingTr": true
+    "tr": "Bulgu çöp kutusuna taşınsın mı?"
   },
   "file_selectRequired": {
     "en": "Please select a file",
-    "missingTr": true
+    "tr": "Lütfen bir dosya seçin"
   },
   "importing": {
     "en": "Importing…",
-    "missingTr": true
+    "tr": "İçe aktarılıyor…"
   },
   "import_action": {
     "en": "Import",
-    "missingTr": true
+    "tr": "İçe Aktar"
   },
   "import_success": {
     "en": "Import successful",
-    "missingTr": true
+    "tr": "İçe aktarma başarılı"
   },
   "import_findingsFound": {
     "en": "Findings found",
-    "missingTr": true
+    "tr": "Bulunan bulgular"
   },
   "import_clusteredRisks": {
     "en": "Clustered risks",
-    "missingTr": true
+    "tr": "Kümelenen riskler"
   },
   "import_created": {
     "en": "Created",
-    "missingTr": true
+    "tr": "Oluşturuldu"
   },
   "import_skippedDuplicates": {
     "en": "Skipped (duplicate)",
-    "missingTr": true
+    "tr": "Atlandı (tekrar)"
   },
   "import_method": {
     "en": "Method",
-    "missingTr": true
+    "tr": "Yöntem"
   },
   "ack_mode": {
     "en": "Mode",
-    "missingTr": true
+    "tr": "Mod"
   },
   "ack_changeMode": {
     "en": "Change Mode",
-    "missingTr": true
+    "tr": "Modu Değiştir"
   },
   "ack_distributions": {
     "en": "Distributions",
-    "missingTr": true
+    "tr": "Dağıtımlar"
   },
   "ack_newDistribution": {
     "en": "New Distribution",
-    "missingTr": true
+    "tr": "Yeni Dağıtım"
   },
   "ack_noDistributions": {
     "en": "No distributions yet.",
-    "missingTr": true
+    "tr": "Henüz dağıtım yok."
   },
   "ack_createFirst": {
     "en": "Create first distribution",
-    "missingTr": true
+    "tr": "İlk dağıtımı oluştur"
   },
   "ack_modeEmail": {
     "en": "Email Campaign",
-    "missingTr": true
+    "tr": "E-posta Kampanyası"
   },
   "ack_modeManual": {
     "en": "Manual / CSV Import",
-    "missingTr": true
+    "tr": "Manuel / CSV İçe Aktarma"
   },
   "ack_modeManualShort": {
     "en": "Manual / CSV",
-    "missingTr": true
+    "tr": "Manuel / CSV"
   },
   "ack_modeDistributionOnly": {
     "en": "Document distribution only",
-    "missingTr": true
+    "tr": "Yalnızca belge dağıtımı"
   },
   "ack_modeDistributionOnlyShort": {
     "en": "Distribution only",
-    "missingTr": true
+    "tr": "Yalnızca dağıtım"
   },
   "ack_modeEmailDesc": {
     "en": "Emails with token links are sent. Employees acknowledge without signing in.",
-    "missingTr": true
+    "tr": "Token bağlantılı e-postalar gönderilir. Çalışanlar oturum açmadan onay verir."
   },
   "ack_modeManualDesc": {
     "en": "Acknowledgements are entered manually or imported by CSV.",
-    "missingTr": true
+    "tr": "Onaylar manuel olarak girilir veya CSV ile içe aktarılır."
   },
   "ack_modeDistributionOnlyDesc": {
     "en": "No individual acknowledgements are recorded, only the distribution is documented.",
-    "missingTr": true
+    "tr": "Bireysel onay kaydedilmez, yalnızca dağıtım belgelenir."
   },
   "ack_statusActive": {
     "en": "Active",
-    "missingTr": true
+    "tr": "Aktif"
   },
   "ack_statusCompleted": {
     "en": "Completed",
-    "missingTr": true
+    "tr": "Tamamlandı"
   },
   "ack_statusExpired": {
     "en": "Expired",
-    "missingTr": true
+    "tr": "Süresi Doldu"
   },
   "ack_policy": {
     "en": "Policy",
-    "missingTr": true
+    "tr": "Politika"
   },
   "ack_policyApprovedOnly": {
     "en": "Policy (approved only)",
-    "missingTr": true
+    "tr": "Politika (yalnızca onaylanmış)"
   },
   "ack_targetGroup": {
     "en": "Target Group",
-    "missingTr": true
+    "tr": "Hedef Grup"
   },
   "ack_targetGroupDescription": {
     "en": "Target Group / Description",
-    "missingTr": true
+    "tr": "Hedef Grup / Açıklama"
   },
   "ack_targetGroupPlaceholder": {
     "en": "e.g. all employees, IT department…",
-    "missingTr": true
+    "tr": "örn. tüm çalışanlar, BT departmanı…"
   },
   "ack_deadline": {
     "en": "Deadline",
-    "missingTr": true
+    "tr": "Son Tarih"
   },
   "ack_deadlineOptional": {
     "en": "Deadline (optional)",
-    "missingTr": true
+    "tr": "Son Tarih (isteğe bağlı)"
   },
   "ack_optional": {
     "en": "optional",
-    "missingTr": true
+    "tr": "isteğe bağlı"
   },
   "ack_activeMode": {
     "en": "Active Mode",
-    "missingTr": true
+    "tr": "Aktif Mod"
   },
   "ack_emailAddresses": {
     "en": "Email addresses",
-    "missingTr": true
+    "tr": "E-posta adresleri"
   },
   "ack_emailHint": {
     "en": "one per line or comma-separated",
-    "missingTr": true
+    "tr": "her satıra bir tane veya virgülle ayrılmış"
   },
   "ack_notes": {
     "en": "Notes",
-    "missingTr": true
+    "tr": "Notlar"
   },
   "ack_notesPlaceholder": {
     "en": "Optional notes for this distribution",
-    "missingTr": true
+    "tr": "Bu dağıtım için isteğe bağlı notlar"
   },
   "ack_createAndPrepareEmails": {
     "en": "Create & prepare emails",
-    "missingTr": true
+    "tr": "Oluştur ve e-postaları hazırla"
   },
   "ack_createDistribution": {
     "en": "Create Distribution",
-    "missingTr": true
+    "tr": "Dağıtım Oluştur"
   },
   "ack_choosePolicy": {
     "en": "Choose policy…",
-    "missingTr": true
+    "tr": "Politika seçin…"
   },
   "ack_choosePolicyAlert": {
     "en": "Please choose a policy.",
-    "missingTr": true
+    "tr": "Lütfen bir politika seçin."
   },
   "ack_createFailed": {
     "en": "Error creating",
-    "missingTr": true
+    "tr": "Oluşturma hatası"
   },
   "ack_createdEmailsSent": {
     "en": "Distribution created. {count} email(s) sent.",
-    "missingTr": true
+    "tr": "Dağıtım oluşturuldu. {count} e-posta gönderildi."
   },
   "ack_createdEmailsFailed": {
     "en": "Distribution created. Emails could not be sent (SMTP not configured?).",
-    "missingTr": true
+    "tr": "Dağıtım oluşturuldu. E-postalar gönderilemedi (SMTP yapılandırılmamış olabilir)."
   },
   "ack_created": {
     "en": "Distribution created successfully.",
-    "missingTr": true
+    "tr": "Dağıtım başarıyla oluşturuldu."
   },
   "ack_noAcknowledgements": {
     "en": "No acknowledgements yet.",
-    "missingTr": true
+    "tr": "Henüz onay yok."
   },
   "ack_confirmedAt": {
     "en": "Acknowledged At",
-    "missingTr": true
+    "tr": "Onay Tarihi"
   },
   "ack_method": {
     "en": "Method",
-    "missingTr": true
+    "tr": "Yöntem"
   },
   "ack_pending": {
     "en": "Pending",
-    "missingTr": true
+    "tr": "Bekliyor"
   },
   "ack_addManual": {
     "en": "Add acknowledgement manually",
-    "missingTr": true
+    "tr": "Onayı manuel olarak ekle"
   },
   "ack_importCsv": {
     "en": "Import CSV",
-    "missingTr": true
+    "tr": "CSV İçe Aktar"
   },
   "ack_csvFormat": {
     "en": "Format",
-    "missingTr": true
+    "tr": "Biçim"
   },
   "ack_csvHint": {
     "en": "one row per person, date optional",
-    "missingTr": true
+    "tr": "kişi başına bir satır, tarih isteğe bağlı"
   },
   "ack_confirmed": {
     "en": "Acknowledged",
-    "missingTr": true
+    "tr": "Onaylandı"
   },
   "ack_sendReminder": {
     "en": "Send reminder",
-    "missingTr": true
+    "tr": "Hatırlatma gönder"
   },
   "ack_acknowledgements": {
     "en": "Acknowledgements",
-    "missingTr": true
+    "tr": "Onaylar"
   },
   "ack_sendReminderConfirm": {
     "en": "Send reminder email to all recipients who have not acknowledged yet?",
-    "missingTr": true
+    "tr": "Henüz onaylamamış tüm alıcılara hatırlatma e-postası gönderilsin mi?"
   },
   "ack_remindersSent": {
     "en": "{count} reminder(s) sent.",
-    "missingTr": true
+    "tr": "{count} hatırlatma gönderildi."
   },
   "ack_deleteDistributionConfirm": {
     "en": "Delete distribution and all acknowledgements?",
-    "missingTr": true
+    "tr": "Dağıtım ve tüm onaylar silinsin mi?"
   },
   "ack_enterEmail": {
     "en": "Enter email address",
-    "missingTr": true
+    "tr": "E-posta adresi girin"
   },
   "ack_noValidRows": {
     "en": "No valid rows found.",
-    "missingTr": true
+    "tr": "Geçerli satır bulunamadı."
   },
   "ack_importSummary": {
     "en": "{imported} imported, {skipped} skipped.",
-    "missingTr": true
+    "tr": "{imported} içe aktarıldı, {skipped} atlandı."
   },
   "ack_deleteConfirm": {
     "en": "Delete acknowledgement?",
-    "missingTr": true
+    "tr": "Onay silinsin mi?"
   },
   "ack_configureMode": {
     "en": "Configure Acknowledgement Mode",
-    "missingTr": true
+    "tr": "Onay Modunu Yapılandır"
   },
   "ack_modeWarningPrefix": {
     "en": "This setting applies to",
-    "missingTr": true
+    "tr": "Bu ayar"
   },
   "ack_modeWarningEmphasis": {
     "en": "all future distributions",
-    "missingTr": true
+    "tr": "tüm gelecekteki dağıtımlar için geçerlidir"
   },
   "ack_modeWarningSuffix": {
     "en": "Existing campaigns keep their original mode.",
-    "missingTr": true
+    "tr": "Mevcut kampanyalar kendi orijinal modunu korur."
   },
   "ack_saveMode": {
     "en": "Save mode",
-    "missingTr": true
+    "tr": "Modu kaydet"
   },
   "ack_activeDistributions": {
     "en": "Active distributions",
-    "missingTr": true
+    "tr": "Aktif dağıtımlar"
   },
   "ack_pendingAcknowledgements": {
     "en": "Pending acknowledgements",
-    "missingTr": true
+    "tr": "Bekleyen onaylar"
   },
   "scanImport_descPrefix": {
     "en": "Imports a Greenbone security report (XML or PDF) as draft risks.",
-    "missingTr": true
+    "tr": "Bir Greenbone güvenlik raporunu (XML veya PDF) taslak risk olarak içe aktarır."
   },
   "scanImport_descSuffix": {
     "en": "All imported risks receive status <strong>needsReview = true</strong> and must be reviewed and approved by an auditor or CISO before they are active in risk management.",
-    "missingTr": true
+    "tr": "İçe aktarılan tüm riskler <strong>needsReview = true</strong> durumunu alır ve risk yönetiminde aktif hale gelmeden önce bir denetçi veya CISO tarafından gözden geçirilip onaylanmalıdır."
   },
   "scanImport_noAssignment": {
     "en": "no assignment",
-    "missingTr": true
+    "tr": "atama yok"
   },
   "scanImport_reference": {
     "en": "Scan Reference",
-    "missingTr": true
+    "tr": "Tarama Referansı"
   },
   "scanImport_referencePlaceholder": {
     "en": "e.g. Scan-2026-03",
-    "missingTr": true
+    "tr": "örn. Tarama-2026-03"
   },
   "admin_langConfig": {
     "en": "Language Configuration",
-    "missingTr": true
+    "tr": "Dil Yapılandırması"
   },
   "admin_langConfigDesc": {
     "en": "Enable or disable languages system-wide. The default language is shown on the login page for users without a stored preference.",
-    "missingTr": true
+    "tr": "Dilleri sistem genelinde etkinleştirin veya devre dışı bırakın. Kayıtlı bir tercihi olmayan kullanıcılara giriş sayfasında varsayılan dil gösterilir."
   },
   "admin_langDefault": {
     "en": "Default Language",
-    "missingTr": true
+    "tr": "Varsayılan Dil"
   },
   "admin_langSave": {
     "en": "Save language settings",
-    "missingTr": true
+    "tr": "Dil ayarlarını kaydet"
   },
   "admin_langSaved": {
     "en": "Language settings saved.",
-    "missingTr": true
+    "tr": "Dil ayarları kaydedildi."
   },
   "admin_langMinOne": {
     "en": "At least one language must be active.",
-    "missingTr": true
+    "tr": "En az bir dil aktif olmalıdır."
   }
 }
