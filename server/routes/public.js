@@ -48,8 +48,24 @@ router.get('/public/incident/:id', requireAuth, authorize('contentowner'), async
 
 // CISO / contentowner: Vorfall zuweisen / aktualisieren
 router.put('/public/incident/:id', requireAuth, authorize('contentowner'), async (req, res) => {
-  const updated = await publicIncidentStore.update(req.params.id, req.body, req.user)
+  let updated = await publicIncidentStore.update(req.params.id, req.body, req.user)
   if (!updated) return res.status(404).json({ error: 'Not found' })
+
+  // FR-INC.4: "Düzeltici faaliyet gerekli" işaretlenince otomatik CAPA açılır — manuel buton yok.
+  if (req.body.correctiveActionRequired === true && !updated.linkedCapaId) {
+    const capaStore = require('../db/capaStore')
+    const capa = await capaStore.createFromAutomation({
+      title: `Olay düzeltici faaliyeti — ${updated.refNumber || updated.id}`,
+      description: updated.description || '',
+      source: 'incident',
+      sourceRef: updated.id,
+      owner: req.user,
+      dueDate: new Date(Date.now() + 30 * 86400000).toISOString().slice(0, 10),
+    })
+    updated = await publicIncidentStore.update(req.params.id, { linkedCapaId: capa.id }, req.user)
+    await require('../db/auditStore').append({ user: req.user, action: 'create', resource: 'capa', resourceId: capa.id, detail: `auto-opened from incident ${updated.id}` })
+  }
+
   res.json(updated)
 })
 

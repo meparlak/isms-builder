@@ -3193,6 +3193,7 @@ async function saveSoaRow(id, container) {
 // ════════════════════════════════════════════════════════════
 
 const CAPA_SOURCES = ['manual', 'audit', 'management_review']
+const CAPA_AUTOMATIC_SOURCES = ['incident', 'rollback', 'continuity_test']
 let _capaBoardData = []
 
 async function _fetchCapaList() {
@@ -3296,7 +3297,9 @@ function openCapaCreateModal() {
               <label class="form-label">${t('capa_sourceLabel')}</label>
               <select id="capaSource" class="select">
                 ${CAPA_SOURCES.map(s => `<option value="${s}">${t('capa_source_' + s)}</option>`).join('')}
+                ${CAPA_AUTOMATIC_SOURCES.map(s => `<option value="${s}" disabled>${t('capa_source_' + s)}</option>`).join('')}
               </select>
+              <div class="hint">${t('capa_automaticSourceHint')}</div>
             </div>
             <div>
               <label class="form-label">${t('col_responsible')}</label>

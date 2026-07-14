@@ -55,3 +55,48 @@ describe('CAPA / Aksiyon Merkezi', () => {
     expect(res.body.every(c => c.source === 'manual')).toBe(true)
   })
 })
+
+describe('CAPA — olaydan otomatik tetikleme', () => {
+  test('olayda correctiveActionRequired=true işaretlenince CAPA otomatik açılır', async () => {
+    const incRes = await require('supertest')(app).post('/public/incident').send({
+      email: 'melder-capa1@example.com',
+      incidentType: 'unauthorized_access',
+      description: 'Yetkisiz erişim denemesi',
+    })
+    expect(incRes.status).toBe(201)
+    const incId = incRes.body.id
+
+    const flagRes = await authedPut(app, adminCookie, `/public/incident/${incId}`, { correctiveActionRequired: true })
+    expect(flagRes.status).toBe(200)
+    expect(flagRes.body.linkedCapaId).toBeTruthy()
+
+    const capaListRes = await authedGet(app, adminCookie, '/capa?source=incident')
+    const linked = capaListRes.body.find(c => c.id === flagRes.body.linkedCapaId)
+    expect(linked).toBeTruthy()
+    expect(linked.sourceRef).toBe(incId)
+
+    const getRes = await authedGet(app, adminCookie, `/public/incident/${incId}`)
+    expect(getRes.body.linkedCapaId).toBe(flagRes.body.linkedCapaId)
+  })
+
+  test('aynı olay ikinci kez işaretlenirse CAPA tekrar üretilmez (tekilleştirme)', async () => {
+    const incRes = await require('supertest')(app).post('/public/incident').send({
+      email: 'melder-capa2@example.com',
+      incidentType: 'unauthorized_access',
+      description: 'İkinci test olayı',
+    })
+    const incId = incRes.body.id
+    const first  = await authedPut(app, adminCookie, `/public/incident/${incId}`, { correctiveActionRequired: true })
+    const second = await authedPut(app, adminCookie, `/public/incident/${incId}`, { correctiveActionRequired: true })
+    expect(second.body.linkedCapaId).toBe(first.body.linkedCapaId)
+
+    const capaListRes = await authedGet(app, adminCookie, '/capa?source=incident')
+    const matches = capaListRes.body.filter(c => c.sourceRef === incId)
+    expect(matches.length).toBe(1)
+  })
+
+  test('POST /capa ile source=incident gönderilirse reddedilir (yalnız otomasyon açabilir)', async () => {
+    const res = await authedPost(app, adminCookie, '/capa', { title: 'x', source: 'incident', owner: 'admin', dueDate: '2026-12-31' })
+    expect(res.status).toBe(422)
+  })
+})

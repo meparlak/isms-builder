@@ -96,7 +96,7 @@ function update(id, patch, updatedBy) {
   const list = load()
   const idx  = list.findIndex(i => i.id === id)
   if (idx === -1) return null
-  const allowed = ['status', 'assignedTo', 'reportable', 'cisoNotes', 'correctiveActionRequired']
+  const allowed = ['status', 'assignedTo', 'reportable', 'cisoNotes', 'correctiveActionRequired', 'linkedCapaId']
   allowed.forEach(k => { if (k in patch) list[idx][k] = patch[k] })
   list[idx].updatedAt = new Date().toISOString()
   list[idx].updatedBy = updatedBy || null

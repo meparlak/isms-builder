@@ -81,7 +81,7 @@ module.exports = {
     const row = await getDb()('public_incidents').where('id', id).first()
     if (!row) return null
     const inc = rowToIncident(row)
-    const allowed = ['status','assignedTo','reportable','cisoNotes','correctiveActionRequired']
+    const allowed = ['status','assignedTo','reportable','cisoNotes','correctiveActionRequired','linkedCapaId']
     for (const k of allowed) { if (k in patch) inc[k] = patch[k] }
     inc.updatedAt = nowISO()
     inc.updatedBy = updatedBy || null
