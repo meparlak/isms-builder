@@ -37,6 +37,16 @@ const INCIDENT_TYPES = [
 
 const CLEANED_UP_VALUES = ['yes', 'no', 'partial']
 
+// Müdahale/izolasyon adımları (Incident Response / Isolation Steps)
+const RESPONSE_STEPS = ['source_ip_blocked', 'sessions_terminated', 'evidence_archived']
+
+function ensureResponseLog(incident) {
+  if (!incident.responseLog) {
+    incident.responseLog = RESPONSE_STEPS.map(step => ({ step, done: false, doneAt: null, doneBy: null }))
+  }
+  return incident
+}
+
 function getAll({ status } = {}) {
   let list = load().filter(i => !i.deletedAt)
   if (status) list = list.filter(i => i.status === status)
@@ -69,6 +79,7 @@ function create(data) {
     updatedAt:    null,
     updatedBy:    null,
   }
+  ensureResponseLog(incident)
   list.push(incident)
   save(list)
   return incident
@@ -82,6 +93,20 @@ function update(id, patch, updatedBy) {
   allowed.forEach(k => { if (k in patch) list[idx][k] = patch[k] })
   list[idx].updatedAt = new Date().toISOString()
   list[idx].updatedBy = updatedBy || null
+  save(list)
+  return list[idx]
+}
+
+function updateResponseStep(id, step, done, user) {
+  const list = load()
+  const idx = list.findIndex(i => i.id === id && !i.deletedAt)
+  if (idx === -1) return null
+  ensureResponseLog(list[idx])
+  const s = list[idx].responseLog.find(s => s.step === step)
+  if (!s) return null
+  s.done = !!done
+  s.doneAt = done ? new Date().toISOString() : null
+  s.doneBy = done ? (user || null) : null
   save(list)
   return list[idx]
 }
@@ -122,7 +147,10 @@ function getDeleted() {
 // Keep remove as alias for permanentDelete for backward compatibility
 const remove = permanentDelete
 
-const _jsonExports = { getAll, getById, create, update, delete: del, permanentDelete, restore, getDeleted, remove, INCIDENT_TYPES }
+const _jsonExports = {
+  getAll, getById, create, update, delete: del, permanentDelete, restore, getDeleted, remove, INCIDENT_TYPES,
+  ensureResponseLog, updateResponseStep, RESPONSE_STEPS,
+}
 
 if (STORAGE_BACKEND !== 'json') {
   const _knex = require('./stores/publicIncidentStore')

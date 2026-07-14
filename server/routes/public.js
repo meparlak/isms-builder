@@ -53,6 +53,15 @@ router.put('/public/incident/:id', requireAuth, authorize('contentowner'), async
   res.json(updated)
 })
 
+// CISO / contentowner: Müdahale/izolasyon adımını işaretle
+router.put('/public/incident/:id/response-step', requireAuth, authorize('contentowner'), async (req, res) => {
+  const { step, done } = req.body || {}
+  const updated = await publicIncidentStore.updateResponseStep(req.params.id, step, done, req.user)
+  if (!updated) return res.status(404).json({ error: 'Not found' })
+  await require('../db/auditStore').append({ user: req.user, action: 'update', resource: 'public-incident', resourceId: updated.id, detail: `response-step:${step}=${done}` })
+  res.json(updated)
+})
+
 // Admin: Vorfall in Papierkorb verschieben (Soft-Delete)
 router.delete('/public/incident/:id', requireAuth, authorize('admin'), async (req, res) => {
   const ok = await publicIncidentStore.delete(req.params.id, req.user)

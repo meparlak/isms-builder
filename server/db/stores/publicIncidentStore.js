@@ -5,6 +5,16 @@ const { getDb, init: initDb } = require('../knexDatabase')
 const INCIDENT_TYPES = ['malware','phishing','data_theft','ransomware','unauthorized_access','social_engineering','other']
 const CLEANED_UP_VALUES = ['yes','no','partial']
 
+// Müdahale/izolasyon adımları (Incident Response / Isolation Steps)
+const RESPONSE_STEPS = ['source_ip_blocked', 'sessions_terminated', 'evidence_archived']
+
+function ensureResponseLog(incident) {
+  if (!incident.responseLog) {
+    incident.responseLog = RESPONSE_STEPS.map(step => ({ step, done: false, doneAt: null, doneBy: null }))
+  }
+  return incident
+}
+
 function nowISO() { return new Date().toISOString() }
 function _json(val, fallback) { if (!val) return fallback; try { return JSON.parse(val) } catch { return fallback } }
 
@@ -54,6 +64,7 @@ module.exports = {
       assignedTo: null, reportable: null, cisoNotes: '',
       updatedAt: null, updatedBy: null,
     }
+    ensureResponseLog(incident)
     await getDb()('public_incidents').insert({
       id, ref, data: JSON.stringify(incident), submitted_at: now,
     })
@@ -71,6 +82,23 @@ module.exports = {
     await getDb()('public_incidents').where('id', id).update({ data: JSON.stringify(inc) })
     return inc
   },
+
+  updateResponseStep: async (id, step, done, user) => {
+    const row = await getDb()('public_incidents').where('id', id).whereNull('deleted_at').first()
+    if (!row) return null
+    const inc = rowToIncident(row)
+    ensureResponseLog(inc)
+    const s = inc.responseLog.find(s => s.step === step)
+    if (!s) return null
+    s.done = !!done
+    s.doneAt = done ? nowISO() : null
+    s.doneBy = done ? (user || null) : null
+    await getDb()('public_incidents').where('id', id).update({ data: JSON.stringify(inc) })
+    return inc
+  },
+
+  ensureResponseLog,
+  RESPONSE_STEPS,
 
   delete: async (id, deletedBy) => {
     const row = await getDb()('public_incidents').where('id', id).first()
