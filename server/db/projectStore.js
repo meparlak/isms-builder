@@ -59,6 +59,9 @@ function completeChecklistItem(projectId, itemKey, { done, evidenceRef, waived, 
 const STAKEHOLDER_ROLES = ['sponsor', 'responsible', 'customer']
 
 function addStakeholder(projectId, { type, userId, externalName, role }) {
+  if (!['registered', 'external'].includes(type)) {
+    throw Object.assign(new Error(`Geçersiz tip: ${type}`), { status: 422 })
+  }
   if (!STAKEHOLDER_ROLES.includes(role)) {
     throw Object.assign(new Error(`Geçersiz rol: ${role}`), { status: 422 })
   }

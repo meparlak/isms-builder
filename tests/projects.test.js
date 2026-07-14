@@ -86,6 +86,20 @@ describe('Proje — Paydaş Yönetimi', () => {
     expect(res.status).toBe(422)
   })
 
+  test('geçersiz tip reddedilir (422)', async () => {
+    const res = await authedPost(app, adminCookie, `/projects/${projectId}/stakeholders`, {
+      type: 'bogus', role: 'sponsor',
+    })
+    expect(res.status).toBe(422)
+  })
+
+  test('tip belirtilmeden reddedilir (422)', async () => {
+    const res = await authedPost(app, adminCookie, `/projects/${projectId}/stakeholders`, {
+      role: 'sponsor',
+    })
+    expect(res.status).toBe(422)
+  })
+
   test('paydaş kaldırılabilir', async () => {
     const list = await authedGet(app, adminCookie, `/projects/${projectId}`)
     const stakeholderId = list.body.stakeholders[0].id
