@@ -73,6 +73,7 @@
     nav_gdpr:        { de: 'GDPR & Datenschutz',  en: 'GDPR & Data Protection', fr: 'RGPD & Protection des données', nl: 'AVG & Gegevensbescherming' , tr: 'GDPR ve Veri Koruma' },
     nav_legal:       { de: 'Legal & Privacy',     en: 'Legal & Privacy',   fr: 'Juridique & Confidentialité', nl: 'Juridisch & Privacy' , tr: 'Hukuk ve Gizlilik' },
     nav_incident:    { de: 'Incident Inbox',      en: 'Incident Inbox',    fr: 'Boîte incidents',       nl: 'Incidentenpostbus' , tr: 'Olay Kutusu' },
+    nav_capa:        { de: 'CAPA / Maßnahmen',    en: 'CAPA / Actions',    fr: 'CAPA / Actions',        nl: 'CAPA / Acties' , tr: 'DÖF / Aksiyonlar' },
     nav_suppliers:   { de: 'Lieferkette',         en: 'Supply Chain',      fr: 'Chaîne d\'approvisionnement', nl: 'Leveranciersketen' , tr: 'Tedarik Zinciri' },
     nav_bcm:         { de: 'Business Continuity', en: 'Business Continuity', fr: 'Continuité d\'activité', nl: 'Bedrijfscontinuïteit' , tr: 'İş Sürekliliği' },
     nav_governance:  { de: 'Governance',          en: 'Governance',        fr: 'Gouvernance',           nl: 'Bestuur' , tr: 'Yönetişim' },
@@ -1010,6 +1011,28 @@
     admin_langSave:      { de: 'Spracheinstellungen speichern', en: 'Save language settings', fr: 'Enregistrer les paramètres de langue', nl: 'Taalinstellingen opslaan' , tr: 'Dil ayarlarını kaydet' },
     admin_langSaved:     { de: 'Spracheinstellungen gespeichert.', en: 'Language settings saved.', fr: 'Paramètres de langue enregistrés.', nl: 'Taalinstellingen opgeslagen.' , tr: 'Dil ayarları kaydedildi.' },
     admin_langMinOne:    { de: 'Mindestens eine Sprache muss aktiv sein.', en: 'At least one language must be active.', fr: 'Au moins une langue doit être active.', nl: 'Minstens één taal moet actief zijn.' , tr: 'En az bir dil aktif olmalıdır.' },
+
+    // ── CAPA / Actions – Kanban board ──────────────────────────────────────
+    capa_title:              { de: 'CAPA / Maßnahmen',            en: 'CAPA / Actions',              fr: 'CAPA / Actions',                  nl: 'CAPA / Acties' , tr: 'DÖF / Aksiyonlar' },
+    capa_new:                { de: 'Neue Maßnahme',                en: 'New CAPA',                    fr: 'Nouvelle action',                 nl: 'Nieuwe CAPA' , tr: 'Yeni DÖF' },
+    capa_none:               { de: 'Keine Einträge',               en: 'No items',                    fr: 'Aucun élément',                   nl: 'Geen items' , tr: 'Kayıt yok' },
+    capa_statusPlanned:      { de: 'Geplant',                      en: 'Planned',                     fr: 'Planifié',                        nl: 'Gepland' , tr: 'Planlandı' },
+    capa_statusInProgress:   { de: 'In Bearbeitung',               en: 'In Progress',                 fr: 'En cours',                        nl: 'In uitvoering' , tr: 'Devam Ediyor' },
+    capa_statusClosed:       { de: 'Geschlossen',                  en: 'Closed',                      fr: 'Clôturé',                         nl: 'Gesloten' , tr: 'Kapatıldı' },
+    capa_source_manual:      { de: 'Manuell',                      en: 'Manual',                      fr: 'Manuel',                          nl: 'Handmatig' , tr: 'Manuel' },
+    capa_source_audit:       { de: 'Audit',                        en: 'Audit',                       fr: 'Audit',                           nl: 'Audit' , tr: 'Denetim' },
+    capa_source_management_review: { de: 'Managementbewertung',    en: 'Management Review',           fr: 'Revue de direction',              nl: 'Directiebeoordeling' , tr: 'Yönetim Gözden Geçirmesi' },
+    capa_sourceLabel:        { de: 'Quelle',                       en: 'Source',                      fr: 'Source',                          nl: 'Bron' , tr: 'Kaynak' },
+    capa_titlePlaceholder:   { de: 'z.B. Behebung eines Audit-Befunds', en: 'e.g. Remediate audit finding', fr: 'p.ex. Corriger un constat d\'audit', nl: 'bijv. Auditbevinding verhelpen' , tr: 'örn. Denetim bulgusunu düzelt' },
+    capa_titleRequired:      { de: 'Titel ist erforderlich.',      en: 'Title is required.',          fr: 'Le titre est requis.',            nl: 'Titel is verplicht.' , tr: 'Başlık zorunludur.' },
+    capa_dueDate:            { de: 'Fälligkeitsdatum',             en: 'Due Date',                    fr: 'Date d\'échéance',                nl: 'Vervaldatum' , tr: 'Son Tarih' },
+    capa_saveError:          { de: 'Fehler beim Speichern.',       en: 'Error saving.',               fr: 'Erreur lors de l\'enregistrement.', nl: 'Fout bij opslaan.' , tr: 'Kaydetme hatası.' },
+    capa_progressLabel:      { de: 'Fortschritt',                  en: 'Progress',                    fr: 'Progression',                     nl: 'Voortgang' , tr: 'İlerleme' },
+    capa_saveProgress:       { de: 'Fortschritt speichern',        en: 'Save progress',               fr: 'Enregistrer la progression',      nl: 'Voortgang opslaan' , tr: 'İlerlemeyi kaydet' },
+    capa_closeBtn:           { de: 'Schließen',                    en: 'Close',                       fr: 'Clôturer',                        nl: 'Sluiten' , tr: 'Kapat' },
+    capa_closeWarning:       { de: 'Das Schließen kann nicht rückgängig gemacht werden.', en: 'Closing cannot be undone.', fr: 'La clôture ne peut pas être annulée.', nl: 'Sluiten kan niet ongedaan worden gemaakt.' , tr: 'Kapatma işlemi geri alınamaz.' },
+    capa_verificationNote:   { de: 'Verifizierungsnotiz',          en: 'Verification note',           fr: 'Note de vérification',            nl: 'Verificatienotitie' , tr: 'Doğrulama notu' },
+    capa_verificationRequired: { de: 'Eine Verifizierungsnotiz ist erforderlich.', en: 'A verification note is required.', fr: 'Une note de vérification est requise.', nl: 'Een verificatienotitie is verplicht.' , tr: 'Doğrulama notu zorunludur.' },
 
   };
 })();

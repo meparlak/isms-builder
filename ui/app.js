@@ -40,6 +40,7 @@ const SECTION_META = [
   { id:'gdpr',       labelKey:'nav_gdpr',       label:'GDPR & Privacy',     icon:'ph-lock-key',            minRole:'contentowner', functions:['dso','revision'] },
   { id:'legal',      labelKey:'nav_legal',      label:'Legal & Privacy',    icon:'ph-scales',              minRole:'contentowner', functions:['ciso','dso'] },
   { id:'incident',   labelKey:'nav_incident',   label:'Incident Inbox',     icon:'ph-siren',               minRole:'contentowner', functions:['ciso'] },
+  { id:'capa',       labelKey:'nav_capa',       label:'CAPA / Actions',     icon:'ph-check-square',        minRole:'reader',       functions:['ciso','contentowner'] },
   { id:'suppliers',  labelKey:'nav_suppliers',  label:'Supply Chain',       icon:'ph-truck',               minRole:'contentowner', functions:['ciso','revision'] },
   { id:'bcm',        labelKey:'nav_bcm',        label:'Business Continuity',icon:'ph-heartbeat',           minRole:'contentowner', functions:['ciso','revision'] },
   { id:'governance', labelKey:'nav_governance', label:'Governance',         icon:'ph-chalkboard-teacher',  minRole:'contentowner', functions:['ciso','dso','revision','qmb'] },
@@ -931,7 +932,7 @@ function loadSection(sectionId){
 }
 
 function removeAllDynamicPanels() {
-  ['dashboardContainer','soaContainer','guidanceContainer','riskContainer','calendarContainer','adminPanelContainer','settingsPanelContainer','reportsContainer','gdprContainer','trainingContainer','incidentContainer','legalContainer','goalsContainer','assetsContainer','governanceContainer','bcmContainer','suppliersContainer','policyAcksContainer'].forEach(id => {
+  ['dashboardContainer','soaContainer','guidanceContainer','riskContainer','calendarContainer','adminPanelContainer','settingsPanelContainer','reportsContainer','gdprContainer','trainingContainer','incidentContainer','legalContainer','goalsContainer','assetsContainer','governanceContainer','bcmContainer','suppliersContainer','policyAcksContainer','capaBoardContainer'].forEach(id => {
     dom(id)?.remove()
   })
 }
@@ -2073,6 +2074,11 @@ function renderSectionContent(sectionId){
     listPanel.style.display = 'none'
     renderIncidentInbox()
     return
+  } else if (sectionId === 'capa') {
+    editorCard.style.display = 'none'
+    listPanel.style.display = 'none'
+    renderCapaBoard()
+    return
   } else if (sectionId === 'legal') {
     editorCard.style.display = 'none'
     listPanel.style.display = 'none'
@@ -3182,6 +3188,264 @@ async function saveSoaRow(id, container) {
   }
 }
 
+// ════════════════════════════════════════════════════════════
+// CAPA / ACTIONS – Kanban board (planned / in_progress / closed)
+// ════════════════════════════════════════════════════════════
+
+const CAPA_SOURCES = ['manual', 'audit', 'management_review']
+let _capaBoardData = []
+
+async function _fetchCapaList() {
+  const res = await fetch('/capa', { headers: apiHeaders('reader') })
+  return res.ok ? await res.json() : []
+}
+
+async function renderCapaBoard() {
+  dom('capaBoardContainer')?.remove()
+  const container = document.createElement('div')
+  container.id = 'capaBoardContainer'
+  container.className = 'capa-board-container'
+  dom('editor').appendChild(container)
+
+  container.innerHTML = `
+    <div class="capa-board-header">
+      <h2><i class="ph ph-check-square"></i> ${t('capa_title')}</h2>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <button class="btn btn-secondary btn-sm" onclick="renderCapaBoard()">
+          <i class="ph ph-arrow-clockwise"></i> ${t('refresh')}
+        </button>
+        <button class="btn btn-primary btn-sm" onclick="openCapaCreateModal()">
+          <i class="ph ph-plus"></i> ${t('capa_new')}
+        </button>
+      </div>
+    </div>
+    <div class="kanban" id="capaKanban">
+      <p class="report-loading">${t('loading')}</p>
+    </div>`
+
+  if (!container.isConnected) return
+  await loadCapaBoard()
+}
+
+async function loadCapaBoard() {
+  const kanban = document.getElementById('capaKanban')
+  if (!kanban) return
+  _capaBoardData = await _fetchCapaList()
+
+  const columns = [
+    { status: 'planned',     labelKey: 'capa_statusPlanned' },
+    { status: 'in_progress', labelKey: 'capa_statusInProgress' },
+    { status: 'closed',      labelKey: 'capa_statusClosed' },
+  ]
+
+  kanban.innerHTML = columns.map(col => {
+    const items = _capaBoardData.filter(c => c.status === col.status)
+    return `
+      <div class="kcol">
+        <div class="kcol-h">
+          <span>${t(col.labelKey)}</span>
+          <span class="kcol-count">${items.length}</span>
+        </div>
+        <div class="kcol-body">
+          ${items.length === 0
+            ? `<p class="capa-empty">${t('capa_none')}</p>`
+            : items.map(c => _capaCardHtml(c)).join('')}
+        </div>
+      </div>`
+  }).join('')
+}
+
+function _capaCardHtml(c) {
+  const overdue = c.status !== 'closed' && c.dueDate && new Date(c.dueDate) < new Date()
+  return `
+    <div class="kcard ${overdue ? 'kcard-overdue' : ''}" data-id="${c.id}" ${c.status !== 'closed' ? `onclick="openCapaDetailModal('${c.id}')"` : ''}>
+      <div class="kcard-title">${escHtml(c.title)}</div>
+      <div class="kcard-meta">
+        <span class="capa-source-badge">${t('capa_source_' + c.source) || c.source}</span>
+        ${c.owner ? `<span><i class="ph ph-user"></i> ${escHtml(c.owner)}</span>` : ''}
+      </div>
+      ${c.dueDate ? `<div class="kcard-due ${overdue ? 'kcard-due-overdue' : ''}"><i class="ph ph-calendar"></i> ${new Date(c.dueDate).toLocaleDateString('en-GB')}</div>` : ''}
+      ${c.status !== 'closed' ? `
+        <div class="kcard-progress">
+          <div class="goals-progress-bar"><div class="goals-progress-fill" style="width:${c.progress || 0}%;background:var(--accent)"></div></div>
+          <span class="goals-progress-pct">${c.progress || 0}%</span>
+        </div>` : ''}
+    </div>`
+}
+
+function openCapaCreateModal() {
+  document.getElementById('capaCreateModal')?.remove()
+  const html = `
+    <div id="capaCreateModal" class="modal" style="visibility:visible">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title"><i class="ph ph-plus"></i> ${t('capa_new')}</h3>
+          <button class="modal-close" onclick="document.getElementById('capaCreateModal').remove()"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="modal-body" style="display:flex;flex-direction:column;gap:12px">
+          <div>
+            <label class="form-label">${t('col_title')} <span class="form-required">*</span></label>
+            <input id="capaTitle" class="form-input" placeholder="${t('capa_titlePlaceholder')}">
+          </div>
+          <div>
+            <label class="form-label">${t('inc_description')}</label>
+            <textarea id="capaDesc" class="form-textarea" rows="3"></textarea>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div>
+              <label class="form-label">${t('capa_sourceLabel')}</label>
+              <select id="capaSource" class="select">
+                ${CAPA_SOURCES.map(s => `<option value="${s}">${t('capa_source_' + s)}</option>`).join('')}
+              </select>
+            </div>
+            <div>
+              <label class="form-label">${t('col_responsible')}</label>
+              <input id="capaOwner" class="form-input" placeholder="${t('findings_responsiblePlaceholder')}">
+            </div>
+          </div>
+          <div>
+            <label class="form-label">${t('capa_dueDate')}</label>
+            <input id="capaDueDate" type="date" class="form-input">
+          </div>
+          <p class="capa-form-error" id="capaCreateError" style="display:none;color:var(--danger-text);font-size:.8rem"></p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" onclick="document.getElementById('capaCreateModal').remove()">${t('cancel')}</button>
+          <button class="btn btn-primary" onclick="submitCapaCreate()">
+            <i class="ph ph-floppy-disk"></i> ${t('save')}
+          </button>
+        </div>
+      </div>
+    </div>`
+  document.body.insertAdjacentHTML('beforeend', html)
+}
+
+async function submitCapaCreate() {
+  const title = document.getElementById('capaTitle')?.value.trim()
+  const errEl = document.getElementById('capaCreateError')
+  if (!title) {
+    if (errEl) { errEl.textContent = t('capa_titleRequired'); errEl.style.display = 'block' }
+    return
+  }
+  const body = {
+    title,
+    description: document.getElementById('capaDesc')?.value.trim() || '',
+    source:      document.getElementById('capaSource')?.value || 'manual',
+    owner:       document.getElementById('capaOwner')?.value.trim() || '',
+    dueDate:     document.getElementById('capaDueDate')?.value || null,
+  }
+  const res = await fetch('/capa', { method: 'POST', headers: apiHeaders('editor'), body: JSON.stringify(body) })
+  if (!res.ok) {
+    const e = await res.json().catch(() => ({}))
+    if (errEl) { errEl.textContent = e.error || t('capa_saveError'); errEl.style.display = 'block' }
+    return
+  }
+  document.getElementById('capaCreateModal')?.remove()
+  await loadCapaBoard()
+}
+
+function openCapaDetailModal(id) {
+  const c = _capaBoardData.find(x => x.id === id)
+  if (!c) return
+  document.getElementById('capaDetailModal')?.remove()
+  const html = `
+    <div id="capaDetailModal" class="modal" style="visibility:visible">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title"><i class="ph ph-check-square"></i> ${escHtml(c.title)}</h3>
+          <button class="modal-close" onclick="document.getElementById('capaDetailModal').remove()"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="modal-body" style="display:flex;flex-direction:column;gap:12px">
+          <p style="font-size:.85rem;color:var(--text-subtle)">${escHtml(c.description || '—')}</p>
+          <div>
+            <label class="form-label">${t('capa_progressLabel')}</label>
+            <div style="display:flex;align-items:center;gap:10px">
+              <input id="capaProgressInput" type="range" min="0" max="100" value="${c.progress || 0}" style="flex:1"
+                oninput="document.getElementById('capaProgressVal').textContent = this.value + '%'">
+              <span id="capaProgressVal" style="min-width:40px;text-align:right;font-weight:600">${c.progress || 0}%</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-danger" onclick="openCapaCloseModal('${c.id}')">
+            <i class="ph ph-lock-key"></i> ${t('capa_closeBtn')}
+          </button>
+          <button class="btn btn-primary" onclick="submitCapaProgress('${c.id}')">
+            <i class="ph ph-floppy-disk"></i> ${t('capa_saveProgress')}
+          </button>
+        </div>
+      </div>
+    </div>`
+  document.body.insertAdjacentHTML('beforeend', html)
+}
+
+async function submitCapaProgress(id) {
+  const progress = Number(document.getElementById('capaProgressInput')?.value || 0)
+  const res = await fetch(`/capa/${id}/progress`, { method: 'PUT', headers: apiHeaders('editor'), body: JSON.stringify({ progress }) })
+  if (!res.ok) { alert(t('capa_saveError')); return }
+  document.getElementById('capaDetailModal')?.remove()
+  await loadCapaBoard()
+}
+
+function openCapaCloseModal(id) {
+  document.getElementById('capaDetailModal')?.remove()
+  document.getElementById('capaCloseModal')?.remove()
+  const html = `
+    <div id="capaCloseModal" class="modal" style="visibility:visible">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title"><i class="ph ph-lock-key"></i> ${t('capa_closeBtn')}</h3>
+          <button class="modal-close" onclick="document.getElementById('capaCloseModal').remove()"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="modal-body" style="display:flex;flex-direction:column;gap:12px">
+          <p style="font-size:.85rem;color:var(--warning-text)"><i class="ph ph-warning"></i> ${t('capa_closeWarning')}</p>
+          <div>
+            <label class="form-label">${t('capa_verificationNote')} <span class="form-required">*</span></label>
+            <textarea id="capaVerificationNote" class="form-textarea" rows="3"></textarea>
+          </div>
+          <p class="capa-form-error" id="capaCloseError" style="display:none;color:var(--danger-text);font-size:.8rem"></p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" onclick="document.getElementById('capaCloseModal').remove()">${t('cancel')}</button>
+          <button class="btn btn-danger" onclick="submitCapaClose('${id}')">
+            <i class="ph ph-lock-key"></i> ${t('capa_closeBtn')}
+          </button>
+        </div>
+      </div>
+    </div>`
+  document.body.insertAdjacentHTML('beforeend', html)
+}
+
+async function submitCapaClose(id) {
+  const note = document.getElementById('capaVerificationNote')?.value.trim()
+  const errEl = document.getElementById('capaCloseError')
+  if (!note) {
+    if (errEl) { errEl.textContent = t('capa_verificationRequired'); errEl.style.display = 'block' }
+    return
+  }
+  const res = await fetch(`/capa/${id}/close`, { method: 'PUT', headers: apiHeaders('editor'), body: JSON.stringify({ verificationNote: note }) })
+  if (!res.ok) {
+    const e = await res.json().catch(() => ({}))
+    if (errEl) { errEl.textContent = e.error || t('capa_saveError'); errEl.style.display = 'block' }
+    return
+  }
+  document.getElementById('capaCloseModal')?.remove()
+  await loadCapaBoard()
+}
+
+// KRI Helfer für das Dashboard: offene CAPA + überfällige Aktionen
+async function _capaKriCounts() {
+  try {
+    const list = await _fetchCapaList()
+    const openCapa = list.filter(c => c.status === 'planned' || c.status === 'in_progress').length
+    const now = new Date()
+    const overdue = list.filter(c => c.status !== 'closed' && c.dueDate && new Date(c.dueDate) < now).length
+    return { openCapa, overdue }
+  } catch {
+    return { openCapa: null, overdue: null }
+  }
+}
+
 async function renderDashboard() {
   removeDashboard()
   const container = document.createElement('div')
@@ -3193,9 +3457,9 @@ async function renderDashboard() {
 
   container.innerHTML = '<div class="dashboard-loading">Loading Dashboard…</div>'
 
-  let data, soaSummary, riskSummary, gdprDash, trainSummary, legalSummary, calEvents, goalsSummary, assetSummary, govSummary, bcmSummary, supplierSummary, findingsSummary, reviewPending, ackSummary
+  let data, soaSummary, riskSummary, gdprDash, trainSummary, legalSummary, calEvents, goalsSummary, assetSummary, govSummary, bcmSummary, supplierSummary, findingsSummary, reviewPending, ackSummary, capaList
   try {
-    const [dashRes, soaRes, riskRes, gdprRes, trainRes, legalRes, calRes, goalsRes, assetRes, govRes, bcmRes, supplierRes, findRes, reviewRes, ackRes] = await Promise.all([
+    const [dashRes, soaRes, riskRes, gdprRes, trainRes, legalRes, calRes, goalsRes, assetRes, govRes, bcmRes, supplierRes, findRes, reviewRes, ackRes, capaRes] = await Promise.all([
       fetch('/dashboard',                                                                       { headers: apiHeaders('reader') }),
       MODULE_CONFIG.soa        ? fetch('/soa/summary',          { headers: apiHeaders('reader') }) : Promise.resolve(null),
       MODULE_CONFIG.risk       ? fetch('/risks/summary',        { headers: apiHeaders('reader') }) : Promise.resolve(null),
@@ -3211,6 +3475,7 @@ async function renderDashboard() {
       fetch('/findings/summary',                                { headers: apiHeaders('reader') }),
       MODULE_CONFIG.risk       ? fetch('/risks/review-pending', { headers: apiHeaders('reader') }) : Promise.resolve(null),
       fetch('/distributions/summary',                           { headers: apiHeaders('reader') }),
+      fetch('/capa',                                             { headers: apiHeaders('reader') }),
     ])
     if (!dashRes.ok) throw new Error('API error')
     data             = await dashRes.json()
@@ -3228,6 +3493,7 @@ async function renderDashboard() {
     findingsSummary  = findRes?.ok     ? await findRes.json()      : null
     reviewPending    = reviewRes?.ok   ? await reviewRes.json()    : []
     ackSummary       = ackRes?.ok      ? await ackRes.json()       : null
+    capaList         = capaRes?.ok     ? await capaRes.json()      : []
   } catch (e) {
     if (container.isConnected)
       container.innerHTML = '<div class="dashboard-error">Dashboard konnte nicht geladen werden.</div>'
@@ -3289,6 +3555,10 @@ async function renderDashboard() {
     </div>`).join('')
   })()
 
+  const _capaListSafe   = Array.isArray(capaList) ? capaList : []
+  const kriOpenCapa      = _capaListSafe.filter(c => c.status === 'planned' || c.status === 'in_progress').length
+  const kriOverdueAction = _capaListSafe.filter(c => c.status !== 'closed' && c.dueDate && new Date(c.dueDate) < new Date()).length
+
   container.innerHTML = `
     <div class="dash-isms-header">
       <h2 class="dashboard-title"><i class="ph ph-gauge"></i> ${t('dash_title')}</h2>
@@ -3301,18 +3571,18 @@ async function renderDashboard() {
       ${alertsHtml}
     </div>
 
-    <!-- KRI Cards: Kilit Risk Göstergeleri (CAPA verisi Alt-Faz 2.2'de bağlanacak; şimdilik placeholder) -->
+    <!-- KRI Cards: Kilit Risk Göstergeleri (Açık DÖF / Gecikmiş Aksiyon Alt-Faz 2.2.2'de CAPA verisine bağlandı) -->
     <div class="dash-section-title" style="margin:16px 0 8px"><i class="ph ph-gauge"></i> ${t('dash_kriTitle')}</div>
     <div class="kri-grid" style="margin-bottom:0">
-      <div class="kri warn">
+      <div class="kri warn dash-link" data-nav="capa">
         <div class="stripe"></div>
         <div class="label">${t('dash_kriOpenCapa')}</div>
-        <div class="n">—</div>
+        <div class="n">${kriOpenCapa}</div>
       </div>
-      <div class="kri crit">
+      <div class="kri crit dash-link" data-nav="capa">
         <div class="stripe"></div>
         <div class="label">${t('dash_kriOverdueAction')}</div>
-        <div class="n">—</div>
+        <div class="n">${kriOverdueAction}</div>
       </div>
       <div class="kri ok">
         <div class="stripe"></div>

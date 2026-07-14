@@ -592,6 +592,42 @@ hr { border: none; border-top: 1px solid var(--border); margin: 0; }
 .goal-kpi-header span:first-child { flex: 2; }
 .goal-kpi-row { display: flex; gap: 6px; align-items: center; margin-bottom: 6px; }
 .goal-kpi-row .form-input { margin: 0; }
+
+/* ── CAPA / Actions – Kanban board ── */
+.capa-board-container { padding: 20px; max-width: 1400px; margin: 0 auto; }
+.capa-board-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.capa-board-header h2 { display: flex; align-items: center; gap: 8px; font-size: 1.1rem; margin: 0; }
+.capa-empty { font-size: .8rem; color: var(--text-subtle); padding: 12px 4px; }
+
+.kanban { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; align-items: start; }
+@media (max-width: 900px) { .kanban { grid-template-columns: 1fr; } }
+
+.kcol { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); display: flex; flex-direction: column; min-height: 120px; }
+.kcol-h {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 12px; border-bottom: 1px solid var(--border);
+  font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--text-subtle);
+}
+.kcol-count { background: var(--surface-overlay); color: var(--text); border-radius: 10px; padding: 1px 8px; font-size: .72rem; font-weight: 600; }
+.kcol-body { display: flex; flex-direction: column; gap: 8px; padding: 10px; flex: 1; }
+
+.kcard {
+  background: var(--surface-raised); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 10px 12px; cursor: pointer; transition: border-color .15s, box-shadow .15s;
+}
+.kcard:hover { border-color: var(--accent-subtle, var(--accent)); box-shadow: var(--shadow-sm); }
+.kcard-overdue { border-left: 3px solid var(--danger); }
+.kcard-title { font-size: .87rem; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+.kcard-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: .74rem; color: var(--text-subtle); margin-bottom: 6px; }
+.kcard-meta span { display: flex; align-items: center; gap: 3px; }
+.capa-source-badge {
+  display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: .68rem; font-weight: 600;
+  background: var(--surface-overlay); color: var(--text-subtle); text-transform: uppercase; letter-spacing: .03em;
+}
+.kcard-due { font-size: .74rem; color: var(--text-subtle); display: flex; align-items: center; gap: 3px; margin-bottom: 6px; }
+.kcard-due-overdue { color: var(--danger-text); font-weight: 600; }
+.kcard-progress { display: flex; align-items: center; gap: 8px; }
+.kcard-progress .goals-progress-pct { width: auto; }
 .goal-kpi-row .form-input:first-child { flex: 2; }
 
 /* Calendar chips */
