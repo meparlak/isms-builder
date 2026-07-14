@@ -137,6 +137,7 @@ app.use(require('./routes/ackPublic'))
 app.use(require('./routes/assessments'))
 app.use(require('./routes/assessmentPublic'))
 app.use(require('./routes/evidence'))
+app.use(require('./routes/projects'))
 
 // Test-user management routes (temporary, test-env only)
 try {
