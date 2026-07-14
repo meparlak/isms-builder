@@ -9185,9 +9185,9 @@ async function renderRisk() {
       </div>
       <div class="risk-tab-bar">
         <button class="risk-tab active" data-tab="register"  onclick="switchRiskTab('register')"><i class="ph ph-table"></i> ${t('risk_register')}</button>
-        <button class="risk-tab"        data-tab="heatmap"   onclick="switchRiskTab('heatmap')"><i class="ph ph-grid-four"></i> Heatmap</button>
+        <button class="risk-tab"        data-tab="heatmap"   onclick="switchRiskTab('heatmap')"><i class="ph ph-grid-four"></i> ${t('risk_heatmapTab')}</button>
         <button class="risk-tab"        data-tab="treatments"onclick="switchRiskTab('treatments')"><i class="ph ph-list-checks"></i> ${t('risk_treatmentsTab')}</button>
-        <button class="risk-tab"        data-tab="calendar"  onclick="switchRiskTab('calendar')"><i class="ph ph-calendar"></i> Kalender</button>
+        <button class="risk-tab"        data-tab="calendar"  onclick="switchRiskTab('calendar')"><i class="ph ph-calendar"></i> ${t('risk_calendarTab')}</button>
         <button class="risk-tab"        data-tab="reports"   onclick="switchRiskTab('reports')"><i class="ph ph-chart-bar"></i> ${t('risk_reportsTab')}</button>
       </div>
       <div class="risk-tab-content" id="riskTabContent"></div>

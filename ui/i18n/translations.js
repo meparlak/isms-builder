@@ -679,6 +679,8 @@
     risk_measure:        { de: 'Maßnahme',                  en: 'Measure',                    fr: 'Mesure',                    nl: 'Maatregel' , tr: 'Önlem' },
     risk_riskCol:        { de: 'Risiko',                    en: 'Risk',                       fr: 'Risque',                    nl: 'Risico' , tr: 'Risk' },
     risk_all:            { de: 'Alle Risiken',              en: 'All Risks',                  fr: 'Tous les risques',          nl: 'Alle risico’s' , tr: 'Tüm Riskler' },
+    risk_heatmapTab:     { de: 'Heatmap',                   en: 'Heatmap',                    fr: 'Carte de chaleur',          nl: 'Heatmap' , tr: 'Isı Haritası' },
+    risk_calendarTab:    { de: 'Kalender',                  en: 'Calendar',                   fr: 'Calendrier',                nl: 'Kalender' , tr: 'Takvim' },
     risk_total:          { de: 'Risiken gesamt',            en: 'Total Risks',                fr: 'Risques totaux',            nl: 'Totaal risico\'s' , tr: 'Toplam Risk' },
     risk_noRisks:        { de: 'Keine Risiken gefunden.',   en: 'No risks found.',            fr: 'Aucun risque trouvé.',      nl: 'Geen risico’s gevonden.' , tr: 'Risk bulunamadı.' },
     risk_openTreatments: { de: 'Offene Maßnahmen',          en: 'Open Treatments',            fr: 'Traitements ouverts',       nl: 'Openstaande behandelingen' , tr: 'Açık İşlemeler' },
