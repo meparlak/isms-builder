@@ -48,6 +48,9 @@ function updateProgress(id, progress) {
   const idx = list.findIndex(c => c.id === id)
   if (idx === -1) return null
   const c = list[idx]
+  if (c.status === 'closed') {
+    throw Object.assign(new Error('Kapalı CAPA ilerleme güncellemesiyle yeniden açılamaz'), { status: 409 })
+  }
   c.progress = Math.max(0, Math.min(100, progress))
   c.status = c.progress > 0 && c.progress < 100 ? 'in_progress' : c.status
   c.completedAt = c.progress === 100 ? nowISO() : null

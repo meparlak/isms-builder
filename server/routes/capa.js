@@ -27,10 +27,14 @@ router.post('/capa', requireAuth, authorize('editor'), async (req, res) => {
 })
 
 router.put('/capa/:id/progress', requireAuth, authorize('editor'), async (req, res) => {
-  const updated = await capaStore.updateProgress(req.params.id, Number(req.body.progress))
-  if (!updated) return res.status(404).json({ error: 'Not found' })
-  await require('../db/auditStore').append({ user: req.user, action: 'update', resource: 'capa', resourceId: updated.id, detail: `progress=${updated.progress}` })
-  res.json(updated)
+  try {
+    const updated = await capaStore.updateProgress(req.params.id, Number(req.body.progress))
+    if (!updated) return res.status(404).json({ error: 'Not found' })
+    await require('../db/auditStore').append({ user: req.user, action: 'update', resource: 'capa', resourceId: updated.id, detail: `progress=${updated.progress}` })
+    res.json(updated)
+  } catch (e) {
+    res.status(e.status || 500).json({ error: e.message })
+  }
 })
 
 router.put('/capa/:id/close', requireAuth, authorize('editor'), async (req, res) => {

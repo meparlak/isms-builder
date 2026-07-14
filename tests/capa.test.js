@@ -54,6 +54,19 @@ describe('CAPA / Aksiyon Merkezi', () => {
     expect(res.status).toBe(200)
     expect(res.body.every(c => c.source === 'manual')).toBe(true)
   })
+
+  test('PUT /capa/:id/progress — kapalı CAPA yeniden açılamaz (409)', async () => {
+    const before = await authedGet(app, adminCookie, `/capa/${capaId}`)
+    expect(before.body.status).toBe('closed')
+
+    const res = await authedPut(app, adminCookie, `/capa/${capaId}/progress`, { progress: 50 })
+    expect(res.status).toBe(409)
+
+    const after = await authedGet(app, adminCookie, `/capa/${capaId}`)
+    expect(after.body.status).toBe('closed')
+    expect(after.body.progress).toBe(before.body.progress)
+    expect(after.body.completedAt).toBe(before.body.completedAt)
+  })
 })
 
 describe('CAPA — olaydan otomatik tetikleme', () => {
