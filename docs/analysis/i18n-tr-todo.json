@@ -1,0 +1,3534 @@
+{
+  "loginTitle": {
+    "en": "ISMS Builder – Sign in",
+    "missingTr": true
+  },
+  "loginWelcome": {
+    "en": "Welcome back",
+    "missingTr": true
+  },
+  "loginSubtitle": {
+    "en": "Sign in with your ISMS credentials.",
+    "missingTr": true
+  },
+  "loginEmail": {
+    "en": "Email address",
+    "missingTr": true
+  },
+  "loginEmailPh": {
+    "en": "name@example.com",
+    "missingTr": true
+  },
+  "loginPassword": {
+    "en": "Password",
+    "missingTr": true
+  },
+  "loginPasswordPh": {
+    "en": "Password",
+    "missingTr": true
+  },
+  "loginTotpHint": {
+    "en": "Enter the 6-digit code from your authenticator app.",
+    "missingTr": true
+  },
+  "loginTotp": {
+    "en": "Sign in with 2FA",
+    "missingTr": true
+  },
+  "loginBtn": {
+    "en": "Sign in",
+    "missingTr": true
+  },
+  "loginReportIncident": {
+    "en": "Report a Security Incident",
+    "missingTr": true
+  },
+  "loginFooter": {
+    "en": "ISMS Builder · ISO 27001 · BSI · NIS2 · EUCS · EU AI Act",
+    "missingTr": true
+  },
+  "licenseNotice": {
+    "en": "© Claude Hecker · Open source (AGPL-3.0)",
+    "missingTr": true
+  },
+  "licenseSourceLink": {
+    "en": "Source code on GitHub",
+    "missingTr": true
+  },
+  "loginLang": {
+    "en": "Language",
+    "missingTr": true
+  },
+  "demoResetTitle": {
+    "en": "Demo mode ended",
+    "missingTr": true
+  },
+  "demoResetText": {
+    "en": "The system has been reset for production use. Please sign in with admin@example.com / password adminpass and change the password immediately after first login.",
+    "missingTr": true
+  },
+  "incModalTitle": {
+    "en": "Report a Security Incident",
+    "missingTr": true
+  },
+  "incEmailLabel": {
+    "en": "Your Email",
+    "missingTr": true
+  },
+  "incEntityLabel": {
+    "en": "Entity / Location",
+    "missingTr": true
+  },
+  "incEntityPh": {
+    "en": "– please select –",
+    "missingTr": true
+  },
+  "incTypeLabel": {
+    "en": "Incident Type",
+    "missingTr": true
+  },
+  "incTypePh": {
+    "en": "– please select –",
+    "missingTr": true
+  },
+  "incTypeMalware": {
+    "en": "Malware / Malicious Software",
+    "missingTr": true
+  },
+  "incTypePhishing": {
+    "en": "Phishing / Scam / Social Engineering",
+    "missingTr": true
+  },
+  "incTypeDataTheft": {
+    "en": "Data Theft / Data Loss",
+    "missingTr": true
+  },
+  "incTypeRansomware": {
+    "en": "Ransomware / Extortion",
+    "missingTr": true
+  },
+  "incTypeUnauth": {
+    "en": "Unauthorized System Access",
+    "missingTr": true
+  },
+  "incTypeSocial": {
+    "en": "CEO Fraud / Identity Abuse",
+    "missingTr": true
+  },
+  "incTypeOther": {
+    "en": "Other",
+    "missingTr": true
+  },
+  "incDescLabel": {
+    "en": "What happened?",
+    "missingTr": true
+  },
+  "incDescPh": {
+    "en": "Please describe the incident as precisely as possible: When, where, how was it detected?",
+    "missingTr": true
+  },
+  "incMeasuresLabel": {
+    "en": "What measures have already been taken?",
+    "missingTr": true
+  },
+  "incMeasuresPh": {
+    "en": "e.g. system disconnected, passwords changed, IT notified…",
+    "missingTr": true
+  },
+  "incContactLabel": {
+    "en": "Local Contact",
+    "missingTr": true
+  },
+  "incContactPh": {
+    "en": "Name and phone / email",
+    "missingTr": true
+  },
+  "incCleanedLabel": {
+    "en": "Has everything been cleaned up?",
+    "missingTr": true
+  },
+  "incCleanedNo": {
+    "en": "No – follow-up required",
+    "missingTr": true
+  },
+  "incCleanedPartial": {
+    "en": "Partial – further measures planned",
+    "missingTr": true
+  },
+  "incCleanedYes": {
+    "en": "Yes – fully cleaned up",
+    "missingTr": true
+  },
+  "incHint": {
+    "en": "This report goes directly to the CISO team. Fields marked * are required. Assignment to IT or data protection and reporting obligation assessment is done by the CISO.",
+    "missingTr": true
+  },
+  "incCancelBtn": {
+    "en": "Cancel",
+    "missingTr": true
+  },
+  "incSubmitBtn": {
+    "en": "Report Incident",
+    "missingTr": true
+  },
+  "incConfirmTitle": {
+    "en": "Incident Reported",
+    "missingTr": true
+  },
+  "incConfirmText": {
+    "en": "Your incident has been successfully submitted. The CISO team will handle further processing.",
+    "missingTr": true
+  },
+  "incConfirmRef": {
+    "en": "Your reference number:",
+    "missingTr": true
+  },
+  "incConfirmNote": {
+    "en": "Please note this reference number for follow-up queries.",
+    "missingTr": true
+  },
+  "incConfirmClose": {
+    "en": "Close",
+    "missingTr": true
+  },
+  "nav_dashboard": {
+    "en": "Dashboard",
+    "missingTr": true
+  },
+  "nav_soa": {
+    "en": "SoA – Controls",
+    "missingTr": true
+  },
+  "nav_guidance": {
+    "en": "Guidance",
+    "missingTr": true
+  },
+  "nav_training": {
+    "en": "Training",
+    "missingTr": true
+  },
+  "nav_calendar": {
+    "en": "Calendar",
+    "missingTr": true
+  },
+  "nav_risk": {
+    "en": "Risk & Compliance",
+    "missingTr": true
+  },
+  "nav_assets": {
+    "en": "Asset Management",
+    "missingTr": true
+  },
+  "nav_goals": {
+    "en": "Security Goals",
+    "missingTr": true
+  },
+  "nav_gdpr": {
+    "en": "GDPR & Data Protection",
+    "missingTr": true
+  },
+  "nav_legal": {
+    "en": "Legal & Privacy",
+    "missingTr": true
+  },
+  "nav_incident": {
+    "en": "Incident Inbox",
+    "missingTr": true
+  },
+  "nav_suppliers": {
+    "en": "Supply Chain",
+    "missingTr": true
+  },
+  "nav_bcm": {
+    "en": "Business Continuity",
+    "missingTr": true
+  },
+  "nav_governance": {
+    "en": "Governance",
+    "missingTr": true
+  },
+  "nav_policyAcks": {
+    "en": "Policy Acknowledgements",
+    "missingTr": true
+  },
+  "nav_reports": {
+    "en": "Reports",
+    "missingTr": true
+  },
+  "nav_settings": {
+    "en": "Settings",
+    "missingTr": true
+  },
+  "nav_admin": {
+    "en": "Admin",
+    "missingTr": true
+  },
+  "template": {
+    "en": "Template",
+    "missingTr": true
+  },
+  "risk_title": {
+    "en": "Risk",
+    "missingTr": true
+  },
+  "incident_title": {
+    "en": "Incident",
+    "missingTr": true
+  },
+  "lc_toDraft": {
+    "en": "← Reactivate",
+    "missingTr": true
+  },
+  "lc_toReview": {
+    "en": "→ For Review",
+    "missingTr": true
+  },
+  "lc_toApproved": {
+    "en": "→ Approve",
+    "missingTr": true
+  },
+  "lc_backToDraft": {
+    "en": "← Back to Draft",
+    "missingTr": true
+  },
+  "lc_backToReview": {
+    "en": "← Back to Review",
+    "missingTr": true
+  },
+  "lc_archive": {
+    "en": "→ Archive",
+    "missingTr": true
+  },
+  "status_draft": {
+    "en": "Draft",
+    "missingTr": true
+  },
+  "status_review": {
+    "en": "Review",
+    "missingTr": true
+  },
+  "status_approved": {
+    "en": "Approved",
+    "missingTr": true
+  },
+  "status_archived": {
+    "en": "Archived",
+    "missingTr": true
+  },
+  "save": {
+    "en": "Save",
+    "missingTr": true
+  },
+  "saved": {
+    "en": "✓ Saved",
+    "missingTr": true
+  },
+  "cancel": {
+    "en": "Cancel",
+    "missingTr": true
+  },
+  "close": {
+    "en": "Close",
+    "missingTr": true
+  },
+  "edit": {
+    "en": "Edit",
+    "missingTr": true
+  },
+  "delete": {
+    "en": "Delete",
+    "missingTr": true
+  },
+  "restore": {
+    "en": "Restore",
+    "missingTr": true
+  },
+  "add": {
+    "en": "Add",
+    "missingTr": true
+  },
+  "remove": {
+    "en": "Remove",
+    "missingTr": true
+  },
+  "reset": {
+    "en": "Reset",
+    "missingTr": true
+  },
+  "default": {
+    "en": "Default",
+    "missingTr": true
+  },
+  "confirm": {
+    "en": "Confirm",
+    "missingTr": true
+  },
+  "loading": {
+    "en": "Loading…",
+    "missingTr": true
+  },
+  "error": {
+    "en": "Error",
+    "missingTr": true
+  },
+  "warning": {
+    "en": "Warning",
+    "missingTr": true
+  },
+  "note": {
+    "en": "Note",
+    "missingTr": true
+  },
+  "yes": {
+    "en": "Yes",
+    "missingTr": true
+  },
+  "no": {
+    "en": "No",
+    "missingTr": true
+  },
+  "refresh": {
+    "en": "Refresh",
+    "missingTr": true
+  },
+  "search": {
+    "en": "Search…",
+    "missingTr": true
+  },
+  "search_noResultsFor": {
+    "en": "No results for \"{query}\"",
+    "missingTr": true
+  },
+  "search_ai": {
+    "en": "AI",
+    "missingTr": true
+  },
+  "search_keyword": {
+    "en": "Keyword",
+    "missingTr": true
+  },
+  "search_results": {
+    "en": "Search results",
+    "missingTr": true
+  },
+  "search_aiUnavailable": {
+    "en": "AI search unavailable",
+    "missingTr": true
+  },
+  "underConstruction": {
+    "en": "Under Construction",
+    "missingTr": true
+  },
+  "underConstructionHint": {
+    "en": "This module will be available in one of the next releases.",
+    "missingTr": true
+  },
+  "create": {
+    "en": "Create",
+    "missingTr": true
+  },
+  "export": {
+    "en": "Export",
+    "missingTr": true
+  },
+  "common_action": {
+    "en": "Action",
+    "missingTr": true
+  },
+  "common_back": {
+    "en": "Back",
+    "missingTr": true
+  },
+  "common_print": {
+    "en": "Print",
+    "missingTr": true
+  },
+  "common_total": {
+    "en": "Total",
+    "missingTr": true
+  },
+  "moveUp": {
+    "en": "Move up",
+    "missingTr": true
+  },
+  "moveDown": {
+    "en": "Move down",
+    "missingTr": true
+  },
+  "err_nameRequired": {
+    "en": "Name is required.",
+    "missingTr": true
+  },
+  "settings_lang": {
+    "en": "Language / Sprache",
+    "missingTr": true
+  },
+  "settings_langDesc": {
+    "en": "Choose the interface language. The setting is saved in your browser.",
+    "missingTr": true
+  },
+  "settings_langDe": {
+    "en": "Deutsch (German)",
+    "missingTr": true
+  },
+  "settings_langEn": {
+    "en": "English",
+    "missingTr": true
+  },
+  "settings_langFr": {
+    "en": "Français (French)",
+    "missingTr": true
+  },
+  "settings_langNl": {
+    "en": "Nederlands (Dutch)",
+    "missingTr": true
+  },
+  "settings_langSaved": {
+    "en": "Language saved. Reloading page…",
+    "missingTr": true
+  },
+  "settings_password": {
+    "en": "Change Password",
+    "missingTr": true
+  },
+  "settings_pwOld": {
+    "en": "Old Password",
+    "missingTr": true
+  },
+  "settings_pwNew": {
+    "en": "New Password",
+    "missingTr": true
+  },
+  "settings_pwRepeat": {
+    "en": "Repeat",
+    "missingTr": true
+  },
+  "settings_pwSave": {
+    "en": "Change Password",
+    "missingTr": true
+  },
+  "settings_pwChanged": {
+    "en": "Password changed.",
+    "missingTr": true
+  },
+  "settings_pwWrong": {
+    "en": "Incorrect old password.",
+    "missingTr": true
+  },
+  "settings_2fa": {
+    "en": "Setup 2FA",
+    "missingTr": true
+  },
+  "settings_2faScan": {
+    "en": "Scan this QR code with an authenticator app (Google Authenticator, Authy, Microsoft Authenticator, etc.)",
+    "missingTr": true
+  },
+  "settings_2faCode": {
+    "en": "Verification Code",
+    "missingTr": true
+  },
+  "settings_2faVerify": {
+    "en": "Verify & enable 2FA",
+    "missingTr": true
+  },
+  "settings_2faDisable": {
+    "en": "Disable 2FA",
+    "missingTr": true
+  },
+  "settings_2faKey": {
+    "en": "Secret Key:",
+    "missingTr": true
+  },
+  "settings_2faKeyNote": {
+    "en": "Save this secret key in a secure location.",
+    "missingTr": true
+  },
+  "dash_title": {
+    "en": "ISMS Dashboard",
+    "missingTr": true
+  },
+  "dash_status": {
+    "en": "As of:",
+    "missingTr": true
+  },
+  "dash_actionRequired": {
+    "en": "Action Required",
+    "missingTr": true
+  },
+  "dash_noIssues": {
+    "en": "No critical issues",
+    "missingTr": true
+  },
+  "dash_policies": {
+    "en": "Policies & Compliance",
+    "missingTr": true
+  },
+  "dash_templates": {
+    "en": "Templates",
+    "missingTr": true
+  },
+  "dash_approved": {
+    "en": "Approved",
+    "missingTr": true
+  },
+  "dash_inReview": {
+    "en": "In Review",
+    "missingTr": true
+  },
+  "dash_fwRate": {
+    "en": "Ø Framework Rate",
+    "missingTr": true
+  },
+  "dash_risks": {
+    "en": "Risk Management",
+    "missingTr": true
+  },
+  "dash_totalRisks": {
+    "en": "Total Risks",
+    "missingTr": true
+  },
+  "dash_critical": {
+    "en": "Critical",
+    "missingTr": true
+  },
+  "dash_high": {
+    "en": "High",
+    "missingTr": true
+  },
+  "dash_openActions": {
+    "en": "Open Actions",
+    "missingTr": true
+  },
+  "dash_gdpr": {
+    "en": "Data Protection (GDPR)",
+    "missingTr": true
+  },
+  "dash_vvt": {
+    "en": "Record Entries",
+    "missingTr": true
+  },
+  "dash_breaches": {
+    "en": "Open Data Breaches",
+    "missingTr": true
+  },
+  "dash_dsars": {
+    "en": "Open DSARs",
+    "missingTr": true
+  },
+  "dash_toms": {
+    "en": "TOMs Implemented",
+    "missingTr": true
+  },
+  "dash_goals": {
+    "en": "ISO 27001 Ch. 6.2",
+    "missingTr": true
+  },
+  "dash_activeGoals": {
+    "en": "Active Goals",
+    "missingTr": true
+  },
+  "dash_achieved": {
+    "en": "Achieved",
+    "missingTr": true
+  },
+  "dash_overdue": {
+    "en": "Overdue",
+    "missingTr": true
+  },
+  "dash_progress": {
+    "en": "Ø Progress",
+    "missingTr": true
+  },
+  "dash_assets": {
+    "en": "Total Assets",
+    "missingTr": true
+  },
+  "dash_eol": {
+    "en": "EoL in 90 Days",
+    "missingTr": true
+  },
+  "dash_unclassifiedCritical": {
+    "en": "Unclassified crit.",
+    "missingTr": true
+  },
+  "dash_top5": {
+    "en": "Top 5 Risks",
+    "missingTr": true
+  },
+  "dash_next14": {
+    "en": "Next 14 Days",
+    "missingTr": true
+  },
+  "dash_activity": {
+    "en": "Recent Activity",
+    "missingTr": true
+  },
+  "dash_noActivity": {
+    "en": "No activity yet.",
+    "missingTr": true
+  },
+  "dash_by": {
+    "en": "by",
+    "missingTr": true
+  },
+  "dash_suppliers": {
+    "en": "Total Suppliers",
+    "missingTr": true
+  },
+  "dash_critSuppliers": {
+    "en": "Critical Suppliers",
+    "missingTr": true
+  },
+  "dash_auditsOverdue": {
+    "en": "Audits Overdue",
+    "missingTr": true
+  },
+  "dash_withDataAccess": {
+    "en": "With Data Access",
+    "missingTr": true
+  },
+  "dash_bcm": {
+    "en": "Continuity Plans",
+    "missingTr": true
+  },
+  "dash_testedPlans": {
+    "en": "Tested Plans",
+    "missingTr": true
+  },
+  "dash_criticalProcesses": {
+    "en": "Critical Processes",
+    "missingTr": true
+  },
+  "dash_testsOverdue": {
+    "en": "Tests Overdue",
+    "missingTr": true
+  },
+  "dash_governance": {
+    "en": "Management Reviews",
+    "missingTr": true
+  },
+  "dash_legal": {
+    "en": "Legal & Training",
+    "missingTr": true
+  },
+  "dash_contracts": {
+    "en": "Active Contracts",
+    "missingTr": true
+  },
+  "dash_expiring": {
+    "en": "Contracts Expiring",
+    "missingTr": true
+  },
+  "dash_training": {
+    "en": "Training Rate",
+    "missingTr": true
+  },
+  "dash_overdueTraining": {
+    "en": "Overdue Training",
+    "missingTr": true
+  },
+  "dash_fwCompliance": {
+    "en": "Framework Compliance",
+    "missingTr": true
+  },
+  "dash_criticalHigh": {
+    "en": "Critical/High",
+    "missingTr": true
+  },
+  "dash_scanRisksPending": {
+    "en": "{count} scan risk(s) awaiting approval",
+    "missingTr": true
+  },
+  "soa_title": {
+    "en": "Statement of Applicability",
+    "missingTr": true
+  },
+  "soa_allThemes": {
+    "en": "All Themes",
+    "missingTr": true
+  },
+  "soa_allStatus": {
+    "en": "All Status",
+    "missingTr": true
+  },
+  "soa_applicable": {
+    "en": "Applicable",
+    "missingTr": true
+  },
+  "soa_notApplicable": {
+    "en": "Not Applicable",
+    "missingTr": true
+  },
+  "soa_notStarted": {
+    "en": "Not started",
+    "missingTr": true
+  },
+  "soa_partial": {
+    "en": "Partial",
+    "missingTr": true
+  },
+  "soa_implemented": {
+    "en": "Implemented",
+    "missingTr": true
+  },
+  "soa_optimized": {
+    "en": "Optimized",
+    "missingTr": true
+  },
+  "soa_theme": {
+    "en": "Theme",
+    "missingTr": true
+  },
+  "soa_control": {
+    "en": "Control",
+    "missingTr": true
+  },
+  "soa_owner": {
+    "en": "Owner",
+    "missingTr": true
+  },
+  "soa_justification": {
+    "en": "Justification",
+    "missingTr": true
+  },
+  "soa_noControls": {
+    "en": "No controls found.",
+    "missingTr": true
+  },
+  "soa_loading": {
+    "en": "Loading details…",
+    "missingTr": true
+  },
+  "soa_showDetails": {
+    "en": "Show details",
+    "missingTr": true
+  },
+  "soa_linkedTemplates": {
+    "en": "Linked Templates / Policies",
+    "missingTr": true
+  },
+  "soa_appliesTo": {
+    "en": "Applies to (Entities)",
+    "missingTr": true
+  },
+  "soa_allEntities": {
+    "en": "All Entities",
+    "missingTr": true
+  },
+  "soa_noCrossMapping": {
+    "en": "No cross-mapping for this control.",
+    "missingTr": true
+  },
+  "soa_crossMapping": {
+    "en": "Cross-Mapping (related controls)",
+    "missingTr": true
+  },
+  "soa_importIsoControls": {
+    "en": "Import ISO Controls",
+    "missingTr": true
+  },
+  "soa_newControl": {
+    "en": "New Control",
+    "missingTr": true
+  },
+  "soa_noTemplatesLinked": {
+    "en": "No templates linked.",
+    "missingTr": true
+  },
+  "soa_linkTemplate": {
+    "en": "Link template…",
+    "missingTr": true
+  },
+  "soa_link": {
+    "en": "Link",
+    "missingTr": true
+  },
+  "soa_editApplicability": {
+    "en": "Edit applicability",
+    "missingTr": true
+  },
+  "soa_editControl": {
+    "en": "Edit control",
+    "missingTr": true
+  },
+  "soa_deleteControlTitle": {
+    "en": "Delete (only if no templates linked)",
+    "missingTr": true
+  },
+  "soa_customControl": {
+    "en": "Custom Control",
+    "missingTr": true
+  },
+  "soa_controlTitlePlaceholder": {
+    "en": "Control title…",
+    "missingTr": true
+  },
+  "soa_themeCategory": {
+    "en": "Theme / Category",
+    "missingTr": true
+  },
+  "soa_themePlaceholder": {
+    "en": "e.g. Access Control",
+    "missingTr": true
+  },
+  "soa_justificationPlaceholder": {
+    "en": "Why is this control needed?",
+    "missingTr": true
+  },
+  "soa_importArrayRequired": {
+    "en": "JSON must contain an array of controls.",
+    "missingTr": true
+  },
+  "soa_importSuccess": {
+    "en": "✓ {count} ISO controls imported. Page is reloading…",
+    "missingTr": true
+  },
+  "reports_title": {
+    "en": "Reports & Compliance",
+    "missingTr": true
+  },
+  "reports_compliance": {
+    "en": "Compliance",
+    "missingTr": true
+  },
+  "reports_fw": {
+    "en": "Framework Coverage",
+    "missingTr": true
+  },
+  "reports_gap": {
+    "en": "Gap Analysis",
+    "missingTr": true
+  },
+  "reports_templates": {
+    "en": "Template Overview",
+    "missingTr": true
+  },
+  "reports_reviews": {
+    "en": "Due Reviews",
+    "missingTr": true
+  },
+  "reports_matrix": {
+    "en": "Compliance Matrix",
+    "missingTr": true
+  },
+  "reports_audit": {
+    "en": "Audit Trail",
+    "missingTr": true
+  },
+  "reports_entity": {
+    "en": "Entity",
+    "missingTr": true
+  },
+  "reports_allEntities": {
+    "en": "All Entities",
+    "missingTr": true
+  },
+  "reports_framework": {
+    "en": "Framework",
+    "missingTr": true
+  },
+  "reports_allFw": {
+    "en": "All Frameworks",
+    "missingTr": true
+  },
+  "reports_from": {
+    "en": "From",
+    "missingTr": true
+  },
+  "reports_to": {
+    "en": "To",
+    "missingTr": true
+  },
+  "reports_generate": {
+    "en": "Generate Report",
+    "missingTr": true
+  },
+  "reports_run": {
+    "en": "Run",
+    "missingTr": true
+  },
+  "reports_calculating": {
+    "en": "Calculating…",
+    "missingTr": true
+  },
+  "reports_rate": {
+    "en": "Rate",
+    "missingTr": true
+  },
+  "reports_controlsWithoutPolicy": {
+    "en": "Controls without policy",
+    "missingTr": true
+  },
+  "reports_inDays": {
+    "en": "In {days} days",
+    "missingTr": true
+  },
+  "reports_daysCount": {
+    "en": "{days} days",
+    "missingTr": true
+  },
+  "reports_reviewDate": {
+    "en": "Review Date",
+    "missingTr": true
+  },
+  "reports_changedBy": {
+    "en": "Changed by",
+    "missingTr": true
+  },
+  "reports_fromScan": {
+    "en": "from scan",
+    "missingTr": true
+  },
+  "reports_manual": {
+    "en": "Manual",
+    "missingTr": true
+  },
+  "reports_source": {
+    "en": "Source",
+    "missingTr": true
+  },
+  "reports_descCompliance": {
+    "en": "Implementation rate per entity and framework",
+    "missingTr": true
+  },
+  "reports_descFramework": {
+    "en": "Controls per framework: applicable / implemented / gap",
+    "missingTr": true
+  },
+  "reports_descGap": {
+    "en": "Controls without linked policy templates",
+    "missingTr": true
+  },
+  "reports_descTemplates": {
+    "en": "All templates of an entity by status",
+    "missingTr": true
+  },
+  "reports_descReviews": {
+    "en": "Templates with overdue or upcoming review date",
+    "missingTr": true
+  },
+  "reports_descMatrix": {
+    "en": "Control × Entity traffic light overview",
+    "missingTr": true
+  },
+  "reports_descAudit": {
+    "en": "Status changes on templates in a given period",
+    "missingTr": true
+  },
+  "reports_descFindings": {
+    "en": "Audit findings with action plans (IS→SHALL→Risk→Recommendation)",
+    "missingTr": true
+  },
+  "reports_descRisks": {
+    "en": "All approved risks incl. CVSS scores from scan imports",
+    "missingTr": true
+  },
+  "reports_overdue": {
+    "en": "Overdue",
+    "missingTr": true
+  },
+  "reports_dueSoon": {
+    "en": "Due Soon",
+    "missingTr": true
+  },
+  "reports_noDate": {
+    "en": "No Review Date",
+    "missingTr": true
+  },
+  "reports_days": {
+    "en": "Days",
+    "missingTr": true
+  },
+  "reports_jsonExport": {
+    "en": "JSON",
+    "missingTr": true
+  },
+  "reports_csvExport": {
+    "en": "CSV",
+    "missingTr": true
+  },
+  "admin_title": {
+    "en": "Administration",
+    "missingTr": true
+  },
+  "admin_users": {
+    "en": "Users",
+    "missingTr": true
+  },
+  "admin_entities": {
+    "en": "Entities",
+    "missingTr": true
+  },
+  "admin_templates": {
+    "en": "Existing Templates",
+    "missingTr": true
+  },
+  "admin_lists": {
+    "en": "Lists",
+    "missingTr": true
+  },
+  "admin_org": {
+    "en": "Organization",
+    "missingTr": true
+  },
+  "admin_auditLog": {
+    "en": "Audit Log",
+    "missingTr": true
+  },
+  "admin_maintenance": {
+    "en": "Maintenance",
+    "missingTr": true
+  },
+  "admin_trash": {
+    "en": "Trash",
+    "missingTr": true
+  },
+  "admin_sysConfig": {
+    "en": "System Configuration",
+    "missingTr": true
+  },
+  "admin_newUser": {
+    "en": "New User",
+    "missingTr": true
+  },
+  "admin_email": {
+    "en": "Email",
+    "missingTr": true
+  },
+  "admin_role": {
+    "en": "Role",
+    "missingTr": true
+  },
+  "admin_actions": {
+    "en": "Actions",
+    "missingTr": true
+  },
+  "admin_saveUser": {
+    "en": "Save User",
+    "missingTr": true
+  },
+  "admin_deleteUser": {
+    "en": "Really delete user \"[NAME]\"?",
+    "missingTr": true
+  },
+  "admin_noTemplates": {
+    "en": "No templates found.",
+    "missingTr": true
+  },
+  "admin_restoreDefaults": {
+    "en": "Restore defaults",
+    "missingTr": true
+  },
+  "admin_newEntry": {
+    "en": "New entry…",
+    "missingTr": true
+  },
+  "admin_labelPlaceholder": {
+    "en": "Label…",
+    "missingTr": true
+  },
+  "admin_idLabelRequired": {
+    "en": "ID and label are required.",
+    "missingTr": true
+  },
+  "admin_resetListConfirm": {
+    "en": "Reset list to default values?",
+    "missingTr": true
+  },
+  "admin_resetError": {
+    "en": "Error resetting.",
+    "missingTr": true
+  },
+  "admin_userManagement": {
+    "en": "User Management",
+    "missingTr": true
+  },
+  "admin_noUsers": {
+    "en": "No users found",
+    "missingTr": true
+  },
+  "admin_functions": {
+    "en": "Functions",
+    "missingTr": true
+  },
+  "admin_domain": {
+    "en": "Domain",
+    "missingTr": true
+  },
+  "admin_editUser": {
+    "en": "Edit User",
+    "missingTr": true
+  },
+  "admin_username": {
+    "en": "Username",
+    "missingTr": true
+  },
+  "admin_orgFunctions": {
+    "en": "Organisational Functions",
+    "missingTr": true
+  },
+  "admin_functionsHint": {
+    "en": "Multiple functions possible — independent of RBAC rank",
+    "missingTr": true
+  },
+  "admin_confirmPassword": {
+    "en": "Confirm Password",
+    "missingTr": true
+  },
+  "admin_userRequired": {
+    "en": "Username, e-mail and role are required.",
+    "missingTr": true
+  },
+  "admin_passwordMismatch": {
+    "en": "Passwords do not match.",
+    "missingTr": true
+  },
+  "admin_passwordMin": {
+    "en": "Password must be at least 6 characters.",
+    "missingTr": true
+  },
+  "admin_corporateEntities": {
+    "en": "Corporate Structure – Entities",
+    "missingTr": true
+  },
+  "admin_newEntity": {
+    "en": "New Entity",
+    "missingTr": true
+  },
+  "admin_editEntity": {
+    "en": "Edit Entity",
+    "missingTr": true
+  },
+  "admin_entitySubsidiary": {
+    "en": "Subsidiary",
+    "missingTr": true
+  },
+  "admin_entityHolding": {
+    "en": "Holding",
+    "missingTr": true
+  },
+  "admin_deleteEntityConfirm": {
+    "en": "Delete entity \"{name}\"?",
+    "missingTr": true
+  },
+  "auditLog_clear": {
+    "en": "Clear Log",
+    "missingTr": true
+  },
+  "auditLog_allActions": {
+    "en": "All Actions",
+    "missingTr": true
+  },
+  "auditLog_allRes": {
+    "en": "All Resources",
+    "missingTr": true
+  },
+  "auditLog_time": {
+    "en": "Timestamp",
+    "missingTr": true
+  },
+  "auditLog_action": {
+    "en": "Action",
+    "missingTr": true
+  },
+  "auditLog_resource": {
+    "en": "Resource",
+    "missingTr": true
+  },
+  "auditLog_detail": {
+    "en": "Detail",
+    "missingTr": true
+  },
+  "auditLog_noEntries": {
+    "en": "No entries.",
+    "missingTr": true
+  },
+  "auditLog_total": {
+    "en": "Total entries",
+    "missingTr": true
+  },
+  "auditLog_confirm": {
+    "en": "Really clear the audit log? This action cannot be undone.",
+    "missingTr": true
+  },
+  "auditLog_clearError": {
+    "en": "Error clearing the log.",
+    "missingTr": true
+  },
+  "audit_userPlaceholder": {
+    "en": "User…",
+    "missingTr": true
+  },
+  "audit_actionCreated": {
+    "en": "Created",
+    "missingTr": true
+  },
+  "audit_actionUpdated": {
+    "en": "Updated",
+    "missingTr": true
+  },
+  "audit_actionDeleted": {
+    "en": "Deleted",
+    "missingTr": true
+  },
+  "audit_actionLogin": {
+    "en": "Login",
+    "missingTr": true
+  },
+  "audit_actionLogout": {
+    "en": "Logout",
+    "missingTr": true
+  },
+  "audit_actionExport": {
+    "en": "Export",
+    "missingTr": true
+  },
+  "audit_actionSettings": {
+    "en": "Settings",
+    "missingTr": true
+  },
+  "audit_resourceUser": {
+    "en": "User",
+    "missingTr": true
+  },
+  "org_general": {
+    "en": "General Information",
+    "missingTr": true
+  },
+  "org_name": {
+    "en": "Organization Name",
+    "missingTr": true
+  },
+  "org_short": {
+    "en": "Short Code",
+    "missingTr": true
+  },
+  "org_scope": {
+    "en": "ISMS Scope",
+    "missingTr": true
+  },
+  "org_responsibilities": {
+    "en": "Responsibilities",
+    "missingTr": true
+  },
+  "org_ciso": {
+    "en": "CISO / ISM Name",
+    "missingTr": true
+  },
+  "org_cisoEmail": {
+    "en": "CISO / ISM Email",
+    "missingTr": true
+  },
+  "org_dso": {
+    "en": "DPO / Privacy Officer Name",
+    "missingTr": true
+  },
+  "org_dsoEmail": {
+    "en": "DPO / Privacy Officer Email",
+    "missingTr": true
+  },
+  "org_2fa": {
+    "en": "Enforce Two-Factor Authentication (2FA) system-wide",
+    "missingTr": true
+  },
+  "org_save": {
+    "en": "Save",
+    "missingTr": true
+  },
+  "org_dataConfiguration": {
+    "en": "Organisation Data & Configuration",
+    "missingTr": true
+  },
+  "org_logoText": {
+    "en": "Logo Text / Abbreviation",
+    "missingTr": true
+  },
+  "org_icsContact": {
+    "en": "ICS Contact",
+    "missingTr": true
+  },
+  "org_securityPolicies": {
+    "en": "Security Policies",
+    "missingTr": true
+  },
+  "org_2faDesc": {
+    "en": "When enabled, users <strong>cannot log in without 2FA configured</strong>. Login will be rejected with an explanatory message.",
+    "missingTr": true
+  },
+  "org_2faWarning": {
+    "en": "Only enable if <em>all</em> user accounts already have 2FA set up. Otherwise affected accounts will be locked out immediately.",
+    "missingTr": true
+  },
+  "org_saveSecurity": {
+    "en": "Save security settings",
+    "missingTr": true
+  },
+  "org_emailNotifications": {
+    "en": "E-Mail Notifications",
+    "missingTr": true
+  },
+  "org_smtpEnvNotice": {
+    "en": "SMTP credentials are configured in the <code>.env</code> file (<code>SMTP_HOST</code>, <code>SMTP_USER</code> etc.). Only notification types are controlled here.",
+    "missingTr": true
+  },
+  "org_enableDigest": {
+    "en": "Enable daily digest e-mails",
+    "missingTr": true
+  },
+  "org_digestDesc": {
+    "en": "Sends a daily summary to CISO, GDPO and admin e-mail once per day.",
+    "missingTr": true
+  },
+  "org_adminEmail": {
+    "en": "Admin E-Mail",
+    "missingTr": true
+  },
+  "org_emailHighRisks": {
+    "en": "High/critical risks",
+    "missingTr": true
+  },
+  "org_emailBcmDue": {
+    "en": "BCM tests due (≤ 14 days)",
+    "missingTr": true
+  },
+  "org_emailSupplierAudits": {
+    "en": "Supplier audits due (≤ 14 days)",
+    "missingTr": true
+  },
+  "org_emailDsar": {
+    "en": "DSAR deadlines (≤ 3 days)",
+    "missingTr": true
+  },
+  "org_emailGdprIncidents": {
+    "en": "GDPR incidents > 48h open",
+    "missingTr": true
+  },
+  "org_emailDeletionLog": {
+    "en": "Deletion log Art. 17 GDPR",
+    "missingTr": true
+  },
+  "org_emailContracts": {
+    "en": "Expiring contracts (≤ 30 days)",
+    "missingTr": true
+  },
+  "org_emailTemplateReview": {
+    "en": "Template review due (≤ 14 days)",
+    "missingTr": true
+  },
+  "org_toCiso": {
+    "en": "→ CISO e-mail",
+    "missingTr": true
+  },
+  "org_toGdpo": {
+    "en": "→ GDPO e-mail",
+    "missingTr": true
+  },
+  "org_toAdmin": {
+    "en": "→ Admin e-mail",
+    "missingTr": true
+  },
+  "org_saveEmail": {
+    "en": "Save e-mail settings",
+    "missingTr": true
+  },
+  "org_smtpConfig": {
+    "en": "SMTP Configuration",
+    "missingTr": true
+  },
+  "org_securityNotice": {
+    "en": "Security notice",
+    "missingTr": true
+  },
+  "org_smtpSecurityNotice": {
+    "en": "The SMTP password is stored in <code>org-settings.json</code> (plaintext). For higher security, use environment variables (<code>SMTP_HOST</code> etc.) in <code>.env</code> — these always take precedence.",
+    "missingTr": true
+  },
+  "org_smtpEnvOverride": {
+    "en": "SMTP is configured via <code>.env</code> variables — UI settings are ignored.",
+    "missingTr": true
+  },
+  "org_smtpHost": {
+    "en": "SMTP Host",
+    "missingTr": true
+  },
+  "org_smtpPort": {
+    "en": "Port",
+    "missingTr": true
+  },
+  "org_smtpEncryption": {
+    "en": "TLS / Encryption",
+    "missingTr": true
+  },
+  "org_smtpUsername": {
+    "en": "Username",
+    "missingTr": true
+  },
+  "org_smtpPassword": {
+    "en": "Password",
+    "missingTr": true
+  },
+  "org_smtpSender": {
+    "en": "Sender (From)",
+    "missingTr": true
+  },
+  "org_saveSmtp": {
+    "en": "Save SMTP",
+    "missingTr": true
+  },
+  "org_sendTestMail": {
+    "en": "Send test mail",
+    "missingTr": true
+  },
+  "org_testMailDesc": {
+    "en": "Test mail will be sent to the CISO e-mail ({email}). Please enter a CISO e-mail under Responsibilities first.",
+    "missingTr": true
+  },
+  "org_menuOrder": {
+    "en": "Menu Order",
+    "missingTr": true
+  },
+  "org_menuOrderDesc": {
+    "en": "Drag entries with <i class=\"ph ph-dots-six-vertical\"></i> or use ↑/↓ to adjust the sidebar order. Dashboard, Admin and Settings are always shown.",
+    "missingTr": true
+  },
+  "org_saveOrder": {
+    "en": "Save order",
+    "missingTr": true
+  },
+  "org_units": {
+    "en": "Organisational Units",
+    "missingTr": true
+  },
+  "org_newUnit": {
+    "en": "New Unit",
+    "missingTr": true
+  },
+  "org_unitsDesc": {
+    "en": "Defines the IT org structure (CIO → GroupIT / GroupApp → Local IT). Used for ownership assignment across all modules (Risks, Assets, Suppliers, BCM, Goals, Findings).",
+    "missingTr": true
+  },
+  "org_parent": {
+    "en": "Parent",
+    "missingTr": true
+  },
+  "org_head": {
+    "en": "Head",
+    "missingTr": true
+  },
+  "org_noUnits": {
+    "en": "No units defined.",
+    "missingTr": true
+  },
+  "org_itUnit": {
+    "en": "IT Organisational Unit",
+    "missingTr": true
+  },
+  "org_parentUnit": {
+    "en": "Parent Unit",
+    "missingTr": true
+  },
+  "org_noParentTop": {
+    "en": "none (top level)",
+    "missingTr": true
+  },
+  "org_headPerson": {
+    "en": "Head (Person)",
+    "missingTr": true
+  },
+  "org_deleteUnitConfirm": {
+    "en": "Delete unit \"{name}\"?",
+    "missingTr": true
+  },
+  "org_noUnitAssigned": {
+    "en": "no unit assigned",
+    "missingTr": true
+  },
+  "org_2faEnabled": {
+    "en": "2FA enforcement enabled.",
+    "missingTr": true
+  },
+  "org_2faDisabled": {
+    "en": "2FA enforcement disabled.",
+    "missingTr": true
+  },
+  "org_splashSaved": {
+    "en": "Splash screen settings saved.",
+    "missingTr": true
+  },
+  "org_orderSaved": {
+    "en": "Order saved. Reload the page for the change to take effect.",
+    "missingTr": true
+  },
+  "org_smtpSaved": {
+    "en": "SMTP saved.",
+    "missingTr": true
+  },
+  "org_sendingTestMail": {
+    "en": "Sending test mail…",
+    "missingTr": true
+  },
+  "org_cisoEmailMissing": {
+    "en": "CISO email missing — please enter it first and save org settings.",
+    "missingTr": true
+  },
+  "org_testMailSent": {
+    "en": "Test mail sent to {email}.",
+    "missingTr": true
+  },
+  "org_smtpConnectionFailed": {
+    "en": "SMTP connection failed",
+    "missingTr": true
+  },
+  "org_emailSaved": {
+    "en": "E-mail settings saved.",
+    "missingTr": true
+  },
+  "maint_backend": {
+    "en": "Storage Backend",
+    "missingTr": true
+  },
+  "maint_backup": {
+    "en": "Data Backup & Export",
+    "missingTr": true
+  },
+  "maint_download": {
+    "en": "Download Full Export",
+    "missingTr": true
+  },
+  "maint_cleanup": {
+    "en": "Start Cleanup",
+    "missingTr": true
+  },
+  "maint_demoReset": {
+    "en": "Perform Demo Reset",
+    "missingTr": true
+  },
+  "maint_demoImport": {
+    "en": "Import Demo Data",
+    "missingTr": true
+  },
+  "maint_dataMaintenance": {
+    "en": "Data & Maintenance",
+    "missingTr": true
+  },
+  "maint_productionRestartTitle": {
+    "en": "Transition to production — server restart required",
+    "missingTr": true
+  },
+  "maint_productionRestartDesc": {
+    "en": "The demo reset has set <code>STORAGE_BACKEND=sqlite</code> in <code>.env</code>. The change will take effect after a server restart. Until then the server is still running with the old backend.",
+    "missingTr": true
+  },
+  "maint_productionRestartAfter": {
+    "en": "After restart, the system stores all data in <code>data/isms.db</code> (SQLite, WAL mode). JSON files are retained as a fallback backup.",
+    "missingTr": true
+  },
+  "maint_backendDesc": {
+    "en": "<strong>JSON</strong> — for demo and development only. <strong>SQLite</strong> — required for production (ACID-compliant, WAL mode, no data loss on crash). The demo reset automatically sets <code>STORAGE_BACKEND=sqlite</code> in <code>.env</code> and requires a server restart afterwards.",
+    "missingTr": true
+  },
+  "maint_backupDesc": {
+    "en": "Exports all data (templates, SoA, risks, GDPR, users, settings) as a single JSON file. Attachments (PDF/DOCX) are not included.",
+    "missingTr": true
+  },
+  "maint_cleanupOrphans": {
+    "en": "Clean up orphaned attachments",
+    "missingTr": true
+  },
+  "maint_cleanupOrphansDesc": {
+    "en": "Removes files from the upload directory that are no longer associated with any template.",
+    "missingTr": true
+  },
+  "maint_aiIntegration": {
+    "en": "AI Integration (Ollama)",
+    "missingTr": true
+  },
+  "maint_aiDesc": {
+    "en": "Controls semantic search and future AI features. Ollama must be installed and running locally. If Ollama is unavailable, features can be disabled here — the topbar search will then fall back to \"unavailable\".",
+    "missingTr": true
+  },
+  "maint_enableAiSearch": {
+    "en": "Enable AI search",
+    "missingTr": true
+  },
+  "maint_aiGlobalSwitch": {
+    "en": "Global switch — disables all AI features system-wide.",
+    "missingTr": true
+  },
+  "maint_ollamaUrl": {
+    "en": "Ollama URL",
+    "missingTr": true
+  },
+  "maint_embeddingModel": {
+    "en": "Embedding model",
+    "missingTr": true
+  },
+  "maint_rebuildIndex": {
+    "en": "Rebuild index",
+    "missingTr": true
+  },
+  "maint_checkStatus": {
+    "en": "Check status",
+    "missingTr": true
+  },
+  "maint_demoResetTitle": {
+    "en": "Demo Reset",
+    "missingTr": true
+  },
+  "maint_demoResetDesc": {
+    "en": "Exports all current demo data, then deletes all module data and users (except admin) and resets the admin account to <code>adminpass</code> without 2FA. The exported JSON file is automatically downloaded. After the reset, a notice for the administrator will appear on the login page.",
+    "missingTr": true
+  },
+  "maint_demoImportDesc": {
+    "en": "Restores a previously exported demo dataset. All module data will be overwritten. Users alice and bob will be restored with original passwords and without 2FA. The admin account remains unchanged.",
+    "missingTr": true
+  },
+  "maint_selectJsonImport": {
+    "en": "Select JSON file & import",
+    "missingTr": true
+  },
+  "maint_splashScreen": {
+    "en": "Login Splash Screen",
+    "missingTr": true
+  },
+  "maint_splashDesc": {
+    "en": "After login, show the ISMS Builder banner image for a few seconds before the dashboard opens.",
+    "missingTr": true
+  },
+  "maint_enableSplash": {
+    "en": "Enable splash screen",
+    "missingTr": true
+  },
+  "maint_showSplash": {
+    "en": "Show banner image after successful login",
+    "missingTr": true
+  },
+  "maint_durationSeconds": {
+    "en": "Duration (seconds)",
+    "missingTr": true
+  },
+  "modules_title": {
+    "en": "System Configuration – Module Management",
+    "missingTr": true
+  },
+  "modules_desc": {
+    "en": "Enable or disable modules according to your organisation structure and applicable standards. Disabled modules are hidden system-wide — for all users. <strong>Dashboard, Admin and Settings</strong> are always active.",
+    "missingTr": true
+  },
+  "modules_active": {
+    "en": "Active",
+    "missingTr": true
+  },
+  "modules_disabled": {
+    "en": "Disabled",
+    "missingTr": true
+  },
+  "modules_soaFrameworks": {
+    "en": "SoA – Active Compliance Frameworks",
+    "missingTr": true
+  },
+  "modules_soaFrameworksDesc": {
+    "en": "Select the frameworks relevant to your organisation. Disabled frameworks are hidden in SoA, Dashboard and Reports.",
+    "missingTr": true
+  },
+  "modules_soaFrameworksNote": {
+    "en": "At least one framework must remain active — an ISMS without a compliance framework would not make sense. The system prevents disabling the last active framework.",
+    "missingTr": true
+  },
+  "modules_saveApply": {
+    "en": "Save & apply configuration",
+    "missingTr": true
+  },
+  "modules_lastFrameworkWarning": {
+    "en": "At least one framework must remain active — the last active framework cannot be disabled.",
+    "missingTr": true
+  },
+  "modules_savedUpdating": {
+    "en": "Saved. Sidebar and SoA are being updated…",
+    "missingTr": true
+  },
+  "inc_title": {
+    "en": "Incident Inbox – CISO Processing",
+    "missingTr": true
+  },
+  "inc_allStatus": {
+    "en": "All Status",
+    "missingTr": true
+  },
+  "inc_new": {
+    "en": "New",
+    "missingTr": true
+  },
+  "inc_inReview": {
+    "en": "In Review",
+    "missingTr": true
+  },
+  "inc_assigned": {
+    "en": "Assigned",
+    "missingTr": true
+  },
+  "inc_closed": {
+    "en": "Closed",
+    "missingTr": true
+  },
+  "inc_none": {
+    "en": "No incidents present.",
+    "missingTr": true
+  },
+  "inc_select": {
+    "en": "Select incident from list",
+    "missingTr": true
+  },
+  "inc_inboxTitle": {
+    "en": "Incident Inbox – CISO Processing",
+    "missingTr": true
+  },
+  "inc_statusNew": {
+    "en": "New",
+    "missingTr": true
+  },
+  "inc_statusReview": {
+    "en": "Under Review",
+    "missingTr": true
+  },
+  "inc_statusAssigned": {
+    "en": "Assigned",
+    "missingTr": true
+  },
+  "inc_statusClosed": {
+    "en": "Closed",
+    "missingTr": true
+  },
+  "inc_reference": {
+    "en": "Reference",
+    "missingTr": true
+  },
+  "inc_company": {
+    "en": "Company",
+    "missingTr": true
+  },
+  "inc_typeLabel": {
+    "en": "Incident Type",
+    "missingTr": true
+  },
+  "inc_reporterEmail": {
+    "en": "Reporter Email",
+    "missingTr": true
+  },
+  "inc_resolved": {
+    "en": "Resolved?",
+    "missingTr": true
+  },
+  "inc_description": {
+    "en": "Description",
+    "missingTr": true
+  },
+  "inc_measuresTaken": {
+    "en": "Measures Already Taken",
+    "missingTr": true
+  },
+  "inc_localContact": {
+    "en": "Local Contact",
+    "missingTr": true
+  },
+  "inc_cisoDecision": {
+    "en": "CISO Decision",
+    "missingTr": true
+  },
+  "inc_setStatus": {
+    "en": "Set Status",
+    "missingTr": true
+  },
+  "inc_assignTo": {
+    "en": "Assign to",
+    "missingTr": true
+  },
+  "inc_notAssigned": {
+    "en": "not yet assigned",
+    "missingTr": true
+  },
+  "inc_itDepartment": {
+    "en": "IT Department",
+    "missingTr": true
+  },
+  "inc_dataProtection": {
+    "en": "Data Protection / DPO",
+    "missingTr": true
+  },
+  "inc_reportable": {
+    "en": "Reportable (GDPR)",
+    "missingTr": true
+  },
+  "inc_stillOpen": {
+    "en": "still open",
+    "missingTr": true
+  },
+  "inc_reportableTbd": {
+    "en": "Unclear – under review",
+    "missingTr": true
+  },
+  "inc_reportableYes": {
+    "en": "Yes – reportable",
+    "missingTr": true
+  },
+  "inc_reportableNo": {
+    "en": "No – not reportable",
+    "missingTr": true
+  },
+  "inc_cisoNotes": {
+    "en": "CISO Notes",
+    "missingTr": true
+  },
+  "inc_lastUpdated": {
+    "en": "Last updated",
+    "missingTr": true
+  },
+  "inc_saveDecision": {
+    "en": "Save Decision",
+    "missingTr": true
+  },
+  "inc_ref": {
+    "en": "Reference Number",
+    "missingTr": true
+  },
+  "inc_type": {
+    "en": "Type of Incident",
+    "missingTr": true
+  },
+  "inc_updated": {
+    "en": "Last updated:",
+    "missingTr": true
+  },
+  "inc_deleteConfirm": {
+    "en": "Really delete this incident?\nThis action cannot be undone.",
+    "missingTr": true
+  },
+  "uc_title": {
+    "en": "Under Construction",
+    "missingTr": true
+  },
+  "uc_text": {
+    "en": "This module will be available in a future release.",
+    "missingTr": true
+  },
+  "col_date": {
+    "en": "Date",
+    "missingTr": true
+  },
+  "col_title": {
+    "en": "Title",
+    "missingTr": true
+  },
+  "col_status": {
+    "en": "Status",
+    "missingTr": true
+  },
+  "col_owner": {
+    "en": "Owner",
+    "missingTr": true
+  },
+  "col_type": {
+    "en": "Type",
+    "missingTr": true
+  },
+  "col_version": {
+    "en": "Version",
+    "missingTr": true
+  },
+  "col_name": {
+    "en": "Name",
+    "missingTr": true
+  },
+  "col_actions": {
+    "en": "Actions",
+    "missingTr": true
+  },
+  "col_modified": {
+    "en": "Modified",
+    "missingTr": true
+  },
+  "col_label": {
+    "en": "Label",
+    "missingTr": true
+  },
+  "sidebar_create": {
+    "en": "Create",
+    "missingTr": true
+  },
+  "sidebar_nav": {
+    "en": "Navigation",
+    "missingTr": true
+  },
+  "sidebar_types": {
+    "en": "Template Types",
+    "missingTr": true
+  },
+  "sidebar_admin": {
+    "en": "Administration",
+    "missingTr": true
+  },
+  "tmpl_childPage": {
+    "en": "Child Page",
+    "missingTr": true
+  },
+  "tmpl_move": {
+    "en": "Move",
+    "missingTr": true
+  },
+  "tmpl_history": {
+    "en": "History",
+    "missingTr": true
+  },
+  "tmpl_soaControls": {
+    "en": "SoA Controls",
+    "missingTr": true
+  },
+  "tmpl_appliesTo": {
+    "en": "Applies to",
+    "missingTr": true
+  },
+  "tmpl_nextReview": {
+    "en": "Next Review:",
+    "missingTr": true
+  },
+  "tmpl_titlePlaceholder": {
+    "en": "Template title",
+    "missingTr": true
+  },
+  "tmpl_contentPlaceholder": {
+    "en": "Template content…",
+    "missingTr": true
+  },
+  "tmpl_linkSoaControls": {
+    "en": "Link SoA Controls",
+    "missingTr": true
+  },
+  "tmpl_controlSearchPlaceholder": {
+    "en": "Search controls…",
+    "missingTr": true
+  },
+  "tmpl_createNew": {
+    "en": "Create New Template",
+    "missingTr": true
+  },
+  "tmpl_newTitlePlaceholder": {
+    "en": "Enter title…",
+    "missingTr": true
+  },
+  "tmpl_trashConfirm": {
+    "en": "Move template \"{title}\" to trash?",
+    "missingTr": true
+  },
+  "tmpl_permanentDeleteConfirm": {
+    "en": "Permanently delete template \"{title}\"? This cannot be undone.",
+    "missingTr": true
+  },
+  "tmpl_restoreConfirm": {
+    "en": "Restore template \"{title}\"?",
+    "missingTr": true
+  },
+  "tfa_hint": {
+    "en": "2FA not active",
+    "missingTr": true
+  },
+  "tfa_title": {
+    "en": "2FA not set up – enable now",
+    "missingTr": true
+  },
+  "tfa_banner": {
+    "en": "You have not enabled 2FA yet. We recommend setting up 2FA for better security.",
+    "missingTr": true
+  },
+  "tfa_setup": {
+    "en": "Setup now",
+    "missingTr": true
+  },
+  "err_saveFailed": {
+    "en": "Error saving",
+    "missingTr": true
+  },
+  "err_network": {
+    "en": "Network Error",
+    "missingTr": true
+  },
+  "err_load": {
+    "en": "Load failed",
+    "missingTr": true
+  },
+  "err_delete": {
+    "en": "Deletion failed.",
+    "missingTr": true
+  },
+  "err_popupBlocked": {
+    "en": "Pop-up blocked. Please allow pop-ups for this site.",
+    "missingTr": true
+  },
+  "err_invalidJson": {
+    "en": "Invalid JSON file.",
+    "missingTr": true
+  },
+  "err_restartServer": {
+    "en": "Please restart the server.",
+    "missingTr": true
+  },
+  "msg_saved": {
+    "en": "Saved.",
+    "missingTr": true
+  },
+  "msg_deleted": {
+    "en": "Deleted.",
+    "missingTr": true
+  },
+  "msg_restored": {
+    "en": "Restored.",
+    "missingTr": true
+  },
+  "topbar_settings": {
+    "en": "Settings",
+    "missingTr": true
+  },
+  "topbar_logout": {
+    "en": "Sign out",
+    "missingTr": true
+  },
+  "topbar_search": {
+    "en": "Search…",
+    "missingTr": true
+  },
+  "topbar_toggleSidebar": {
+    "en": "Show/hide sidebar",
+    "missingTr": true
+  },
+  "guidance_noPrintableDocs": {
+    "en": "No printable documents in this category.",
+    "missingTr": true
+  },
+  "guidance_printCategoryTitle": {
+    "en": "Print all documents in this category as PDF",
+    "missingTr": true
+  },
+  "guidance_printAll": {
+    "en": "Print all",
+    "missingTr": true
+  },
+  "filter_allStatuses": {
+    "en": "All Statuses",
+    "missingTr": true
+  },
+  "filter_allCats": {
+    "en": "All Categories",
+    "missingTr": true
+  },
+  "filter_allEntities": {
+    "en": "All Entities",
+    "missingTr": true
+  },
+  "col_responsible": {
+    "en": "Responsible",
+    "missingTr": true
+  },
+  "col_dueDate": {
+    "en": "Due Date",
+    "missingTr": true
+  },
+  "col_category": {
+    "en": "Category",
+    "missingTr": true
+  },
+  "col_counterparty": {
+    "en": "Counterparty",
+    "missingTr": true
+  },
+  "col_endDate": {
+    "en": "End Date",
+    "missingTr": true
+  },
+  "col_signed": {
+    "en": "Signed",
+    "missingTr": true
+  },
+  "col_expires": {
+    "en": "Expires",
+    "missingTr": true
+  },
+  "col_published": {
+    "en": "Published",
+    "missingTr": true
+  },
+  "col_validUntil": {
+    "en": "Valid Until",
+    "missingTr": true
+  },
+  "col_country": {
+    "en": "Country",
+    "missingTr": true
+  },
+  "col_nextAudit": {
+    "en": "Next Audit",
+    "missingTr": true
+  },
+  "col_auditResult": {
+    "en": "Audit Result",
+    "missingTr": true
+  },
+  "col_dataAccess": {
+    "en": "Data Access",
+    "missingTr": true
+  },
+  "col_criticality": {
+    "en": "Criticality",
+    "missingTr": true
+  },
+  "col_process": {
+    "en": "Process",
+    "missingTr": true
+  },
+  "col_department": {
+    "en": "Department",
+    "missingTr": true
+  },
+  "col_due": {
+    "en": "Due:",
+    "missingTr": true
+  },
+  "col_deletedBy": {
+    "en": "Deleted By",
+    "missingTr": true
+  },
+  "col_deletedAt": {
+    "en": "Deleted At",
+    "missingTr": true
+  },
+  "kpi_total": {
+    "en": "Total",
+    "missingTr": true
+  },
+  "kpi_active": {
+    "en": "Active",
+    "missingTr": true
+  },
+  "kpi_overdue": {
+    "en": "Overdue",
+    "missingTr": true
+  },
+  "kpi_planned": {
+    "en": "Planned",
+    "missingTr": true
+  },
+  "kpi_inProgress": {
+    "en": "In Progress",
+    "missingTr": true
+  },
+  "kpi_completed": {
+    "en": "Completed",
+    "missingTr": true
+  },
+  "common_close": {
+    "en": "Close",
+    "missingTr": true
+  },
+  "common_edit": {
+    "en": "Edit",
+    "missingTr": true
+  },
+  "common_applicableEntities": {
+    "en": "Applicable to Entities",
+    "missingTr": true
+  },
+  "common_policiesPicker": {
+    "en": "Policies / Templates",
+    "missingTr": true
+  },
+  "risk_new": {
+    "en": "New Risk",
+    "missingTr": true
+  },
+  "risk_register": {
+    "en": "Risk Register",
+    "missingTr": true
+  },
+  "risk_treatmentsTab": {
+    "en": "Treatment Plans",
+    "missingTr": true
+  },
+  "risk_reportsTab": {
+    "en": "Reports",
+    "missingTr": true
+  },
+  "risk_probability": {
+    "en": "Probability",
+    "missingTr": true
+  },
+  "risk_impact": {
+    "en": "Impact",
+    "missingTr": true
+  },
+  "risk_heatmapHint": {
+    "en": "Click a point to open risk details.",
+    "missingTr": true
+  },
+  "risk_levelLow": {
+    "en": "Low (1–4)",
+    "missingTr": true
+  },
+  "risk_levelMed": {
+    "en": "Medium (5–9)",
+    "missingTr": true
+  },
+  "risk_levelHigh": {
+    "en": "High (10–14)",
+    "missingTr": true
+  },
+  "risk_levelCrit": {
+    "en": "Critical (15–25)",
+    "missingTr": true
+  },
+  "risk_measure": {
+    "en": "Measure",
+    "missingTr": true
+  },
+  "risk_riskCol": {
+    "en": "Risk",
+    "missingTr": true
+  },
+  "risk_all": {
+    "en": "All Risks",
+    "missingTr": true
+  },
+  "risk_total": {
+    "en": "Total Risks",
+    "missingTr": true
+  },
+  "risk_noRisks": {
+    "en": "No risks found.",
+    "missingTr": true
+  },
+  "risk_openTreatments": {
+    "en": "Open Treatments",
+    "missingTr": true
+  },
+  "risk_catTechnical": {
+    "en": "Technical",
+    "missingTr": true
+  },
+  "risk_catOrganizational": {
+    "en": "Organizational",
+    "missingTr": true
+  },
+  "risk_catPhysical": {
+    "en": "Physical",
+    "missingTr": true
+  },
+  "risk_catLegal": {
+    "en": "Legal",
+    "missingTr": true
+  },
+  "risk_treatmentReduce": {
+    "en": "Reduce",
+    "missingTr": true
+  },
+  "risk_treatmentAccept": {
+    "en": "Accept",
+    "missingTr": true
+  },
+  "risk_treatmentAvoid": {
+    "en": "Avoid",
+    "missingTr": true
+  },
+  "risk_treatmentTransfer": {
+    "en": "Transfer",
+    "missingTr": true
+  },
+  "risk_statusCompleted": {
+    "en": "Completed",
+    "missingTr": true
+  },
+  "risk_allTreatments": {
+    "en": "All Treatment Measures",
+    "missingTr": true
+  },
+  "risk_select": {
+    "en": "Select risk",
+    "missingTr": true
+  },
+  "risk_newMeasure": {
+    "en": "New Measure",
+    "missingTr": true
+  },
+  "risk_orgUnit": {
+    "en": "Unit (OU)",
+    "missingTr": true
+  },
+  "risk_approvalPending": {
+    "en": "Approval Pending",
+    "missingTr": true
+  },
+  "risk_approvalRequired": {
+    "en": "Approval required",
+    "missingTr": true
+  },
+  "risk_approve": {
+    "en": "Approve",
+    "missingTr": true
+  },
+  "risk_approved": {
+    "en": "Approved",
+    "missingTr": true
+  },
+  "risk_approvedBy": {
+    "en": "Approved By",
+    "missingTr": true
+  },
+  "risk_scanImports": {
+    "en": "Scan Imports",
+    "missingTr": true
+  },
+  "risk_scanReviewText": {
+    "en": "This risk was automatically created by a scan import and must be reviewed and approved.",
+    "missingTr": true
+  },
+  "risk_approvalFailed": {
+    "en": "Approval failed",
+    "missingTr": true
+  },
+  "risk_byLevel": {
+    "en": "By Risk Level",
+    "missingTr": true
+  },
+  "risk_byCategory": {
+    "en": "By Category",
+    "missingTr": true
+  },
+  "risk_byStatus": {
+    "en": "By Status",
+    "missingTr": true
+  },
+  "risk_recorded": {
+    "en": "Risks recorded",
+    "missingTr": true
+  },
+  "risk_treatmentsOpen": {
+    "en": "Treatment plans open",
+    "missingTr": true
+  },
+  "risk_descHeading": {
+    "en": "Risk Description",
+    "missingTr": true
+  },
+  "risk_threat": {
+    "en": "Threat",
+    "missingTr": true
+  },
+  "risk_vulnerability": {
+    "en": "Vulnerability",
+    "missingTr": true
+  },
+  "risk_mitigation": {
+    "en": "Mitigation Measures",
+    "missingTr": true
+  },
+  "risk_assessment": {
+    "en": "Assessment",
+    "missingTr": true
+  },
+  "risk_treatmentOpt": {
+    "en": "Treatment Option",
+    "missingTr": true
+  },
+  "risk_noMeasures": {
+    "en": "No measures recorded.",
+    "missingTr": true
+  },
+  "risk_linkedControls": {
+    "en": "Linked SoA Controls",
+    "missingTr": true
+  },
+  "risk_openBtn": {
+    "en": "Open Risk",
+    "missingTr": true
+  },
+  "risk_selectFirst": {
+    "en": "Please select a risk first.",
+    "missingTr": true
+  },
+  "risk_openMeasures": {
+    "en": "Open Measures",
+    "missingTr": true
+  },
+  "cvss_descCritical": {
+    "en": "Critical: vulnerability can allow full system compromise, often without authentication or user interaction (for example remote code execution).",
+    "missingTr": true
+  },
+  "cvss_descHigh": {
+    "en": "High: significant damage is possible. Attackers may control important resources or read confidential data.",
+    "missingTr": true
+  },
+  "cvss_descMedium": {
+    "en": "Medium: limited damage, or exploitation requires specific preconditions such as network access or user interaction.",
+    "missingTr": true
+  },
+  "cvss_descLow": {
+    "en": "Low: minimal damage, difficult exploitation, or strong limiting factors.",
+    "missingTr": true
+  },
+  "cvss_descNone": {
+    "en": "No risk: no impact on confidentiality, integrity, or availability.",
+    "missingTr": true
+  },
+  "cvss_sourceNote": {
+    "en": "Classification according to CVSS v3.1",
+    "missingTr": true
+  },
+  "goals_title": {
+    "en": "Security Goals",
+    "missingTr": true
+  },
+  "goals_new": {
+    "en": "New Goal",
+    "missingTr": true
+  },
+  "goals_loading": {
+    "en": "Loading Security Goals…",
+    "missingTr": true
+  },
+  "goals_achieved": {
+    "en": "Achieved",
+    "missingTr": true
+  },
+  "goals_avgProgress": {
+    "en": "Avg. Progress",
+    "missingTr": true
+  },
+  "goals_count": {
+    "en": "Goal(s)",
+    "missingTr": true
+  },
+  "goals_empty": {
+    "en": "No security goals found.",
+    "missingTr": true
+  },
+  "goals_catConfidentiality": {
+    "en": "Confidentiality",
+    "missingTr": true
+  },
+  "goals_catIntegrity": {
+    "en": "Integrity",
+    "missingTr": true
+  },
+  "goals_catAvailability": {
+    "en": "Availability",
+    "missingTr": true
+  },
+  "goals_catCompliance": {
+    "en": "Compliance",
+    "missingTr": true
+  },
+  "goals_catOperational": {
+    "en": "Operational",
+    "missingTr": true
+  },
+  "goals_catTechnical": {
+    "en": "Technical",
+    "missingTr": true
+  },
+  "goals_catOrganizational": {
+    "en": "Organizational",
+    "missingTr": true
+  },
+  "goals_statusPlanned": {
+    "en": "Planned",
+    "missingTr": true
+  },
+  "goals_statusActive": {
+    "en": "Active",
+    "missingTr": true
+  },
+  "goals_statusAchieved": {
+    "en": "Achieved",
+    "missingTr": true
+  },
+  "goals_statusMissed": {
+    "en": "Missed",
+    "missingTr": true
+  },
+  "goals_statusCancelled": {
+    "en": "Cancelled",
+    "missingTr": true
+  },
+  "goals_priorityLow": {
+    "en": "Low",
+    "missingTr": true
+  },
+  "goals_priorityMedium": {
+    "en": "Medium",
+    "missingTr": true
+  },
+  "goals_priorityHigh": {
+    "en": "High",
+    "missingTr": true
+  },
+  "goals_priorityCritical": {
+    "en": "Critical",
+    "missingTr": true
+  },
+  "goals_isoClause": {
+    "en": "ISO 27001 Cl. 6.2",
+    "missingTr": true
+  },
+  "goals_countLabel": {
+    "en": "Goal(s)",
+    "missingTr": true
+  },
+  "goals_metricKpi": {
+    "en": "Metric / KPI",
+    "missingTr": true
+  },
+  "goals_target": {
+    "en": "Target",
+    "missingTr": true
+  },
+  "goals_current": {
+    "en": "Current",
+    "missingTr": true
+  },
+  "goals_unit": {
+    "en": "Unit",
+    "missingTr": true
+  },
+  "goals_unitHint": {
+    "en": "e.g. %, days, items",
+    "missingTr": true
+  },
+  "goals_edit": {
+    "en": "Edit Security Goal",
+    "missingTr": true
+  },
+  "goals_titlePlaceholder": {
+    "en": "e.g. Reduce critical vulnerabilities by 80%",
+    "missingTr": true
+  },
+  "goals_priority": {
+    "en": "Priority",
+    "missingTr": true
+  },
+  "goals_descriptionContext": {
+    "en": "Description / Context",
+    "missingTr": true
+  },
+  "goals_descPlaceholder": {
+    "en": "What should be achieved and why?",
+    "missingTr": true
+  },
+  "goals_ownerResponsible": {
+    "en": "Owner / Responsible",
+    "missingTr": true
+  },
+  "goals_targetDate": {
+    "en": "Target Date",
+    "missingTr": true
+  },
+  "goals_reviewDate": {
+    "en": "Review Date",
+    "missingTr": true
+  },
+  "goals_manualProgress": {
+    "en": "Manual Progress (%)",
+    "missingTr": true
+  },
+  "goals_progressHint": {
+    "en": "Calculated from KPIs if available",
+    "missingTr": true
+  },
+  "goals_kpisMetrics": {
+    "en": "KPIs (Metrics)",
+    "missingTr": true
+  },
+  "goals_kpisDesc": {
+    "en": "Define measurable metrics — progress is automatically calculated from the KPIs.",
+    "missingTr": true
+  },
+  "goals_addKpi": {
+    "en": "Add KPI",
+    "missingTr": true
+  },
+  "goals_notes": {
+    "en": "Notes",
+    "missingTr": true
+  },
+  "goals_deleteConfirm": {
+    "en": "Delete security goal?",
+    "missingTr": true
+  },
+  "legal_activeContracts": {
+    "en": "Active Contracts",
+    "missingTr": true
+  },
+  "legal_expiring": {
+    "en": "Expiring",
+    "missingTr": true
+  },
+  "legal_activeNdas": {
+    "en": "Active NDAs",
+    "missingTr": true
+  },
+  "legal_livePolicies": {
+    "en": "Live Policies",
+    "missingTr": true
+  },
+  "legal_contractsTab": {
+    "en": "Contracts",
+    "missingTr": true
+  },
+  "legal_newContract": {
+    "en": "New Contract",
+    "missingTr": true
+  },
+  "legal_noContracts": {
+    "en": "No contracts found.",
+    "missingTr": true
+  },
+  "legal_newNda": {
+    "en": "New NDA",
+    "missingTr": true
+  },
+  "legal_noNdas": {
+    "en": "No NDAs found.",
+    "missingTr": true
+  },
+  "legal_newPolicy": {
+    "en": "New Policy",
+    "missingTr": true
+  },
+  "legal_noPolicies": {
+    "en": "No privacy policies found.",
+    "missingTr": true
+  },
+  "training_tabOverview": {
+    "en": "Overview",
+    "missingTr": true
+  },
+  "training_tabPlan": {
+    "en": "Training Plan",
+    "missingTr": true
+  },
+  "training_tabEvidence": {
+    "en": "Evidence",
+    "missingTr": true
+  },
+  "training_completionRate": {
+    "en": "Completion Rate",
+    "missingTr": true
+  },
+  "training_overdueUpcoming": {
+    "en": "Overdue & Upcoming Trainings",
+    "missingTr": true
+  },
+  "training_overdueSince": {
+    "en": "Overdue since",
+    "missingTr": true
+  },
+  "training_noUrgent": {
+    "en": "No urgent trainings.",
+    "missingTr": true
+  },
+  "training_evidenceHeading": {
+    "en": "Completed Training with Evidence",
+    "missingTr": true
+  },
+  "training_noEvidence": {
+    "en": "No completed training yet.",
+    "missingTr": true
+  },
+  "bcm_tabBia": {
+    "en": "BIA Register",
+    "missingTr": true
+  },
+  "bcm_tabPlans": {
+    "en": "Continuity Plans",
+    "missingTr": true
+  },
+  "bcm_tabExercises": {
+    "en": "Exercises & Tests",
+    "missingTr": true
+  },
+  "bcm_subtitle": {
+    "en": "BIA Register · Continuity Plans (BCP/DRP/ITP) · Exercises & Tests | ISO 22301",
+    "missingTr": true
+  },
+  "bcm_rto": {
+    "en": "RTO (h)",
+    "missingTr": true
+  },
+  "bcm_rpo": {
+    "en": "RPO (h)",
+    "missingTr": true
+  },
+  "bcm_noBia": {
+    "en": "No BIA entries found",
+    "missingTr": true
+  },
+  "assets_new": {
+    "en": "New Asset",
+    "missingTr": true
+  },
+  "assets_tabAll": {
+    "en": "All Assets",
+    "missingTr": true
+  },
+  "assets_tabByCat": {
+    "en": "By Category",
+    "missingTr": true
+  },
+  "assets_tabByClass": {
+    "en": "By Classification",
+    "missingTr": true
+  },
+  "assets_allClass": {
+    "en": "All Classifications",
+    "missingTr": true
+  },
+  "assets_allCrit": {
+    "en": "All Criticalities",
+    "missingTr": true
+  },
+  "suppliers_tabList": {
+    "en": "List",
+    "missingTr": true
+  },
+  "suppliers_tabData": {
+    "en": "Data Processing",
+    "missingTr": true
+  },
+  "suppliers_title": {
+    "en": "Supply Chain Management",
+    "missingTr": true
+  },
+  "suppliers_total": {
+    "en": "Total Suppliers",
+    "missingTr": true
+  },
+  "gdpr_title": {
+    "en": "GDPR & Privacy",
+    "missingTr": true
+  },
+  "cal_riskDue": {
+    "en": "Risk Due",
+    "missingTr": true
+  },
+  "cal_riskReview": {
+    "en": "Risk Review",
+    "missingTr": true
+  },
+  "cal_measureDue": {
+    "en": "Measure Due",
+    "missingTr": true
+  },
+  "cal_templateReview": {
+    "en": "Template Review",
+    "missingTr": true
+  },
+  "cal_templateDue": {
+    "en": "Template Due",
+    "missingTr": true
+  },
+  "cal_overdue": {
+    "en": "Overdue",
+    "missingTr": true
+  },
+  "cal_dueSoon": {
+    "en": "Due Soon",
+    "missingTr": true
+  },
+  "cal_noUpcoming": {
+    "en": "No upcoming events.",
+    "missingTr": true
+  },
+  "cal_openRisk": {
+    "en": "Open Risk",
+    "missingTr": true
+  },
+  "cal_upcoming": {
+    "en": "Upcoming Events",
+    "missingTr": true
+  },
+  "gov_tabReviews": {
+    "en": "Management Reviews",
+    "missingTr": true
+  },
+  "gov_tabActions": {
+    "en": "Actions",
+    "missingTr": true
+  },
+  "gov_tabMeetings": {
+    "en": "Meeting Minutes",
+    "missingTr": true
+  },
+  "gov_newReview": {
+    "en": "New Review",
+    "missingTr": true
+  },
+  "gov_newAction": {
+    "en": "New Action",
+    "missingTr": true
+  },
+  "gov_meetings": {
+    "en": "Meetings",
+    "missingTr": true
+  },
+  "gov_newMeeting": {
+    "en": "New Meeting",
+    "missingTr": true
+  },
+  "list_templateTypes": {
+    "en": "Template Types",
+    "missingTr": true
+  },
+  "list_riskCats": {
+    "en": "Risk Categories",
+    "missingTr": true
+  },
+  "list_riskTreatments": {
+    "en": "Risk Treatments",
+    "missingTr": true
+  },
+  "list_gdprDataCats": {
+    "en": "GDPR Data Categories",
+    "missingTr": true
+  },
+  "list_gdprSubjects": {
+    "en": "GDPR Subject Groups",
+    "missingTr": true
+  },
+  "list_incidentTypes": {
+    "en": "Incident Types",
+    "missingTr": true
+  },
+  "reports_createBtn": {
+    "en": "Create Report",
+    "missingTr": true
+  },
+  "reports_fromLabel": {
+    "en": "From",
+    "missingTr": true
+  },
+  "reports_toLabel": {
+    "en": "To",
+    "missingTr": true
+  },
+  "trash_deletedBy": {
+    "en": "Deleted By",
+    "missingTr": true
+  },
+  "trash_deletedAt": {
+    "en": "Deleted At",
+    "missingTr": true
+  },
+  "trash_expires": {
+    "en": "Expires",
+    "missingTr": true
+  },
+  "trash_loadError": {
+    "en": "Error loading trash.",
+    "missingTr": true
+  },
+  "trash_empty": {
+    "en": "The trash is empty.",
+    "missingTr": true
+  },
+  "trash_autoDelete": {
+    "en": "Entries are automatically permanently deleted after 30 days.",
+    "missingTr": true
+  },
+  "trash_entries": {
+    "en": "entries",
+    "missingTr": true
+  },
+  "trash_inTrash": {
+    "en": "in trash",
+    "missingTr": true
+  },
+  "trash_deletePermanent": {
+    "en": "Delete permanently",
+    "missingTr": true
+  },
+  "trash_restoreItemConfirm": {
+    "en": "Restore item?",
+    "missingTr": true
+  },
+  "trash_unknownModule": {
+    "en": "Unknown module",
+    "missingTr": true
+  },
+  "trash_restoreFailed": {
+    "en": "Restore failed",
+    "missingTr": true
+  },
+  "trash_permanentDeleteConfirm": {
+    "en": "Permanently delete? This action CANNOT be undone!",
+    "missingTr": true
+  },
+  "trash_deleteFailed": {
+    "en": "Delete failed",
+    "missingTr": true
+  },
+  "findings_title": {
+    "en": "Audit Findings",
+    "missingTr": true
+  },
+  "findings_tabList": {
+    "en": "All",
+    "missingTr": true
+  },
+  "findings_tabOpen": {
+    "en": "Open",
+    "missingTr": true
+  },
+  "findings_tabResolved": {
+    "en": "Resolved",
+    "missingTr": true
+  },
+  "findings_new": {
+    "en": "New Finding",
+    "missingTr": true
+  },
+  "findings_total": {
+    "en": "Total Findings",
+    "missingTr": true
+  },
+  "findings_open": {
+    "en": "Open",
+    "missingTr": true
+  },
+  "findings_critical": {
+    "en": "Critical",
+    "missingTr": true
+  },
+  "findings_high": {
+    "en": "High",
+    "missingTr": true
+  },
+  "findings_medium": {
+    "en": "Medium",
+    "missingTr": true
+  },
+  "findings_low": {
+    "en": "Low",
+    "missingTr": true
+  },
+  "findings_observation": {
+    "en": "Observation",
+    "missingTr": true
+  },
+  "findings_openActions": {
+    "en": "Open Actions",
+    "missingTr": true
+  },
+  "findings_overdue": {
+    "en": "Overdue Actions",
+    "missingTr": true
+  },
+  "findings_observation_field": {
+    "en": "Observation (IS)",
+    "missingTr": true
+  },
+  "findings_requirement": {
+    "en": "Requirement (SHALL)",
+    "missingTr": true
+  },
+  "findings_impact": {
+    "en": "Risk / Impact",
+    "missingTr": true
+  },
+  "findings_recommendation": {
+    "en": "Recommendation",
+    "missingTr": true
+  },
+  "findings_actions": {
+    "en": "Action Plan",
+    "missingTr": true
+  },
+  "findings_singular": {
+    "en": "Finding",
+    "missingTr": true
+  },
+  "findings_none": {
+    "en": "No findings",
+    "missingTr": true
+  },
+  "findings_edit": {
+    "en": "Edit Finding",
+    "missingTr": true
+  },
+  "findings_create": {
+    "en": "Create Finding",
+    "missingTr": true
+  },
+  "findings_deleted": {
+    "en": "Finding deleted",
+    "missingTr": true
+  },
+  "findings_severity": {
+    "en": "Severity",
+    "missingTr": true
+  },
+  "findings_statusOpen": {
+    "en": "Open",
+    "missingTr": true
+  },
+  "findings_statusInProgress": {
+    "en": "In Progress",
+    "missingTr": true
+  },
+  "findings_statusResolved": {
+    "en": "Resolved",
+    "missingTr": true
+  },
+  "findings_statusAccepted": {
+    "en": "Accepted",
+    "missingTr": true
+  },
+  "findings_statusDone": {
+    "en": "Done",
+    "missingTr": true
+  },
+  "findings_actionsOpenShort": {
+    "en": "Actions open",
+    "missingTr": true
+  },
+  "findings_actionsOverdueShort": {
+    "en": "Actions overdue",
+    "missingTr": true
+  },
+  "findings_auditedArea": {
+    "en": "Audited Area",
+    "missingTr": true
+  },
+  "findings_auditor": {
+    "en": "Auditor",
+    "missingTr": true
+  },
+  "findings_period": {
+    "en": "Period",
+    "missingTr": true
+  },
+  "findings_created": {
+    "en": "Created",
+    "missingTr": true
+  },
+  "findings_basicData": {
+    "en": "Basic Data",
+    "missingTr": true
+  },
+  "findings_details": {
+    "en": "Finding Details",
+    "missingTr": true
+  },
+  "findings_observationFull": {
+    "en": "Observation (Current State)",
+    "missingTr": true
+  },
+  "findings_requirementFull": {
+    "en": "Requirement (Target State)",
+    "missingTr": true
+  },
+  "findings_linkedControls": {
+    "en": "Linked Controls",
+    "missingTr": true
+  },
+  "findings_noActions": {
+    "en": "No actions recorded.",
+    "missingTr": true
+  },
+  "findings_actionDescPlaceholder": {
+    "en": "What exactly will be done?",
+    "missingTr": true
+  },
+  "findings_responsiblePlaceholder": {
+    "en": "Name / role",
+    "missingTr": true
+  },
+  "findings_targetDate": {
+    "en": "Target Date",
+    "missingTr": true
+  },
+  "findings_deleteActionConfirm": {
+    "en": "Delete action?",
+    "missingTr": true
+  },
+  "findings_titlePlaceholder": {
+    "en": "Short clear finding name",
+    "missingTr": true
+  },
+  "findings_auditorPlaceholder": {
+    "en": "Name or initials",
+    "missingTr": true
+  },
+  "findings_periodFrom": {
+    "en": "Audit Period From",
+    "missingTr": true
+  },
+  "findings_observationPlaceholder": {
+    "en": "What was found? Sample size, specific figures…",
+    "missingTr": true
+  },
+  "findings_requirementPlaceholder": {
+    "en": "What does the standard or internal policy require?",
+    "missingTr": true
+  },
+  "findings_impactPlaceholder": {
+    "en": "What can happen if this is not fixed?",
+    "missingTr": true
+  },
+  "findings_recommendationPlaceholder": {
+    "en": "What should be done specifically?",
+    "missingTr": true
+  },
+  "findings_detailView": {
+    "en": "Detail View",
+    "missingTr": true
+  },
+  "findings_titleRequired": {
+    "en": "Title is required",
+    "missingTr": true
+  },
+  "findings_createdMessage": {
+    "en": "Finding {ref} created.",
+    "missingTr": true
+  },
+  "findings_trashConfirm": {
+    "en": "Move finding to trash?",
+    "missingTr": true
+  },
+  "file_selectRequired": {
+    "en": "Please select a file",
+    "missingTr": true
+  },
+  "importing": {
+    "en": "Importing…",
+    "missingTr": true
+  },
+  "import_action": {
+    "en": "Import",
+    "missingTr": true
+  },
+  "import_success": {
+    "en": "Import successful",
+    "missingTr": true
+  },
+  "import_findingsFound": {
+    "en": "Findings found",
+    "missingTr": true
+  },
+  "import_clusteredRisks": {
+    "en": "Clustered risks",
+    "missingTr": true
+  },
+  "import_created": {
+    "en": "Created",
+    "missingTr": true
+  },
+  "import_skippedDuplicates": {
+    "en": "Skipped (duplicate)",
+    "missingTr": true
+  },
+  "import_method": {
+    "en": "Method",
+    "missingTr": true
+  },
+  "ack_mode": {
+    "en": "Mode",
+    "missingTr": true
+  },
+  "ack_changeMode": {
+    "en": "Change Mode",
+    "missingTr": true
+  },
+  "ack_distributions": {
+    "en": "Distributions",
+    "missingTr": true
+  },
+  "ack_newDistribution": {
+    "en": "New Distribution",
+    "missingTr": true
+  },
+  "ack_noDistributions": {
+    "en": "No distributions yet.",
+    "missingTr": true
+  },
+  "ack_createFirst": {
+    "en": "Create first distribution",
+    "missingTr": true
+  },
+  "ack_modeEmail": {
+    "en": "Email Campaign",
+    "missingTr": true
+  },
+  "ack_modeManual": {
+    "en": "Manual / CSV Import",
+    "missingTr": true
+  },
+  "ack_modeManualShort": {
+    "en": "Manual / CSV",
+    "missingTr": true
+  },
+  "ack_modeDistributionOnly": {
+    "en": "Document distribution only",
+    "missingTr": true
+  },
+  "ack_modeDistributionOnlyShort": {
+    "en": "Distribution only",
+    "missingTr": true
+  },
+  "ack_modeEmailDesc": {
+    "en": "Emails with token links are sent. Employees acknowledge without signing in.",
+    "missingTr": true
+  },
+  "ack_modeManualDesc": {
+    "en": "Acknowledgements are entered manually or imported by CSV.",
+    "missingTr": true
+  },
+  "ack_modeDistributionOnlyDesc": {
+    "en": "No individual acknowledgements are recorded, only the distribution is documented.",
+    "missingTr": true
+  },
+  "ack_statusActive": {
+    "en": "Active",
+    "missingTr": true
+  },
+  "ack_statusCompleted": {
+    "en": "Completed",
+    "missingTr": true
+  },
+  "ack_statusExpired": {
+    "en": "Expired",
+    "missingTr": true
+  },
+  "ack_policy": {
+    "en": "Policy",
+    "missingTr": true
+  },
+  "ack_policyApprovedOnly": {
+    "en": "Policy (approved only)",
+    "missingTr": true
+  },
+  "ack_targetGroup": {
+    "en": "Target Group",
+    "missingTr": true
+  },
+  "ack_targetGroupDescription": {
+    "en": "Target Group / Description",
+    "missingTr": true
+  },
+  "ack_targetGroupPlaceholder": {
+    "en": "e.g. all employees, IT department…",
+    "missingTr": true
+  },
+  "ack_deadline": {
+    "en": "Deadline",
+    "missingTr": true
+  },
+  "ack_deadlineOptional": {
+    "en": "Deadline (optional)",
+    "missingTr": true
+  },
+  "ack_optional": {
+    "en": "optional",
+    "missingTr": true
+  },
+  "ack_activeMode": {
+    "en": "Active Mode",
+    "missingTr": true
+  },
+  "ack_emailAddresses": {
+    "en": "Email addresses",
+    "missingTr": true
+  },
+  "ack_emailHint": {
+    "en": "one per line or comma-separated",
+    "missingTr": true
+  },
+  "ack_notes": {
+    "en": "Notes",
+    "missingTr": true
+  },
+  "ack_notesPlaceholder": {
+    "en": "Optional notes for this distribution",
+    "missingTr": true
+  },
+  "ack_createAndPrepareEmails": {
+    "en": "Create & prepare emails",
+    "missingTr": true
+  },
+  "ack_createDistribution": {
+    "en": "Create Distribution",
+    "missingTr": true
+  },
+  "ack_choosePolicy": {
+    "en": "Choose policy…",
+    "missingTr": true
+  },
+  "ack_choosePolicyAlert": {
+    "en": "Please choose a policy.",
+    "missingTr": true
+  },
+  "ack_createFailed": {
+    "en": "Error creating",
+    "missingTr": true
+  },
+  "ack_createdEmailsSent": {
+    "en": "Distribution created. {count} email(s) sent.",
+    "missingTr": true
+  },
+  "ack_createdEmailsFailed": {
+    "en": "Distribution created. Emails could not be sent (SMTP not configured?).",
+    "missingTr": true
+  },
+  "ack_created": {
+    "en": "Distribution created successfully.",
+    "missingTr": true
+  },
+  "ack_noAcknowledgements": {
+    "en": "No acknowledgements yet.",
+    "missingTr": true
+  },
+  "ack_confirmedAt": {
+    "en": "Acknowledged At",
+    "missingTr": true
+  },
+  "ack_method": {
+    "en": "Method",
+    "missingTr": true
+  },
+  "ack_pending": {
+    "en": "Pending",
+    "missingTr": true
+  },
+  "ack_addManual": {
+    "en": "Add acknowledgement manually",
+    "missingTr": true
+  },
+  "ack_importCsv": {
+    "en": "Import CSV",
+    "missingTr": true
+  },
+  "ack_csvFormat": {
+    "en": "Format",
+    "missingTr": true
+  },
+  "ack_csvHint": {
+    "en": "one row per person, date optional",
+    "missingTr": true
+  },
+  "ack_confirmed": {
+    "en": "Acknowledged",
+    "missingTr": true
+  },
+  "ack_sendReminder": {
+    "en": "Send reminder",
+    "missingTr": true
+  },
+  "ack_acknowledgements": {
+    "en": "Acknowledgements",
+    "missingTr": true
+  },
+  "ack_sendReminderConfirm": {
+    "en": "Send reminder email to all recipients who have not acknowledged yet?",
+    "missingTr": true
+  },
+  "ack_remindersSent": {
+    "en": "{count} reminder(s) sent.",
+    "missingTr": true
+  },
+  "ack_deleteDistributionConfirm": {
+    "en": "Delete distribution and all acknowledgements?",
+    "missingTr": true
+  },
+  "ack_enterEmail": {
+    "en": "Enter email address",
+    "missingTr": true
+  },
+  "ack_noValidRows": {
+    "en": "No valid rows found.",
+    "missingTr": true
+  },
+  "ack_importSummary": {
+    "en": "{imported} imported, {skipped} skipped.",
+    "missingTr": true
+  },
+  "ack_deleteConfirm": {
+    "en": "Delete acknowledgement?",
+    "missingTr": true
+  },
+  "ack_configureMode": {
+    "en": "Configure Acknowledgement Mode",
+    "missingTr": true
+  },
+  "ack_modeWarningPrefix": {
+    "en": "This setting applies to",
+    "missingTr": true
+  },
+  "ack_modeWarningEmphasis": {
+    "en": "all future distributions",
+    "missingTr": true
+  },
+  "ack_modeWarningSuffix": {
+    "en": "Existing campaigns keep their original mode.",
+    "missingTr": true
+  },
+  "ack_saveMode": {
+    "en": "Save mode",
+    "missingTr": true
+  },
+  "ack_activeDistributions": {
+    "en": "Active distributions",
+    "missingTr": true
+  },
+  "ack_pendingAcknowledgements": {
+    "en": "Pending acknowledgements",
+    "missingTr": true
+  },
+  "scanImport_descPrefix": {
+    "en": "Imports a Greenbone security report (XML or PDF) as draft risks.",
+    "missingTr": true
+  },
+  "scanImport_descSuffix": {
+    "en": "All imported risks receive status <strong>needsReview = true</strong> and must be reviewed and approved by an auditor or CISO before they are active in risk management.",
+    "missingTr": true
+  },
+  "scanImport_noAssignment": {
+    "en": "no assignment",
+    "missingTr": true
+  },
+  "scanImport_reference": {
+    "en": "Scan Reference",
+    "missingTr": true
+  },
+  "scanImport_referencePlaceholder": {
+    "en": "e.g. Scan-2026-03",
+    "missingTr": true
+  },
+  "admin_langConfig": {
+    "en": "Language Configuration",
+    "missingTr": true
+  },
+  "admin_langConfigDesc": {
+    "en": "Enable or disable languages system-wide. The default language is shown on the login page for users without a stored preference.",
+    "missingTr": true
+  },
+  "admin_langDefault": {
+    "en": "Default Language",
+    "missingTr": true
+  },
+  "admin_langSave": {
+    "en": "Save language settings",
+    "missingTr": true
+  },
+  "admin_langSaved": {
+    "en": "Language settings saved.",
+    "missingTr": true
+  },
+  "admin_langMinOne": {
+    "en": "At least one language must be active.",
+    "missingTr": true
+  }
+}
