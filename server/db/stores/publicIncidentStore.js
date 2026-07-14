@@ -4,6 +4,7 @@ const { getDb, init: initDb } = require('../knexDatabase')
 
 const INCIDENT_TYPES = ['malware','phishing','data_theft','ransomware','unauthorized_access','social_engineering','other']
 const CLEANED_UP_VALUES = ['yes','no','partial']
+const SEVERITY_VALUES = ['critical','high','medium','low']
 
 // Müdahale/izolasyon adımları (Incident Response / Isolation Steps)
 const RESPONSE_STEPS = ['source_ip_blocked', 'sessions_terminated', 'evidence_archived']
@@ -61,6 +62,11 @@ module.exports = {
       description: (data.description || '').trim(), measuresTaken: (data.measuresTaken || '').trim(),
       localContact: (data.localContact || '').trim(),
       cleanedUp: CLEANED_UP_VALUES.includes(data.cleanedUp) ? data.cleanedUp : 'no',
+      severity: SEVERITY_VALUES.includes(data.severity) ? data.severity : 'medium',
+      occurredAt: data.occurredAt || null,
+      assetId: data.assetId || null,
+      assetName: (data.assetName || '').trim(),
+      correctiveActionRequired: !!data.correctiveActionRequired,
       assignedTo: null, reportable: null, cisoNotes: '',
       updatedAt: null, updatedBy: null,
     }
@@ -75,7 +81,7 @@ module.exports = {
     const row = await getDb()('public_incidents').where('id', id).first()
     if (!row) return null
     const inc = rowToIncident(row)
-    const allowed = ['status','assignedTo','reportable','cisoNotes']
+    const allowed = ['status','assignedTo','reportable','cisoNotes','correctiveActionRequired']
     for (const k of allowed) { if (k in patch) inc[k] = patch[k] }
     inc.updatedAt = nowISO()
     inc.updatedBy = updatedBy || null

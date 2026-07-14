@@ -37,6 +37,8 @@ const INCIDENT_TYPES = [
 
 const CLEANED_UP_VALUES = ['yes', 'no', 'partial']
 
+const SEVERITY_VALUES = ['critical', 'high', 'medium', 'low']
+
 // Müdahale/izolasyon adımları (Incident Response / Isolation Steps)
 const RESPONSE_STEPS = ['source_ip_blocked', 'sessions_terminated', 'evidence_archived']
 
@@ -72,6 +74,11 @@ function create(data) {
     measuresTaken:(data.measuresTaken|| '').trim(),
     localContact: (data.localContact || '').trim(),
     cleanedUp:    CLEANED_UP_VALUES.includes(data.cleanedUp) ? data.cleanedUp : 'no',
+    severity:     SEVERITY_VALUES.includes(data.severity) ? data.severity : 'medium',
+    occurredAt:   data.occurredAt || null,
+    assetId:      data.assetId || null,
+    assetName:    (data.assetName || '').trim(),
+    correctiveActionRequired: !!data.correctiveActionRequired,
     // CISO-Felder (initial leer)
     assignedTo:   null,   // 'it' | 'datenschutz'
     reportable:   null,   // 'yes' | 'no' | 'tbd'
@@ -89,7 +96,7 @@ function update(id, patch, updatedBy) {
   const list = load()
   const idx  = list.findIndex(i => i.id === id)
   if (idx === -1) return null
-  const allowed = ['status', 'assignedTo', 'reportable', 'cisoNotes']
+  const allowed = ['status', 'assignedTo', 'reportable', 'cisoNotes', 'correctiveActionRequired']
   allowed.forEach(k => { if (k in patch) list[idx][k] = patch[k] })
   list[idx].updatedAt = new Date().toISOString()
   list[idx].updatedBy = updatedBy || null

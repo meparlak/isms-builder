@@ -54,3 +54,51 @@ describe('Incident — müdahale/izolasyon kayıtları', () => {
     expect(res.status).toBe(404)
   })
 })
+
+describe('Incident — severity/occurredAt/asset alanları ve correctiveActionRequired', () => {
+  test('POST /public/incident severity/occurredAt/assetId/assetName kaydeder ve GET ile okunabilir', async () => {
+    const createRes = await require('supertest')(app).post('/public/incident').send({
+      email: 'melder2@example.com',
+      incidentType: 'malware',
+      description: 'Kritik bir olay açıklaması',
+      severity: 'critical',
+      occurredAt: '2026-07-10T08:30:00.000Z',
+      assetId: 'asset-123',
+      assetName: 'Web Sunucusu',
+    })
+    expect(createRes.status).toBe(201)
+    const id = createRes.body.id
+
+    const getRes = await authedGet(app, adminCookie, `/public/incident/${id}`)
+    expect(getRes.status).toBe(200)
+    expect(getRes.body.severity).toBe('critical')
+    expect(getRes.body.occurredAt).toBe('2026-07-10T08:30:00.000Z')
+    expect(getRes.body.assetId).toBe('asset-123')
+    expect(getRes.body.assetName).toBe('Web Sunucusu')
+  })
+
+  test('POST /public/incident geçersiz/eksik severity için varsayılan "medium" kullanır', async () => {
+    const createRes = await require('supertest')(app).post('/public/incident').send({
+      email: 'melder3@example.com',
+      incidentType: 'other',
+      description: 'Severity belirtilmeyen olay',
+    })
+    expect(createRes.status).toBe(201)
+    const getRes = await authedGet(app, adminCookie, `/public/incident/${createRes.body.id}`)
+    expect(getRes.body.severity).toBe('medium')
+    expect(getRes.body.occurredAt).toBeNull()
+    expect(getRes.body.correctiveActionRequired).toBe(false)
+  })
+
+  test('PUT /public/incident/:id correctiveActionRequired alanını kalıcı olarak günceller', async () => {
+    const res = await authedPut(app, adminCookie, `/public/incident/${incidentId}`, {
+      correctiveActionRequired: true,
+    })
+    expect(res.status).toBe(200)
+    expect(res.body.correctiveActionRequired).toBe(true)
+
+    const getRes = await authedGet(app, adminCookie, `/public/incident/${incidentId}`)
+    expect(getRes.status).toBe(200)
+    expect(getRes.body.correctiveActionRequired).toBe(true)
+  })
+})

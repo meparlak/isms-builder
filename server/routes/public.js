@@ -25,11 +25,11 @@ router.get('/public/entities', async (req, res) => {
 
 // Jeder kann einen Vorfall melden
 router.post('/public/incident', async (req, res) => {
-  const { email, entityName, incidentType, description, measuresTaken, localContact, cleanedUp } = req.body || {}
+  const { email, entityName, incidentType, description, measuresTaken, localContact, cleanedUp, severity, occurredAt, assetId, assetName } = req.body || {}
   if (!email || !incidentType || !description) {
     return res.status(400).json({ error: 'email, incidentType und description sind Pflichtfelder.' })
   }
-  const incident = await publicIncidentStore.create({ email, entityName, incidentType, description, measuresTaken, localContact, cleanedUp })
+  const incident = await publicIncidentStore.create({ email, entityName, incidentType, description, measuresTaken, localContact, cleanedUp, severity, occurredAt, assetId, assetName })
   res.status(201).json({ ok: true, refNumber: incident.refNumber, id: incident.id })
 })
 
