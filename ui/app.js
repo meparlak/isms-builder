@@ -4049,6 +4049,30 @@ async function renderDashboard() {
   const kriOpenCapa      = _capaListSafe.filter(c => c.status === 'planned' || c.status === 'in_progress').length
   const kriOverdueAction = _capaListSafe.filter(c => c.status !== 'closed' && c.dueDate && new Date(c.dueDate) < new Date()).length
 
+  // KRI: Ort. Kapama Süresi — kapanmış CAPA'ların createdAt→closedAt farkının ortalaması (Task 3.2.1)
+  const _closedCapas = _capaListSafe.filter(c => c.closedAt && c.createdAt)
+  const kriAvgClosureDays = _closedCapas.length > 0
+    ? Math.round(_closedCapas.reduce((sum, c) => sum + (new Date(c.closedAt) - new Date(c.createdAt)), 0) / _closedCapas.length / 86400000)
+    : null
+
+  // KRI: Açık Yüksek Risk — riskSummary.byLevel içindeki high + critical toplamı (Task 3.2.1)
+  const kriOpenHighRisk = MODULE_CONFIG.risk && riskSummary?.byLevel
+    ? (riskSummary.byLevel.high || 0) + (riskSummary.byLevel.critical || 0)
+    : null
+
+  // KRI: SOA Uygulama — tüm aktif framework'ler için ağırlıklı uygulanma oranı (Task 3.2.1)
+  const kriSoaImplementation = (() => {
+    if (!MODULE_CONFIG.soa || !soaSummary) return null
+    const frameworks = Object.values(soaSummary).filter(fw => fw && typeof fw === 'object' && fw.byStatus)
+    if (frameworks.length === 0) return null
+    let applicable = 0, implemented = 0
+    for (const fw of frameworks) {
+      applicable  += fw.applicable || 0
+      implemented += (fw.byStatus?.implemented || 0) + (fw.byStatus?.optimized || 0)
+    }
+    return applicable > 0 ? Math.round(implemented / applicable * 100) : 0
+  })()
+
   container.innerHTML = `
     <div class="dash-isms-header">
       <h2 class="dashboard-title"><i class="ph ph-gauge"></i> ${t('dash_title')}</h2>
@@ -4061,7 +4085,8 @@ async function renderDashboard() {
       ${alertsHtml}
     </div>
 
-    <!-- KRI Cards: Kilit Risk Göstergeleri (Açık DÖF / Gecikmiş Aksiyon Alt-Faz 2.2.2'de CAPA verisine bağlandı) -->
+    <!-- KRI Cards: Kilit Risk Göstergeleri (Açık DÖF / Gecikmiş Aksiyon Alt-Faz 2.2.2'de CAPA verisine bağlandı;
+         Ort. Kapama Süresi / Açık Yüksek Risk / SOA Uygulama Task 3.2.1'de mevcut /capa, /risks/summary, /soa/summary verisine bağlandı) -->
     <div class="dash-section-title" style="margin:16px 0 8px"><i class="ph ph-gauge"></i> ${t('dash_kriTitle')}</div>
     <div class="kri-grid" style="margin-bottom:0">
       <div class="kri warn dash-link" data-nav="capa">
@@ -4077,8 +4102,20 @@ async function renderDashboard() {
       <div class="kri ok">
         <div class="stripe"></div>
         <div class="label">${t('dash_kriAvgClosureTime')} <span class="trend flat">(${t('dash_kriDays')})</span></div>
-        <div class="n">—</div>
+        <div class="n">${kriAvgClosureDays !== null ? kriAvgClosureDays : '—'}</div>
       </div>
+      ${kriOpenHighRisk !== null ? `
+      <div class="kri crit dash-link" data-nav="risk">
+        <div class="stripe"></div>
+        <div class="label">${t('dash_kriOpenHighRisk')}</div>
+        <div class="n">${kriOpenHighRisk}</div>
+      </div>` : ''}
+      ${kriSoaImplementation !== null ? `
+      <div class="kri ok dash-link" data-nav="soa">
+        <div class="stripe"></div>
+        <div class="label">${t('dash_kriSoaImplementation')} <span class="trend flat">(%)</span></div>
+        <div class="n">${kriSoaImplementation}</div>
+      </div>` : ''}
     </div>
 
     <!-- KPI Row 1: Templates & Compliance -->

@@ -219,6 +219,8 @@
     dash_kriOverdueAction: { de: 'Überfällige Maßnahmen', en: 'Overdue Action', fr: 'Actions en retard', nl: 'Achterstallige acties' , tr: 'Gecikmiş Aksiyon' },
     dash_kriAvgClosureTime: { de: 'Ø Schließungszeit', en: 'Avg. Closure Time', fr: 'Durée moyenne de fermeture', nl: 'Gem. Sluitingstijd' , tr: 'Ort. Kapama Süresi' },
     dash_kriDays:        { de: 'Tage', en: 'days', fr: 'jours', nl: 'dagen' , tr: 'gün' },
+    dash_kriOpenHighRisk: { de: 'Offene Hoch-/Kritisch-Risiken', en: 'Open High/Critical Risks', fr: 'Risques élevés/critiques ouverts', nl: 'Open hoge/kritieke risico\'s' , tr: 'Açık Yüksek Risk' },
+    dash_kriSoaImplementation: { de: 'SoA-Umsetzungsgrad', en: 'SoA Implementation Rate', fr: 'Taux de mise en œuvre SoA', nl: 'SoA-implementatiegraad' , tr: 'SOA Uygulama' },
 
     // ── SoA ─────────────────────────────────────────────────────────────────
     soa_title:           { de: 'Statement of Applicability', en: 'Statement of Applicability', fr: 'Déclaration d\'applicabilité', nl: 'Verklaring van toepasselijkheid' , tr: 'Uygulanabilirlik Bildirgesi' },
