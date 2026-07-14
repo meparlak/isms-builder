@@ -41,6 +41,7 @@ const SECTION_META = [
   { id:'legal',      labelKey:'nav_legal',      label:'Legal & Privacy',    icon:'ph-scales',              minRole:'contentowner', functions:['ciso','dso'] },
   { id:'incident',   labelKey:'nav_incident',   label:'Incident Inbox',     icon:'ph-siren',               minRole:'contentowner', functions:['ciso'] },
   { id:'capa',       labelKey:'nav_capa',       label:'CAPA / Actions',     icon:'ph-check-square',        minRole:'reader',       functions:['ciso','contentowner'] },
+  { id:'projects',   labelKey:'nav_projects',   label:'Projects / SDLC',    icon:'ph-flow-arrow',          minRole:'reader' },
   { id:'evidence',   labelKey:'nav_evidence',   label:'Evidence Pool',     icon:'ph-archive-tray',        minRole:'reader' },
   { id:'suppliers',  labelKey:'nav_suppliers',  label:'Supply Chain',       icon:'ph-truck',               minRole:'contentowner', functions:['ciso','revision'] },
   { id:'bcm',        labelKey:'nav_bcm',        label:'Business Continuity',icon:'ph-heartbeat',           minRole:'contentowner', functions:['ciso','revision'] },
@@ -933,7 +934,7 @@ function loadSection(sectionId){
 }
 
 function removeAllDynamicPanels() {
-  ['dashboardContainer','soaContainer','guidanceContainer','riskContainer','calendarContainer','adminPanelContainer','settingsPanelContainer','reportsContainer','gdprContainer','trainingContainer','incidentContainer','legalContainer','goalsContainer','assetsContainer','governanceContainer','bcmContainer','suppliersContainer','policyAcksContainer','capaBoardContainer','evidencePoolContainer'].forEach(id => {
+  ['dashboardContainer','soaContainer','guidanceContainer','riskContainer','calendarContainer','adminPanelContainer','settingsPanelContainer','reportsContainer','gdprContainer','trainingContainer','incidentContainer','legalContainer','goalsContainer','assetsContainer','governanceContainer','bcmContainer','suppliersContainer','policyAcksContainer','capaBoardContainer','evidencePoolContainer','projectsContainer'].forEach(id => {
     dom(id)?.remove()
   })
 }
@@ -2084,6 +2085,11 @@ function renderSectionContent(sectionId){
     editorCard.style.display = 'none'
     listPanel.style.display = 'none'
     renderEvidencePool()
+    return
+  } else if (sectionId === 'projects') {
+    editorCard.style.display = 'none'
+    listPanel.style.display = 'none'
+    renderProjects()
     return
   } else if (sectionId === 'legal') {
     editorCard.style.display = 'none'
@@ -3569,6 +3575,255 @@ function _evidenceRowHtml(e) {
       <td><span class="evidence-scan-badge">${t('evidence_scanNotAvailable')}</span></td>
       <td>${e.uploadedBy ? escHtml(e.uploadedBy) : ''}${uploadedAt ? ` · ${uploadedAt}` : ''}</td>
     </tr>`
+}
+
+// ════════════════════════════════════════════════════════════
+// PROJECTS / SDLC — Proje listesi + checklist detay ekranı
+// ════════════════════════════════════════════════════════════
+
+const PROJECT_CHECKLIST_LABEL_KEYS = {
+  request_form:               'proj_item_request_form',
+  requirements_form:          'proj_item_requirements_form',
+  design_doc:                 'proj_item_design_doc',
+  test_security_verification: 'proj_item_test_security_verification',
+  deployment_record:          'proj_item_deployment_record',
+}
+
+async function _fetchProjectList() {
+  const res = await fetch('/projects', { headers: apiHeaders('reader') })
+  return res.ok ? await res.json() : []
+}
+
+async function _fetchProject(id) {
+  const res = await fetch(`/projects/${id}`, { headers: apiHeaders('reader') })
+  return res.ok ? await res.json() : null
+}
+
+function _projectChecklistPercent(p) {
+  if (!p.checklist || !p.checklist.length) return 0
+  const done = p.checklist.filter(i => i.done).length
+  return Math.round((done / p.checklist.length) * 100)
+}
+
+async function renderProjects() {
+  dom('projectsContainer')?.remove()
+  const container = document.createElement('div')
+  container.id = 'projectsContainer'
+  container.className = 'capa-board-container'
+  dom('editor').appendChild(container)
+
+  container.innerHTML = `
+    <div class="capa-board-header">
+      <h2><i class="ph ph-flow-arrow"></i> ${t('proj_title')}</h2>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <button class="btn btn-secondary btn-sm" onclick="renderProjects()">
+          <i class="ph ph-arrow-clockwise"></i> ${t('refresh')}
+        </button>
+        <button class="btn btn-primary btn-sm" onclick="openProjectCreateModal()">
+          <i class="ph ph-plus"></i> ${t('proj_new')}
+        </button>
+      </div>
+    </div>
+    <div id="projectsListBody"><p class="report-loading">${t('loading')}</p></div>`
+
+  if (!container.isConnected) return
+  await loadProjectsList()
+}
+
+async function loadProjectsList() {
+  const body = document.getElementById('projectsListBody')
+  if (!body) return
+  const items = await _fetchProjectList()
+
+  if (!items.length) {
+    body.innerHTML = `<p class="capa-empty">${t('proj_none')}</p>`
+    return
+  }
+
+  body.innerHTML = `
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>${t('proj_col_code')}</th>
+          <th>${t('proj_col_name')}</th>
+          <th>${t('proj_col_requestingUnit')}</th>
+          <th>${t('proj_col_completion')}</th>
+          <th>${t('proj_col_targetDate')}</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${items.map(_projectRowHtml).join('')}
+      </tbody>
+    </table>`
+}
+
+function _projectRowHtml(p) {
+  const pct = _projectChecklistPercent(p)
+  const targetDate = p.targetDate ? new Date(p.targetDate).toLocaleDateString('en-GB') : ''
+  return `
+    <tr onclick="renderProjectDetail('${p.id}')" style="cursor:pointer">
+      <td>${escHtml(p.code)}</td>
+      <td>${escHtml(p.name)}</td>
+      <td>${escHtml(p.requestingUnit || '')}</td>
+      <td>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div class="goals-progress-bar" style="width:80px"><div style="width:${pct}%;height:100%;background:var(--accent,#3b82f6);border-radius:3px"></div></div>
+          <span>${pct}%</span>
+        </div>
+      </td>
+      <td>${escHtml(targetDate)}</td>
+    </tr>`
+}
+
+function openProjectCreateModal() {
+  document.getElementById('projectCreateModal')?.remove()
+  document.body.insertAdjacentHTML('beforeend', `
+    <div id="projectCreateModal" class="modal" style="visibility:visible">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title"><i class="ph ph-plus"></i> ${t('proj_new')}</h3>
+          <button class="modal-close" onclick="document.getElementById('projectCreateModal').remove()"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label">${t('proj_col_code')} <span class="form-required">*</span></label>
+            <input id="projCode" class="form-input" placeholder="${t('proj_codePlaceholder')}">
+          </div>
+          <div class="form-group">
+            <label class="form-label">${t('proj_col_name')} <span class="form-required">*</span></label>
+            <input id="projName" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label">${t('proj_col_requestingUnit')}</label>
+            <input id="projRequestingUnit" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label">${t('proj_col_targetDate')}</label>
+            <input id="projTargetDate" type="date" class="form-input">
+          </div>
+          <p class="capa-form-error" id="projectCreateError" style="display:none;color:var(--danger-text);font-size:.8rem"></p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" onclick="document.getElementById('projectCreateModal').remove()">${t('cancel')}</button>
+          <button class="btn btn-primary" onclick="submitProjectCreate()">
+            <i class="ph ph-floppy-disk"></i> ${t('save')}
+          </button>
+        </div>
+      </div>
+    </div>`)
+}
+
+async function submitProjectCreate() {
+  const code = document.getElementById('projCode')?.value.trim()
+  const name = document.getElementById('projName')?.value.trim()
+  const errEl = document.getElementById('projectCreateError')
+  if (!code || !name) {
+    if (errEl) { errEl.textContent = t('proj_requiredFields'); errEl.style.display = 'block' }
+    return
+  }
+  const body = {
+    code,
+    name,
+    requestingUnit: document.getElementById('projRequestingUnit')?.value.trim() || '',
+    targetDate:     document.getElementById('projTargetDate')?.value || null,
+  }
+  const res = await fetch('/projects', { method: 'POST', headers: apiHeaders('editor'), body: JSON.stringify(body) })
+  if (!res.ok) {
+    const e = await res.json().catch(() => ({}))
+    const msg = res.status === 409 ? t('proj_duplicateCode') : (e.error || t('proj_saveError'))
+    if (errEl) { errEl.textContent = msg; errEl.style.display = 'block' }
+    return
+  }
+  document.getElementById('projectCreateModal')?.remove()
+  await loadProjectsList()
+}
+
+async function renderProjectDetail(id) {
+  const container = dom('projectsContainer')
+  if (!container) return
+  container.innerHTML = `<p class="report-loading">${t('loading')}</p>`
+
+  const p = await _fetchProject(id)
+  if (!p) {
+    container.innerHTML = `<p class="capa-empty">${t('proj_notFound')}</p>`
+    return
+  }
+
+  const pct = _projectChecklistPercent(p)
+  const targetDate = p.targetDate ? new Date(p.targetDate).toLocaleDateString('en-GB') : ''
+
+  container.innerHTML = `
+    <div class="capa-board-header">
+      <h2><i class="ph ph-flow-arrow"></i> ${escHtml(p.code)} — ${escHtml(p.name)}</h2>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <button class="btn btn-secondary btn-sm" onclick="renderProjects()">
+          <i class="ph ph-arrow-left"></i> ${t('proj_backToList')}
+        </button>
+      </div>
+    </div>
+    <div class="kcard" style="padding:16px;margin-bottom:16px;cursor:default">
+      <p><strong>${t('proj_col_requestingUnit')}:</strong> ${escHtml(p.requestingUnit || '')}</p>
+      <p><strong>${t('proj_col_targetDate')}:</strong> ${escHtml(targetDate)}</p>
+      <p><strong>${t('proj_col_completion')}:</strong> ${pct}%</p>
+    </div>
+    <h3>${t('proj_checklistTitle')}</h3>
+    <div id="projectChecklistBody">
+      ${p.checklist.map(item => _projectChecklistRowHtml(p.id, item)).join('')}
+    </div>`
+}
+
+function _projectChecklistRowHtml(projectId, item) {
+  const labelKey = PROJECT_CHECKLIST_LABEL_KEYS[item.key] || item.key
+  const label = t(labelKey)
+  let statusHtml
+  if (item.waived) {
+    statusHtml = `<span class="capa-source-badge">${t('proj_waived')}</span> <span style="font-size:.8rem;color:var(--text-muted)">${escHtml(item.waiverReason || '')}</span>`
+  } else if (item.done) {
+    statusHtml = `<span class="capa-source-badge">${t('proj_done')}</span> <span style="font-size:.8rem;color:var(--text-muted)">${escHtml(item.evidenceRef || '')}</span>`
+  } else {
+    statusHtml = `
+      <button class="btn btn-primary btn-sm" onclick="completeProjectChecklistItem('${projectId}','${item.key}')">
+        <i class="ph ph-check"></i> ${t('proj_complete')}
+      </button>
+      <button class="btn btn-secondary btn-sm" onclick="waiveProjectChecklistItem('${projectId}','${item.key}')">
+        <i class="ph ph-prohibit"></i> ${t('proj_waive')}
+      </button>`
+  }
+  return `
+    <div class="check-row" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border)">
+      <span><i class="ph ${item.done ? 'ph-check-circle' : 'ph-circle'}"></i> ${escHtml(label)}</span>
+      <span>${statusHtml}</span>
+    </div>`
+}
+
+async function completeProjectChecklistItem(projectId, itemKey) {
+  const evidenceRef = window.prompt(t('proj_evidenceRefPrompt'))
+  if (evidenceRef === null) return
+  if (!evidenceRef.trim()) { alert(t('proj_evidenceRefRequired')); return }
+  const res = await fetch(`/projects/${projectId}/checklist/${itemKey}`, {
+    method: 'PUT', headers: apiHeaders('editor'), body: JSON.stringify({ done: true, evidenceRef: evidenceRef.trim() }),
+  })
+  if (!res.ok) {
+    const e = await res.json().catch(() => ({}))
+    alert(e.error || t('proj_saveError'))
+    return
+  }
+  await renderProjectDetail(projectId)
+}
+
+async function waiveProjectChecklistItem(projectId, itemKey) {
+  const waiverReason = window.prompt(t('proj_waiverReasonPrompt'))
+  if (waiverReason === null) return
+  if (!waiverReason.trim()) { alert(t('proj_waiverReasonRequired')); return }
+  const res = await fetch(`/projects/${projectId}/checklist/${itemKey}`, {
+    method: 'PUT', headers: apiHeaders('editor'), body: JSON.stringify({ waived: true, waiverReason: waiverReason.trim() }),
+  })
+  if (!res.ok) {
+    const e = await res.json().catch(() => ({}))
+    alert(e.error || t('proj_saveError'))
+    return
+  }
+  await renderProjectDetail(projectId)
 }
 
 async function renderDashboard() {
@@ -14837,7 +15092,7 @@ window.addEventListener('pageshow', (e) => {
     'dashboardContainer','soaContainer','guidanceContainer','riskContainer',
     'calendarContainer','adminPanelContainer','settingsPanelContainer','reportsContainer',
     'gdprContainer','trainingContainer','incidentContainer','legalContainer',
-    'goalsContainer','assetsContainer','governanceContainer','bcmContainer','suppliersContainer','policyAcksContainer'
+    'goalsContainer','assetsContainer','governanceContainer','bcmContainer','suppliersContainer','policyAcksContainer','projectsContainer'
   ]
   const alreadyRendered = containerIds.some(id => !!document.getElementById(id))
   if (!alreadyRendered) loadSection(currentSection)
