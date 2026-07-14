@@ -2155,6 +2155,9 @@ async function renderIncidentInbox() {
           <button class="btn btn-secondary btn-sm" onclick="loadIncidents()">
             <i class="ph ph-arrow-clockwise"></i> ${t('refresh')}
           </button>
+          <button class="btn btn-primary btn-sm" onclick="renderIncidentWizard()">
+            <i class="ph ph-plus"></i> ${t('inc_reportBtn')}
+          </button>
         </div>
       </div>
       <div class="incident-inbox-body">
@@ -2310,6 +2313,302 @@ async function saveIncidentDecision(id) {
   if (!res.ok) { alert('Error saving'); return }
   await loadIncidents()
   await openIncidentDetail(id)
+}
+
+// ════════════════════════════════════════════════════════════
+// INCIDENT REPORTING WIZARD – 3-Schritt-Meldeformular
+// ════════════════════════════════════════════════════════════
+
+const INC_SEVERITY_LEVELS = [
+  { id: 'low',      icon: 'ph-info',              labelKey: 'inc_severityLow' },
+  { id: 'medium',   icon: 'ph-warning',           labelKey: 'inc_severityMedium' },
+  { id: 'high',     icon: 'ph-warning-circle',    labelKey: 'inc_severityHigh' },
+  { id: 'critical', icon: 'ph-warning-octagon',   labelKey: 'inc_severityCritical' },
+]
+
+let _incWizard = null
+
+function _incWizardDefaultData() {
+  return {
+    incidentType: '',
+    occurredAt: new Date().toISOString().slice(0, 16),
+    entityName: '',
+    assetId: '',
+    assetName: '',
+    description: '',
+    measuresTaken: '',
+    localContact: '',
+    cleanedUp: 'no',
+    severity: 'medium',
+    correctiveActionRequired: false,
+    email: getCurrentUser(),
+  }
+}
+
+async function renderIncidentWizard() {
+  dom('incidentContainer')?.remove()
+  dom('incidentWizardContainer')?.remove()
+
+  _incWizard = { step: 1, data: _incWizardDefaultData(), entities: [], assets: [], error: '' }
+
+  const container = document.createElement('div')
+  container.id = 'incidentWizardContainer'
+  container.className = 'incident-inbox-container'
+  dom('editor').appendChild(container)
+
+  // Referenzlisten (Gesellschaften, Anlagen) einmalig laden
+  try {
+    const [entRes, assetRes] = await Promise.all([
+      fetch('/public/entities', { headers: apiHeaders() }),
+      fetch('/assets', { headers: apiHeaders() })
+    ])
+    if (entRes.ok) _incWizard.entities = await entRes.json()
+    if (assetRes.ok) _incWizard.assets = await assetRes.json()
+  } catch {}
+
+  _incWizardRender(container)
+}
+
+function _incWizardClose() {
+  dom('incidentWizardContainer')?.remove()
+  _incWizard = null
+  renderIncidentInbox()
+}
+
+function _incWizardStepsHtml() {
+  const titles = [t('inc_wizardStep1Title'), t('inc_wizardStep2Title'), t('inc_wizardStep3Title')]
+  return `
+    <div class="steps">
+      ${titles.map((title, idx) => {
+        const num = idx + 1
+        const cls = num === _incWizard.step ? 'active' : (num < _incWizard.step ? 'done' : '')
+        return `
+          <div class="step ${cls}">
+            <span class="step-num">${num < _incWizard.step ? '' : num}</span>
+            <span>${title}</span>
+          </div>
+          ${num < titles.length ? '<div class="step-sep"></div>' : ''}
+        `
+      }).join('')}
+    </div>`
+}
+
+function _incWizardStep1Html() {
+  const d = _incWizard.data
+  return `
+    <h3 class="wcard-title">${t('inc_wizardStep1Title')}</h3>
+    <p class="wcard-sub">${t('inc_wizardStep1Sub')}</p>
+    <div class="radio-grid">
+      ${Object.entries(INC_TYPE_LABELS).map(([id, label]) => `
+        <div class="radio-card ${d.incidentType === id ? 'selected' : ''}" onclick="_incWizardSelectType('${id}')">
+          <i class="ph ${INC_TYPE_ICONS[id] || 'ph-siren'}"></i>
+          <span>${escHtml(label)}</span>
+        </div>`).join('')}
+    </div>`
+}
+
+const INC_TYPE_ICONS = {
+  malware: 'ph-bug',
+  phishing: 'ph-fish-simple',
+  data_theft: 'ph-database',
+  ransomware: 'ph-lock-key',
+  unauthorized_access: 'ph-key',
+  social_engineering: 'ph-user-focus',
+  other: 'ph-question',
+}
+
+function _incWizardStep2Html() {
+  const d = _incWizard.data
+  return `
+    <h3 class="wcard-title">${t('inc_wizardStep2Title')}</h3>
+    <p class="wcard-sub">${t('inc_wizardStep2Sub')}</p>
+    <div>
+      <label class="form-label">${t('inc_wizardOccurredAt')}</label>
+      <input type="datetime-local" class="form-input" id="incWOccurredAt" value="${escHtml(d.occurredAt)}" style="margin-bottom:0">
+    </div>
+    <div>
+      <label class="form-label">${t('inc_wizardEntity')}</label>
+      <select class="form-select select" id="incWEntity">
+        <option value="">—</option>
+        ${_incWizard.entities.map(e => `<option value="${escHtml(e.name)}" ${d.entityName === e.name ? 'selected' : ''}>${escHtml(e.name)}</option>`).join('')}
+      </select>
+    </div>
+    <div>
+      <label class="form-label">${t('inc_wizardAsset')}</label>
+      <select class="form-select select" id="incWAsset">
+        <option value="">${t('inc_wizardNoAsset')}</option>
+        ${_incWizard.assets.map(a => `<option value="${escHtml(a.id)}" ${d.assetId === a.id ? 'selected' : ''}>${escHtml(a.name)}</option>`).join('')}
+      </select>
+    </div>
+    <div>
+      <label class="form-label">${t('inc_description')}</label>
+      <textarea class="form-textarea" id="incWDescription" rows="4" style="height:auto;font-family:inherit;font-size:.85rem">${escHtml(d.description)}</textarea>
+    </div>
+    ${_incWizard.error ? `<p class="wizard-error">${escHtml(_incWizard.error)}</p>` : ''}`
+}
+
+function _incWizardStep3Html() {
+  const d = _incWizard.data
+  return `
+    <h3 class="wcard-title">${t('inc_wizardStep3Title')}</h3>
+    <p class="wcard-sub">${t('inc_wizardStep3Sub')}</p>
+    <div>
+      <label class="form-label">${t('inc_wizardSeverity')}</label>
+      <div class="radio-grid">
+        ${INC_SEVERITY_LEVELS.map(lvl => `
+          <div class="radio-card ${d.severity === lvl.id ? 'selected' : ''}" onclick="_incWizardSelectSeverity('${lvl.id}')">
+            <i class="ph ${lvl.icon}"></i>
+            <span>${t(lvl.labelKey)}</span>
+          </div>`).join('')}
+      </div>
+    </div>
+    <div class="wizard-toggle-row">
+      <span>${t('inc_wizardCapaToggle')}</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="incWCapa" ${d.correctiveActionRequired ? 'checked' : ''} onchange="_incWizard.data.correctiveActionRequired = this.checked">
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+    <div>
+      <label class="form-label">${t('inc_resolved')}</label>
+      <select class="form-select select" id="incWCleaned">
+        <option value="no" ${d.cleanedUp === 'no' ? 'selected' : ''}>${INC_CLEANED_LABELS.no}</option>
+        <option value="partial" ${d.cleanedUp === 'partial' ? 'selected' : ''}>${INC_CLEANED_LABELS.partial}</option>
+        <option value="yes" ${d.cleanedUp === 'yes' ? 'selected' : ''}>${INC_CLEANED_LABELS.yes}</option>
+      </select>
+    </div>
+    <div>
+      <label class="form-label">${t('inc_measuresTaken')}</label>
+      <textarea class="form-textarea" id="incWMeasures" rows="3" style="height:auto;font-family:inherit;font-size:.85rem">${escHtml(d.measuresTaken)}</textarea>
+    </div>
+    <div>
+      <label class="form-label">${t('inc_localContact')}</label>
+      <input type="text" class="form-input" id="incWLocalContact" value="${escHtml(d.localContact)}" style="margin-bottom:0">
+    </div>
+    <div>
+      <label class="form-label">${t('inc_reporterEmail')}</label>
+      <input type="email" class="form-input" id="incWEmail" value="${escHtml(d.email)}" style="margin-bottom:0">
+    </div>
+    ${_incWizard.error ? `<p class="wizard-error">${escHtml(_incWizard.error)}</p>` : ''}`
+}
+
+function _incWizardRender(container) {
+  container = container || dom('incidentWizardContainer')
+  if (!container) return
+  const stepHtml = _incWizard.step === 1 ? _incWizardStep1Html()
+                  : _incWizard.step === 2 ? _incWizardStep2Html()
+                  : _incWizardStep3Html()
+
+  container.innerHTML = `
+    <div class="wizard">
+      <div class="wizard-header">
+        <h2><i class="ph ph-siren"></i> ${t('inc_wizardTitle')}</h2>
+        <button class="btn btn-secondary btn-sm" onclick="_incWizardClose()">
+          <i class="ph ph-x"></i> ${t('inc_wizardCancel')}
+        </button>
+      </div>
+      ${_incWizardStepsHtml()}
+      <div class="wcard"><div class="wcard-inner">${stepHtml}</div></div>
+      <div class="wizard-footer">
+        <button class="btn btn-secondary btn-sm" ${_incWizard.step === 1 ? 'disabled' : ''} onclick="_incWizardBack()">
+          <i class="ph ph-arrow-left"></i> ${t('inc_wizardBack')}
+        </button>
+        ${_incWizard.step < 3
+          ? `<button class="btn btn-primary btn-sm" onclick="_incWizardNext()">${t('inc_wizardNext')} <i class="ph ph-arrow-right"></i></button>`
+          : `<button class="btn btn-primary btn-sm" onclick="_incWizardSubmit()"><i class="ph ph-paper-plane-tilt"></i> ${t('inc_wizardSubmit')}</button>`}
+      </div>
+    </div>`
+}
+
+function _incWizardSelectType(id) {
+  _incWizard.data.incidentType = id
+  _incWizardRender()
+}
+
+function _incWizardSelectSeverity(id) {
+  _incWizard.data.severity = id
+  _incWizardRender()
+}
+
+function _incWizardCaptureStep() {
+  const d = _incWizard.data
+  if (_incWizard.step === 2) {
+    d.occurredAt = dom('incWOccurredAt')?.value || d.occurredAt
+    d.entityName = dom('incWEntity')?.value || ''
+    const assetSel = dom('incWAsset')
+    d.assetId = assetSel?.value || ''
+    d.assetName = assetSel && assetSel.value ? (assetSel.options[assetSel.selectedIndex]?.textContent || '') : ''
+    d.description = dom('incWDescription')?.value.trim() || ''
+  } else if (_incWizard.step === 3) {
+    d.cleanedUp = dom('incWCleaned')?.value || 'no'
+    d.measuresTaken = dom('incWMeasures')?.value.trim() || ''
+    d.localContact = dom('incWLocalContact')?.value.trim() || ''
+    d.email = dom('incWEmail')?.value.trim() || ''
+  }
+}
+
+function _incWizardNext() {
+  _incWizardCaptureStep()
+  _incWizard.error = ''
+  if (_incWizard.step === 1 && !_incWizard.data.incidentType) {
+    _incWizard.error = t('inc_wizardTypeRequired')
+    _incWizardRender()
+    return
+  }
+  if (_incWizard.step === 2 && !_incWizard.data.description) {
+    _incWizard.error = t('inc_wizardDescRequired')
+    _incWizardRender()
+    return
+  }
+  _incWizard.step = Math.min(3, _incWizard.step + 1)
+  _incWizardRender()
+}
+
+function _incWizardBack() {
+  _incWizardCaptureStep()
+  _incWizard.step = Math.max(1, _incWizard.step - 1)
+  _incWizardRender()
+}
+
+async function _incWizardSubmit() {
+  _incWizardCaptureStep()
+  const d = _incWizard.data
+  _incWizard.error = ''
+  if (!d.email || !d.incidentType || !d.description) {
+    _incWizard.error = t('inc_wizardDescRequired')
+    _incWizardRender()
+    return
+  }
+
+  const res = await fetch('/public/incident', {
+    method: 'POST',
+    headers: apiHeaders(),
+    body: JSON.stringify({
+      email: d.email,
+      entityName: d.entityName,
+      incidentType: d.incidentType,
+      description: d.description,
+      measuresTaken: d.measuresTaken,
+      localContact: d.localContact,
+      cleanedUp: d.cleanedUp,
+      occurredAt: d.occurredAt,
+      assetId: d.assetId,
+      assetName: d.assetName,
+      severity: d.severity,
+      correctiveActionRequired: d.correctiveActionRequired,
+    })
+  })
+
+  if (!res.ok) {
+    _incWizard.error = t('inc_wizardError')
+    _incWizardRender()
+    return
+  }
+  const data = await res.json()
+  _incWizard = null
+  dom('incidentWizardContainer')?.remove()
+  await renderIncidentInbox()
+  alert(t('inc_wizardSuccess', { ref: data.refNumber }))
 }
 
 function renderUnderConstruction(sectionId) {
