@@ -2282,6 +2282,18 @@ async function openIncidentDetail(id) {
           <div class="inc-field-label">${t('inc_cisoNotes')}</div>
           <textarea class="form-textarea" id="incCisoNotes" rows="3" style="font-size:.82rem">${escHtml(i.cisoNotes || '')}</textarea>
         </div>
+        <div class="inc-field" style="margin-top:10px">
+          <label style="display:flex;align-items:center;gap:8px;font-size:.82rem;cursor:${i.correctiveActionRequired ? 'default' : 'pointer'}">
+            <input type="checkbox" id="incCorrectiveActionRequired"
+              ${i.correctiveActionRequired ? 'checked disabled' : ''}
+              onchange="toggleIncidentCorrectiveAction('${i.id}', this.checked)">
+            ${t('inc_correctiveActionRequired')}
+          </label>
+          <div style="font-size:.72rem;color:var(--text-subtle);margin-top:2px">${t('inc_correctiveActionHint')}</div>
+          ${i.linkedCapaId ? `<div class="inc-capa-linked" style="margin-top:8px;padding:8px 10px;border-radius:6px;background:var(--bg-subtle,#f2f6ff);font-size:.78rem">
+            <i class="ph ph-arrow-square-out"></i> ${escHtml(t('inc_capaAutoOpened', { ref: i.linkedCapaId }))}
+          </div>` : ''}
+        </div>
         ${i.updatedAt ? `<p style="font-size:.75rem;color:var(--text-disabled);margin-top:6px">${t('inc_lastUpdated')}: ${new Date(i.updatedAt).toLocaleString('en-GB')} ${t('dash_by')} ${escHtml(i.updatedBy || '—')}</p>` : ''}
         <div style="display:flex;gap:8px;margin-top:12px;justify-content:flex-end">
           ${canAccess('admin') ? `<button class="btn btn-danger btn-sm" onclick="deleteIncident('${i.id}','${escHtml(i.refNumber)}')">
@@ -2315,6 +2327,18 @@ async function saveIncidentDecision(id) {
     method: 'PUT',
     headers: apiHeaders(),
     body: JSON.stringify({ status, assignedTo, reportable, cisoNotes })
+  })
+  if (!res.ok) { alert('Error saving'); return }
+  await loadIncidents()
+  await openIncidentDetail(id)
+}
+
+async function toggleIncidentCorrectiveAction(id, checked) {
+  if (!checked) return // FR-INC.4: nicht rückgängig machbar — kein manueller Uncheck
+  const res = await fetch(`/public/incident/${id}`, {
+    method: 'PUT',
+    headers: apiHeaders(),
+    body: JSON.stringify({ correctiveActionRequired: true })
   })
   if (!res.ok) { alert('Error saving'); return }
   await loadIncidents()
